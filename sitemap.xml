@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://onetwo.ren/wiki/#:C++</loc>
+		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;C++&apos;%2520by%2520TidGiUser</loc>
+		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;新条目&apos;%2520by%2520TidGiUser</loc>
 		<lastmod>2022-01-25</lastmod>
 		<changefreq>monthly</changefreq>
@@ -11,6 +23,12 @@
 		<lastmod>2022-01-24</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:LATEX</loc>
+		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:TiddlyWikiIconBlack.png</loc>
@@ -43,7 +61,31 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:兴趣</loc>
+		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:娱乐</loc>
+		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:学习</loc>
+		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:怪物猎人</loc>
+		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:数学</loc>
 		<lastmod>2022-01-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
@@ -56,6 +98,12 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:新条目</loc>
+		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:游戏</loc>
 		<lastmod>2022-01-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
