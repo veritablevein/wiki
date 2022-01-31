@@ -19,6 +19,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Have%2520fun%2520with</loc>
+		<lastmod>2022-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Index</loc>
 		<lastmod>2022-01-24</lastmod>
 		<changefreq>weekly</changefreq>
@@ -27,6 +33,24 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:LATEX</loc>
 		<lastmod>2022-01-28</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:TheBrain2level.js</loc>
+		<lastmod>2022-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:TiddlyMap!!</loc>
+		<lastmod>2022-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:TiddlyWiki</loc>
+		<lastmod>2022-01-31</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -140,6 +164,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:游戏</loc>
 		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:离散数学</loc>
+		<lastmod>2022-01-31</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
