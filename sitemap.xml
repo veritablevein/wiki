@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://onetwo.ren/wiki/#:?</loc>
+		<lastmod>2022-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:69143957_BLUE0.jpg</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:C++</loc>
 		<lastmod>2022-01-28</lastmod>
 		<changefreq>monthly</changefreq>
@@ -9,6 +20,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;C++&apos;%2520by%2520TidGiUser</loc>
 		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;LATEX&apos;%2520by%2520TidGiUser</loc>
+		<lastmod>2022-02-02</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -32,7 +49,7 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:LATEX</loc>
-		<lastmod>2022-01-28</lastmod>
+		<lastmod>2022-01-31</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -127,7 +144,25 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:工具方法</loc>
-		<lastmod>2022-01-28</lastmod>
+		<lastmod>2022-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:幻灯片</loc>
+		<lastmod>2022-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:幻灯片1</loc>
+		<lastmod>2022-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:幻灯片2</loc>
+		<lastmod>2022-01-31</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -139,9 +174,9 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:数学</loc>
-		<lastmod>2022-01-25</lastmod>
+		<lastmod>2022-01-31</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:数据库</loc>
@@ -187,9 +222,9 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:编程</loc>
-		<lastmod>2022-01-25</lastmod>
+		<lastmod>2022-01-31</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:网络</loc>
@@ -205,9 +240,9 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:计算机</loc>
-		<lastmod>2022-01-25</lastmod>
+		<lastmod>2022-01-31</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:词根词缀</loc>
@@ -217,9 +252,9 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:词汇</loc>
-		<lastmod>2022-01-28</lastmod>
+		<lastmod>2022-01-31</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:语法</loc>
