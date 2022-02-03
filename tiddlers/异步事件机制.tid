@@ -1,0 +1,11 @@
+created: 20220202140731966
+creator: TidGiUser
+modified: 20220202140857006
+modifier: TidGiUser
+title: 异步事件机制
+tmap.id: df52878b-1f57-4ae5-9e30-1fea753e5d91
+type: text/vnd.tiddlywiki
+
+* [[为什么使用异步事件机制？]]
+* [[在实际使用中异步事件可能会导致什么问题？]]
+* [[关于setTimeout、setInterval的时间精确性]]

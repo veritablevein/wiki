@@ -1,0 +1,9 @@
+created: 20220202132909608
+creator: TidGiUser
+modified: 20220202132954317
+modifier: TidGiUser
+title: 事件冒泡和事件委托
+tmap.id: 097868e1-618b-41d7-84ee-98a83419909d
+type: text/vnd.tiddlywiki
+
+[[事件委托到父节点上或者Document中，哪个更好？]]

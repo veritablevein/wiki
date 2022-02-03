@@ -1,0 +1,11 @@
+created: 20220202135551191
+creator: TidGiUser
+modified: 20220202135744278
+modifier: TidGiUser
+title: 浏览器的布局过程
+tmap.id: d6a38eca-1202-4628-958b-883d3507ab73
+type: text/vnd.tiddlywiki
+
+# [[浏览器在进行页面布局过程中会做些什么？]]
+# [[重绘和重排会导致什么问题？]]
+# [[CSS动画和JavaScript动画相比，有什么缺点？]]

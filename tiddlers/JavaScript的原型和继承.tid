@@ -1,0 +1,11 @@
+created: 20220202140145285
+creator: TidGiUser
+modified: 20220202140407092
+modifier: TidGiUser
+title: JavaScript的原型和继承
+tmap.id: 48807ad7-2839-4e59-ad10-6808e4e5a19d
+type: text/vnd.tiddlywiki
+
+* [[如何理解JavaScript中的“一切皆对象”]]
+* [[如何创建一个对象]]
+* [[proto与prototype的区别]]
