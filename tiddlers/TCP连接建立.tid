@@ -1,0 +1,12 @@
+created: 20220203145516673
+creator: TidGiUser
+modified: 20220203145822023
+modifier: TidGiUser
+title: TCP连接建立
+tmap.id: 16fe5873-a473-4b1f-9931-cf80b37fbd1f
+type: text/vnd.tiddlywiki
+
+* [[TCP的3次握手过程]]
+** {{TCP的3次握手过程}}
+* [[为什么TCP连续握手需要3次通信，挥手却需要4次？]]
+** {{为什么TCP连续握手需要3次通信，挥手却需要4次？}}

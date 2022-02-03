@@ -1,0 +1,16 @@
+created: 20220203150001198
+creator: TidGiUser
+modified: 20220203150208767
+modifier: TidGiUser
+title: HTTP请求的应用场景
+tmap.id: 417c45f4-340b-4510-b937-5cfa7db4a68c
+type: text/vnd.tiddlywiki
+
+* [[浏览器是如何控制缓存的：相应的头信息、状态码]]
+**{{浏览器是如何控制缓存的：相应的头信息、状态码}}
+* [[Websocket与HTTP请求的区别？]]
+**{{Websocket与HTTP请求的区别？}}
+* [[如何对请求进行抓包和改造？]]
+**{{如何对请求进行抓包和改造？}}
+* [[网络请求的优化方法]]
+**{{网络请求的优化方法}}

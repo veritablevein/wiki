@@ -1,0 +1,23 @@
+created: 20220203142636407
+creator: TidGiUser
+modified: 20220203143702538
+modifier: TidGiUser
+tags: 前端
+title: Node.js
+tmap.id: fe4fc6e1-6c1c-401c-a980-e686535c524b
+type: text/vnd.tiddlywiki
+
+
+<<<.tc-big-quote
+Node.js 和浏览器除了全局对象不一致以外，它们的 Event Loop 机制也有所区别。
+<<<
+<<<.tc-big-quote
+很多时候，我们会使用 Node.js 去做一些脚本工程或是服务端接入层等工作。由于大部分前端的工作主要围绕网页、小程序、客户端这些内容，需要深度使用 Node.js 的场景较少，因此我们不会这个课程中过多地介绍它，你也可以通过《Node.js 应用开发实战》专栏来进行深入地学习。
+<<<
+
+
+! 面试重点
+!! [[Node.js模块与API]]
+{{Node.js模块与API}}
+!! [[用作服务端的Node.js]]
+{{用作服务端的Node.js}}

@@ -1,0 +1,22 @@
+created: 20220125060535712
+creator: TidGiUser
+modified: 20220203144905406
+modifier: TidGiUser
+tags: 
+title: 网络相关
+tmap.id: c8e3768e-4f07-41c2-ade3-e9f057525837
+type: text/vnd.tiddlywiki
+
+<<<.tc-big-quote
+不管是网页、小程序，还是依赖 JavaScript 移植到客户端进行的原生应用开发（比如 React Native、Weex、Electron 等），我们基本上都离不开与服务端的通信。因此，我们还需要掌握网络相关的专业知识。
+很多面试官都喜欢问“一个完整的 HTTP 请求过程”这个问题。通过这样一个问题，面试官可以了解到候选人对网络请求过程到浏览器渲染过程的掌握情况，其中网络相关的知识点会涉及以下知识点。
+<<<
+!! 面试重点
+!!! [[域名解析(此处涉及DNS的寻址过程)]]
+{{域名解析(此处涉及DNS的寻址过程)}}
+!!! [[TCP连接建立]]
+{{TCP连接建立}}
+!!! [[建立TCP连接后发起HTTP请求]]
+{{建立TCP连接后发起HTTP请求}}
+!!! [[服务器相应HTTP请求]]
+{{服务器相应HTTP请求}}

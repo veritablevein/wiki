@@ -1,0 +1,12 @@
+created: 20220203150230886
+creator: TidGiUser
+modified: 20220203150359346
+modifier: TidGiUser
+title: HTTP的更新迭代
+tmap.id: d2737837-38e9-4182-abf4-d2554c37408a
+type: text/vnd.tiddlywiki
+
+* [[HTTPS与HTTP的区别]]
+**{{HTTPS与HTTP的区别}}
+* [[HTTP/2、HTTP/3分别做了怎样的设计调整？]]
+**{{HTTP/2、HTTP/3分别做了怎样的设计调整？}}

@@ -1,0 +1,18 @@
+created: 20220203145236590
+creator: TidGiUser
+modified: 20220203145948570
+modifier: TidGiUser
+title: HTTP消息的结构
+tmap.id: 40d5122a-8a62-43cd-a7a1-2d516be42554
+type: text/vnd.tiddlywiki
+
+* [[Request请求]]
+**{{Request请求}}
+* [[Response响应]]
+**{{Response响应}}
+* [[常见的HTTP状态码]]
+**{{常见的HTTP状态码}}
+* [[HTTP请求方法]]
+**{{HTTP请求方法}}
+* [[使用PUT、DELETE等方法时为什么有时候在浏览器会看到两次请求(涉及CROS中的简单请求和复杂请求)]]
+**{{使用PUT、DELETE等方法时为什么有时候在浏览器会看到两次请求(涉及CROS中的简单请求和复杂请求)}}

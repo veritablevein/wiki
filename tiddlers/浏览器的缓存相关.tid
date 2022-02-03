@@ -1,0 +1,13 @@
+created: 20220203141901299
+creator: TidGiUser
+modified: 20220203142100519
+modifier: TidGiUser
+title: 浏览器的缓存相关
+tmap.id: 20b31e36-d480-4e65-96f6-fdffbc602b65
+type: text/vnd.tiddlywiki
+
+* [[Web缓存通常包括哪些？]]
+* [[浏览器什么情况下会使用本地缓存？]]
+* [[强缓存和协商缓存的区别？]]
+* [[强制Ctrl+F5刷新会发生什么？]]
+* [[session、cookie、token及storage的区别？]]

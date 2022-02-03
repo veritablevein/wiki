@@ -1,0 +1,10 @@
+created: 20220203142120767
+creator: TidGiUser
+modified: 20220203142208545
+modifier: TidGiUser
+title: 浏览器加载顺序
+tmap.id: 8e5c12a1-1451-467b-911b-f93aaf8df108
+type: text/vnd.tiddlywiki
+
+* [[为什么我们通常将JavaScript放在<body>的最后面？]]
+* [[为什么我们将CSS放在<head>里？]]

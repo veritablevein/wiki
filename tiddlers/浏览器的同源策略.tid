@@ -1,0 +1,11 @@
+created: 20220203140852745
+creator: TidGiUser
+modified: 20220203141516897
+modifier: TidGiUser
+title: 浏览器的同源策略
+tmap.id: c4c74d41-75e7-4f05-884b-35968ea99bf4
+type: text/vnd.tiddlywiki
+
+* [["同源"指什么？]]
+* [[哪些行为受到同源策略的限制？]]
+* [[常见的跨域方案有哪些？]]

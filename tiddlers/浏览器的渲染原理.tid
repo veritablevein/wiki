@@ -1,0 +1,12 @@
+created: 20220203142231853
+creator: TidGiUser
+modified: 20220203142351540
+modifier: TidGiUser
+title: 浏览器的渲染原理
+tmap.id: 48144e3d-1a68-45a5-9bba-32f82018f0a0
+type: text/vnd.tiddlywiki
+
+* [[HTML/CSS/JS的解析过程]]
+* [[渲染树是怎样生成的？]]
+* [[重排和重绘是怎样的过程？]]
+* [[日常开发中要注意哪些渲染性能问题？]]

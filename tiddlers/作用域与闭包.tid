@@ -1,0 +1,11 @@
+created: 20220203135835257
+creator: TidGiUser
+modified: 20220203140134039
+modifier: TidGiUser
+title: 作用域与闭包
+tmap.id: fff4b4b6-9980-46b0-b91d-03bb913cc53c
+type: text/vnd.tiddlywiki
+
+* [[请描述以下代码的执行输出内容（考察作用域）]]
+* [[什么场景需要使用闭包？]]
+* [[闭包的缺陷]]

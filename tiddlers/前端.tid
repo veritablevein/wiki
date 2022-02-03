@@ -1,6 +1,6 @@
 created: 20220202131551806
 creator: TidGiUser
-modified: 20220202141350022
+modified: 20220203153417808
 modifier: TidGiUser
 tags: Web 语言
 title: 前端
@@ -10,4 +10,11 @@ type: text/vnd.tiddlywiki
 ! 需要掌握的核心基础知识
 * 前端三件套[[HTML]]/[[CSS]]/[[JavaScript]]
 * 与[[JavaScript]]运行环境相关的[[浏览器]]和[[Node.js]]
-* 前端开发通用领域、网络、安全、算法和计算机通用知识
+* [[前端开发通用领域、网络、安全、算法和计算机通用知识]]
+<$list filter="[tag<currentTiddler>]">
+
+!!! <$link><<currentTiddler>></$link>
+
+ {{!!text}}
+
+</$list>

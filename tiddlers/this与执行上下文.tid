@@ -1,0 +1,11 @@
+created: 20220203140337883
+creator: TidGiUser
+modified: 20220203140502565
+modifier: TidGiUser
+title: this与执行上下文
+tmap.id: f8b153bb-5ad7-4956-93a8-c44a94ea8853
+type: text/vnd.tiddlywiki
+
+* [[简单描述this在不同场景下的指向]]
+* [[apply/call/bind的使用]]
+* [[箭头函数与普通函数的区别]]
