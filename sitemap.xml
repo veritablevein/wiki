@@ -246,7 +246,7 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:制作简历</loc>
-		<lastmod>2022-02-14</lastmod>
+		<lastmod>2022-02-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -306,7 +306,7 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:工作</loc>
-		<lastmod>2022-02-14</lastmod>
+		<lastmod>2022-02-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -355,6 +355,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:怪物猎人</loc>
 		<lastmod>2022-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:总规划</loc>
+		<lastmod>2022-02-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
