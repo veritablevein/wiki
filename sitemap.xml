@@ -24,6 +24,11 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Cloze</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:DOM操作与性能问题</loc>
 		<lastmod>2022-02-02</lastmod>
 		<changefreq>monthly</changefreq>
@@ -68,6 +73,11 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;新条目&apos;%2520by%2520TidGiUser</loc>
 		<lastmod>2022-02-02</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Excerpt</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -133,7 +143,7 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:LATEX</loc>
-		<lastmod>2022-02-02</lastmod>
+		<lastmod>2022-04-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -146,6 +156,16 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:Node.js模块与API</loc>
 		<lastmod>2022-02-03</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Question</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Select</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -204,6 +224,11 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Word</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:favicon.ico</loc>
 		<lastmod>2020-06-05</lastmod>
 		<changefreq>monthly</changefreq>
@@ -217,6 +242,90 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:this与执行上下文</loc>
 		<lastmod>2022-02-03</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/66297532933d6d63/朝花夕拾-1/***%2520START:%2520FULL%2520LICENSE%2520***</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/66297532933d6d63/朝花夕拾-2/Section%25201.%2520General%2520Terms%2520of%2520Use%2520and%2520Redistributing%2520Project%2520Gutenberg-tm%2520electronic%2520works</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/66297532933d6d63/朝花夕拾-3/Section%25202.%2520Information%2520about%2520the%2520Mission%2520of%2520Project%2520Gutenberg-tm</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/66297532933d6d63/朝花夕拾-4/Section%25203.%2520Information%2520about%2520the%2520Project%2520Gutenberg%2520Literary%2520Archive%2520Foundation</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/66297532933d6d63/朝花夕拾-5/Section%25204.%2520Information%2520about%2520Donations%2520to%2520the%2520Project%2520Gutenberg%2520Literary%2520Archive%2520Foundation</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/66297532933d6d63/朝花夕拾-6/Section%25205.%2520General%2520Information%2520About%2520Project%2520Gutenberg-tm%2520electronic%2520works.</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/66297532933d6d63/朝花夕拾</loc>
+		<lastmod>2022-04-11</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/fecf535e6323269f/三國志-1/***%2520START:%2520FULL%2520LICENSE%2520***</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/fecf535e6323269f/三國志-2/Section%25201.%2520General%2520Terms%2520of%2520Use%2520and%2520Redistributing%2520Project%2520Gutenberg-tm%2520electronic%2520works</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/fecf535e6323269f/三國志-3/Section%25202.%2520Information%2520about%2520the%2520Mission%2520of%2520Project%2520Gutenberg-tm</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/fecf535e6323269f/三國志-4/Section%25203.%2520Information%2520about%2520the%2520Project%2520Gutenberg%2520Literary%2520Archive%2520Foundation</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/fecf535e6323269f/三國志-5/Section%25204.%2520Information%2520about%2520Donations%2520to%2520the%2520Project%2520Gutenberg%2520Literary%2520Archive%2520Foundation</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/fecf535e6323269f/三國志-6/Section%25205.%2520General%2520Information%2520About%2520Project%2520Gutenberg-tm%2520electronic%2520works.</loc>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:twpub/fecf535e6323269f/三國志</loc>
+		<lastmod>2022-04-10</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -383,6 +492,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:手动链接</loc>
+		<lastmod>2022-04-11</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:数学</loc>
 		<lastmod>2022-01-31</lastmod>
 		<changefreq>monthly</changefreq>
@@ -462,7 +577,13 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:离散数学</loc>
-		<lastmod>2022-01-31</lastmod>
+		<lastmod>2022-04-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:筛选器的通用形式</loc>
+		<lastmod>2022-04-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
