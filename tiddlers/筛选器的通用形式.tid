@@ -1,0 +1,15 @@
+created: 20220410030617084
+creator: TidGiUser
+modified: 20220411072010505
+modifier: TidGiUser
+tags: TiddlyWiki 筛选器 学习
+title: 筛选器的通用形式
+tmap.id: 7453af3c-a31f-4c0f-851e-00dd9886a7ec
+type: text/vnd.tiddlywiki
+
+`[operator[parameter]]`
+
+* operator:
+* parameter:
+
+例如：

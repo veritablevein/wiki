@@ -1,0 +1,28 @@
+created: 20220411072019450
+creator: TidGiUser
+difficulty: 5
+due: 20220413074803872
+grade: -1
+history: []
+interval: 0
+lapses: 0
+modified: 20220411074843494
+modifier: TidGiUser
+reps: 1
+retrievability: 1
+review: 20220411074803872
+stability: 2
+tags: TiddlyWiki 链接 ?
+title: 手动链接
+tmap.id: 8e0e4c4c-4d9c-4219-970b-eb087aaf9019
+type: text/vnd.tiddlywiki
+
+用条目名称链接到条目，并可以指定标题
+
+`[[指定标题|链接条目名称]]`(严格区分大小写空格)
+
+例如： 
+
+`[[什么是JavaScript|JavaScript]]`:[[什么是JavaScript|JavaScript]]
+
+`[[ 什么是JavaScript | JavaScript ]]`:[[ 什么是JavaScript | JavaScript ]]

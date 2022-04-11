@@ -1,17 +1,17 @@
 created: 20220125132203039
 creator: TidGiUser
-difficulty: 5
-due: 20220202094008709
-grade: -1
-history: []
-interval: 0
+difficulty: 4.225031555049933
+due: 20220615074302685
+grade: 1
+history: [{"due":"20220202094008709","interval":0,"difficulty":5,"stability":2,"retrievability":1,"grade":-1,"lapses":0,"reps":1,"review":"20220131094008709"}]
+interval: 70
 lapses: 0
-modified: 20220202125252396
+modified: 20220411074302691
 modifier: TidGiUser
-reps: 1
-retrievability: 1
-review: 20220131094008709
-stability: 2
+reps: 2
+retrievability: 0.02503155504993243
+review: 20220411074302685
+stability: 64.90183698934061
 tags: 编程 ?
 title: LATEX
 tmap.id: af77b847-5b82-44f5-8ac5-ad7a7a26d7ba

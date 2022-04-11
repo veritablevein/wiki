@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220410085827977
+creator: TidGiUser
+modified: 20220410085827977
+modifier: TidGiUser
+tags: twpub/66297532933d6d63/朝花夕拾
+title: twpub/66297532933d6d63/朝花夕拾-3/Section 2. Information about the Mission of Project Gutenberg-tm
+tmap.id: 6297b76f-2f57-491c-81e2-1a52f05ee608
+twpub: $:/plugins/twpub/66297532933d6d63
+twpub-after: $:/plugins/twpub/66297532933d6d63/text/000000070
+twpub-before: $:/plugins/twpub/66297532933d6d63/text/000000073
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

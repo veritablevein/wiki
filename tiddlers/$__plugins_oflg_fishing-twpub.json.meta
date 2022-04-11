@@ -1,0 +1,12 @@
+author: oflg
+core-version: >=5.2.2
+dependents: $:/plugins/oflg/fishing
+description: Import TWPUB into Fishing
+list: readme license
+name: Fishing TWPUB
+parent-plugin: $:/plugins/oflg/fishing-catchfish
+plugin-type: plugin
+source: https://github.com/oflg/fishing-twpub
+title: $:/plugins/oflg/fishing-twpub
+type: application/json
+version: 0.2.0

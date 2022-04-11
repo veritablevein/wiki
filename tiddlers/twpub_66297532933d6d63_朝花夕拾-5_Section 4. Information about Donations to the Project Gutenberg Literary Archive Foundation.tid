@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220410085827978
+creator: TidGiUser
+modified: 20220410085827978
+modifier: TidGiUser
+tags: twpub/66297532933d6d63/朝花夕拾
+title: twpub/66297532933d6d63/朝花夕拾-5/Section 4. Information about Donations to the Project Gutenberg Literary Archive Foundation
+tmap.id: 39dd113a-2e12-40a4-ab64-739c12f60e5e
+twpub: $:/plugins/twpub/66297532933d6d63
+twpub-after: $:/plugins/twpub/66297532933d6d63/text/000000077
+twpub-before: $:/plugins/twpub/66297532933d6d63/text/000000083
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

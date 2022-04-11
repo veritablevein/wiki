@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220410091329348
+creator: TidGiUser
+modified: 20220410091329348
+modifier: TidGiUser
+tags: twpub/fecf535e6323269f/三國志
+title: twpub/fecf535e6323269f/三國志-5/Section 4. Information about Donations to the Project Gutenberg Literary Archive Foundation
+tmap.id: cef42fb0-4d79-42ce-913c-33aad33ec53f
+twpub: $:/plugins/twpub/fecf535e6323269f
+twpub-after: $:/plugins/twpub/fecf535e6323269f/text/000001171
+twpub-before: $:/plugins/twpub/fecf535e6323269f/text/000001177
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}
