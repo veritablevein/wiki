@@ -1,19 +1,21 @@
 created: 20220411072019450
 creator: TidGiUser
 difficulty: 5
+draft.of: 手动链接
+draft.title: 手动链接
 due: 20220413074803872
 grade: -1
 history: []
 interval: 0
 lapses: 0
-modified: 20220411081024079
+modified: 20220411092820445
 modifier: TidGiUser
 reps: 1
 retrievability: 1
 review: 20220411074803872
 stability: 2
 tags: TiddlyWiki 链接 ?
-title: 手动链接
+title: Draft of '手动链接' by TidGiUser
 tmap.id: 8e0e4c4c-4d9c-4219-970b-eb087aaf9019
 type: text/vnd.tiddlywiki
 
@@ -26,3 +28,16 @@ type: text/vnd.tiddlywiki
 `[[什么是JavaScript|JavaScript]]`:[[什么是JavaScript|JavaScript]]
 
 `[[ 什么是JavaScript | JavaScript ]]`:[[ 什么是JavaScript | JavaScript ]]
+
+|!unit|!test|
+|>| Freedom |
+
+;JavaScript
+:A program language
+;CSS
+:层叠样式表
+---
+-- 这是一个连字符
+
+--- 这是一个破折号
+
