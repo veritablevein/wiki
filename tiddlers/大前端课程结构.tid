@@ -1,0 +1,53 @@
+created: 20220422125119884
+creator: TidGiUser
+modified: 20220422131952604
+modifier: TidGiUser
+tags: 拉勾教育大前端高薪训练营
+title: 大前端课程结构
+tmap.id: d959004e-b2a0-4f16-9cdf-dfe8793ed14e
+type: text/vnd.tiddlywiki
+
+阶段->模块->任务
+
+# JavaScript深度剖析
+## 函数式编程、JavaScript异步编程、手写Promise
+## ES6+、TypeScript、JavaScript性能优化
+# 前端工程化实战
+## 开发脚手架、封装自动化构建工作流
+## 模块化开发、规范化标准
+# Vue框架源码与进阶
+## 手写Vue Router、手写响应式实现、虚拟DOM和Diff算法
+## Vue源码分析：响应式原理、虚拟DOM、模板编译和组件化
+## Vuex数据流管理、Vue服务端渲染(SSR)
+## 搭建自己的SSR、静态站点生成(SSG)、封装Vue组件库
+## Vue3 Composition APIs、Vue3原理剖析
+## Vue+Vuex+TypeScript实战项目开发与项目优化
+## Vue+Vite+TypeScript实战项目开发
+# React框架原理与实战（附带Angular教程）
+## React设计原理解密及核心源码解读
+## React数据流方案专题(Redux、MobX)
+## React Hooks、Chakra-UI、组件性能优化、封装组件库
+## React服务端渲染专题(原生实现、Next.js集成框架、Gatsby)
+## React+Redux+Ant Design+TypeScript实战
+## Angular企业实战开发
+# Node.js全栈开发
+## Node.js高级编程(核心模块、模块加载机制)
+## NoSQL数据库(MongoDB、Redis)
+## Web开发框架(Express、Koa)
+## GraphQL API开发
+## Egg.js企业级框架实战
+# 泛客户端开发
+## 小程序与快应用
+## React Native
+## Flutter原生APP开发
+## Electron桌面应用开发
+## Hybrid APP开发
+# 商业技术解决方案与高阶技术专题
+## 微前端解决方案
+## 前端自动化测试专题
+## 前端数据可视化专题
+## 前端数据可视化专题
+## 前端性能优化专题
+## Serverless无服务架构专题
+## Web Components
+## HarmonyOS JS UI
