@@ -83,6 +83,18 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:ES6</loc>
+		<lastmod>2022-04-22</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:ES6新特性</loc>
+		<lastmod>2022-04-22</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Excerpt</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
@@ -131,13 +143,19 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:JavaScript</loc>
+		<lastmod>2022-04-22</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:JavaScript历史</loc>
 		<lastmod>2022-02-15</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://onetwo.ren/wiki/#:JavaScript历史</loc>
-		<lastmod>2022-02-15</lastmod>
+		<loc>https://onetwo.ren/wiki/#:JavaScript性能优化</loc>
+		<lastmod>2022-04-22</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -150,6 +168,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:LATEX</loc>
 		<lastmod>2022-04-11</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:MyPromise</loc>
+		<lastmod>2022-04-22</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -248,6 +272,18 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:image.png</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:resolvePromise</loc>
+		<lastmod>2022-04-22</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:static%2520resolve</loc>
+		<lastmod>2022-04-22</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -498,6 +534,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:性能优化</loc>
+		<lastmod>2022-04-22</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:怪物猎人</loc>
 		<lastmod>2022-01-25</lastmod>
 		<changefreq>monthly</changefreq>
@@ -506,6 +548,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:总规划</loc>
 		<lastmod>2022-02-23</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:手写Promise</loc>
+		<lastmod>2022-04-22</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
