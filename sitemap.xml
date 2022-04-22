@@ -408,6 +408,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:大前端课程结构</loc>
+		<lastmod>2022-04-22</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:娱乐</loc>
 		<lastmod>2022-01-25</lastmod>
 		<changefreq>monthly</changefreq>
@@ -506,6 +512,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:手动链接</loc>
 		<lastmod>2022-04-11</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:拉勾教育大前端高薪训练营</loc>
+		<lastmod>2022-04-22</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
