@@ -1,0 +1,27 @@
+created: 20220422135752321
+creator: TidGiUser
+modified: 20220422141348074
+modifier: TidGiUser
+tags: JavaScript ES6
+title: ES6新特性
+tmap.id: d212f805-ce57-4946-a94f-89c6b3bf452b
+type: text/vnd.tiddlywiki
+
+# let和const、块级作用域
+# 解构赋值：
+# 模板字符串
+# 字符串的扩展方法
+# 参数默认值
+# 剩余参数
+# 展开数组
+# 箭头函数
+# 对象的扩展方法
+# Proxy和Reflect
+# Promise
+# Class类、静态方法、继承
+# Set、Map
+# Symbol
+# Iterator和for...of循环
+# 生成器
+# Async、Await
+# Module

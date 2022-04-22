@@ -1,0 +1,34 @@
+created: 20220422141355275
+creator: TidGiUser
+modified: 20220422145508512
+modifier: TidGiUser
+tags: JavaScript ES6 面试 实践
+title: 手写Promise
+tmap.id: 384b8ba9-8c87-4ded-a664-c42d438e5789
+type: text/vnd.tiddlywiki
+
+创建Promise类
+
+* 构造函数
+
+* 成员变量
+** state三种状态：Fulfilled、Rejected、Pending
+** 成功后的值value，失败后的原因reason
+**保存状态回调函数数组：onFulfilledCallBacks、onRejectedCallBacks
+
+* 成员方法：
+** resolve
+** reject
+** then(链式调用、自调用检测、)
+** catch
+
+* 静态方法：
+** [[resolve|static resolve]]
+** All
+** Race
+
+非成员复用函数[[resolvePromise]]
+
+测试Promise类
+
+能够通过Promise A+规范的代码：{{MyPromise}}

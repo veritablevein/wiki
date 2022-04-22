@@ -1,0 +1,15 @@
+created: 20220422132049236
+creator: TidGiUser
+modified: 20220422135743512
+modifier: TidGiUser
+tags: 编程 JavaScript 性能优化
+title: JavaScript性能优化
+tmap.id: 09e527f7-08b8-4591-9510-5e38a0f035bb
+type: text/vnd.tiddlywiki
+
+# 内存问题体现：内存泄漏、内存膨胀、垃圾回收频繁
+# 发现内存问题工具——浏览器开发者工具：浏览器任务管理器、Timeline、堆快照、判断是否存在频繁GC
+# GC算法：引用计数、标记清除、标记整理、V8两代GC
+# V8引擎执行流程
+## 堆栈处理：基础数据类型、引用数据类型、函数、闭包
+## ECS、EC(G)、VO、AO
