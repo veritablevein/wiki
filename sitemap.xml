@@ -248,6 +248,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:WSL2代理</loc>
+		<lastmod>2022-04-23</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Web</loc>
 		<lastmod>2022-01-25</lastmod>
 		<changefreq>monthly</changefreq>
@@ -404,6 +410,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:写作</loc>
 		<lastmod>2022-01-28</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:函数式编程</loc>
+		<lastmod>2022-04-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
