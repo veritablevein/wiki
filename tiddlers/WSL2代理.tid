@@ -1,0 +1,57 @@
+created: 20220423144112727
+creator: TidGiUser
+modified: 20220423144504396
+modifier: TidGiUser
+tags: WSL Linux
+title: WSL2代理
+tmap.id: 7190f2ab-d3f4-4c80-a508-df7803c70ceb
+type: text/vnd.tiddlywiki
+
+```bash
+#~/.zshrc
+
+getIp() {
+    export PROXY_SOCKS5="socks5://127.0.0.1:1088" #需要修改为你的socks5代理地址
+    export PROXY_HTTP="http://127.0.0.1:1088" #需要修改为你的http代理地址
+    echo "IP地址：" | lolcat
+    ifconfig | grep "broadcast" | lolcat
+}
+
+#下面这个给WSL2用的
+getIpV2() {
+    export winip=$(ip route | grep default | awk '{print $3}')
+    export wslip=$(hostname -I | awk '{print $1}')
+    export PROXY_SOCKS5="socks5://${winip}:1088"
+    export PROXY_HTTP="http://${winip}:1088"
+    echo "WSL:${wslip}"
+    echo "Windows:${winip}"
+}
+
+proxy () {
+    export http_proxy="${PROXY_HTTP}"
+    export HTTP_PROXY="${PROXY_HTTP}"
+    export https_proxy="${PROXY_HTTP}"
+    export HTTPS_PROXY="${PROXY_HTTP}"
+    export ftp_proxy="${PROXY_HTTP}"
+    export FTP_PROXY="${PROXY_HTTP}"
+    export rsync_proxy="${PROXY_HTTP}"
+    export RSYNC_PROXY="${PROXY_HTTP}"
+    export ALL_PROXY="${PROXY_SOCKS5}"
+    export all_proxy="${PROXY_SOCKS5}"
+#    echo '[*]Updating proxychains configure'
+#    sudo sed -i -r 's/(\b[0-9]{1,3}\.){3}[0-9]{1,3}\b'/"$winip"/ /etc/proxychains.conf
+#curl https://www.incert.cn/getip.php
+}
+noproxy () {
+    unset http_proxy
+    unset HTTP_PROXY
+    unset https_proxy
+    unset HTTPS_PROXY
+    unset ftp_proxy
+    unset FTP_PROXY
+    unset rsync_proxy
+    unset RSYNC_PROXY
+    unset ALL_PROXY
+    unset all_proxy
+    #curl https://www.incert.cn/getip.php
+```
