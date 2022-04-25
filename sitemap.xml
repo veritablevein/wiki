@@ -100,6 +100,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Flow</loc>
+		<lastmod>2022-04-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:HTML</loc>
 		<lastmod>2022-02-03</lastmod>
 		<changefreq>monthly</changefreq>
@@ -154,8 +160,14 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:JavaScript异步编程</loc>
+		<lastmod>2022-04-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:JavaScript性能优化</loc>
-		<lastmod>2022-04-22</lastmod>
+		<lastmod>2022-04-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -246,6 +258,12 @@
 		<lastmod>2020-06-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:TypeScript</loc>
+		<lastmod>2022-04-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:WSL2代理</loc>
