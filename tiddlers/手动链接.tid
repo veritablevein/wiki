@@ -6,7 +6,7 @@ grade: -1
 history: []
 interval: 0
 lapses: 0
-modified: 20220411081024079
+modified: 20220425152838185
 modifier: TidGiUser
 reps: 1
 retrievability: 1
@@ -26,3 +26,16 @@ type: text/vnd.tiddlywiki
 `[[什么是JavaScript|JavaScript]]`:[[什么是JavaScript|JavaScript]]
 
 `[[ 什么是JavaScript | JavaScript ]]`:[[ 什么是JavaScript | JavaScript ]]
+
+|!unit|!test|
+|>| Freedom |
+
+;JavaScript
+:A program language
+;CSS
+:层叠样式表
+---
+-- 这是一个连字符
+
+--- 这是一个破折号
+
