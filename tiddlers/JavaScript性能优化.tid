@@ -1,6 +1,6 @@
 created: 20220422132049236
 creator: TidGiUser
-modified: 20220422135743512
+modified: 20220425160314938
 modifier: TidGiUser
 tags: 编程 JavaScript 性能优化
 title: JavaScript性能优化
@@ -13,3 +13,16 @@ type: text/vnd.tiddlywiki
 # V8引擎执行流程
 ## 堆栈处理：基础数据类型、引用数据类型、函数、闭包
 ## ECS、EC(G)、VO、AO
+# 对比闭包、事件委托的EC内存开销和垃圾回收
+# 循环事件的ECS过程
+# 防抖函数
+# 节流函数
+# 其他优化方法
+## 变量局部化
+## 缓存数据
+## 减少访问层级
+## 减少判断层级
+## 减少循环体活动
+## 字面量与构造式选择
+# 性能测试
+## [[JSBench|https://jsbench.me]]

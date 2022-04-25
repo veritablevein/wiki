@@ -1,0 +1,35 @@
+color: #3178c6
+created: 20220425155127765
+creator: TidGiUser
+modified: 20220425160633058
+modifier: TidGiUser
+tags: JavaScript TypeScript
+title: TypeScript
+tmap.id: a8b72424-06a4-43f5-97b5-6aef75b42d4c
+type: text/vnd.tiddlywiki
+
+# 强弱类型
+# 动态类型、静态类型
+# TypeScript快速上手
+# 配置文件
+# 原始类型
+# 标准库声明
+# 中文错误消息
+# 作用域问题
+# Object类型
+# 数组类型
+# 元组类型
+# 枚举类型
+# 函数类型
+# 任意类型
+# 隐式类型推断
+# 类型断言
+# 接口
+# 接口补充
+# 类的基本使用
+# 类的访问修饰符
+# 类的只读属性
+# 类与接口
+# 抽象类
+# 泛型
+# 类型声明

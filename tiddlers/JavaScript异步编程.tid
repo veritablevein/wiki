@@ -1,0 +1,21 @@
+created: 20220425154806649
+creator: TidGiUser
+modified: 20220425155015573
+modifier: TidGiUser
+tags: JavaScript 编程
+title: JavaScript异步编程
+tmap.id: e1a564cc-1f0a-4bb7-b24f-d6d446bddc04
+type: text/vnd.tiddlywiki
+
+# 同步模式
+# 异步模式
+# Promise
+## 使用案例
+## 常见误区
+## 链式调用
+## 异常处理
+## 静态方法
+## 并行执行
+## 执行时序
+# Generator异步方案
+# Async函数
