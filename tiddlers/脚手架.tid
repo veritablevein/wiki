@@ -1,0 +1,23 @@
+created: 20220426090803560
+creator: TidGiUser
+modified: 20220426091306925
+modifier: TidGiUser
+tags: 前端 工程化
+title: 脚手架
+tmap.id: f8c63e2a-24e5-48fe-89bc-7333bc558f65
+type: text/vnd.tiddlywiki
+
+# 脚手架工具
+## Yeoman
+### 简介
+### 基础使用
+### Sub Generator
+### 使用步骤
+### 自定义Generator
+### 创建Generator模块
+### 根据模板创建文件
+### 接收用户输入
+### Vue Generator实现
+### 发布Generator
+## Plop
+# 脚手架工作原理

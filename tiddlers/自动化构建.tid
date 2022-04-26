@@ -1,8 +1,15 @@
 created: 20220426083548282
 creator: TidGiUser
-modified: 20220426083605379
+modified: 20220426091453710
 modifier: TidGiUser
 tags: 工程化 前端
 title: 自动化构建
 tmap.id: a23cc432-3c05-4daf-a0b6-1bffc3491eab
 type: text/vnd.tiddlywiki
+
+# 常用自动化构建工具
+## Grunt
+
+## Gulp
+## 封装工作流
+## FIS
