@@ -35,6 +35,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;$:/ControlPanel&apos;%2520by%2520TidGiUser</loc>
+		<lastmod>2022-04-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;C++&apos;%2520by%2520TidGiUser</loc>
 		<lastmod>2022-01-25</lastmod>
 		<changefreq>monthly</changefreq>
@@ -237,9 +243,9 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:TiddlyWiki</loc>
-		<lastmod>2022-04-10</lastmod>
+		<lastmod>2022-04-26</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:TiddlyWikiIconBlack.png</loc>
@@ -445,9 +451,9 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:前端</loc>
-		<lastmod>2022-02-03</lastmod>
+		<lastmod>2022-04-26</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:前端安全</loc>
@@ -466,6 +472,12 @@
 		<lastmod>2022-01-28</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:后端</loc>
+		<lastmod>2022-04-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:听力</loc>
@@ -502,6 +514,12 @@
 		<lastmod>2022-03-22</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:实践</loc>
+		<lastmod>2022-04-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:对EventLoop的理解</loc>
