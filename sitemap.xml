@@ -12,6 +12,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Angular</loc>
+		<lastmod>2022-04-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:C++</loc>
 		<lastmod>2022-04-25</lastmod>
 		<changefreq>monthly</changefreq>
@@ -213,6 +219,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:React</loc>
+		<lastmod>2022-04-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Sass%2520Mixed</loc>
 		<lastmod>2022-04-26</lastmod>
 		<changefreq>monthly</changefreq>
@@ -282,6 +294,12 @@
 		<lastmod>2022-04-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Vue</loc>
+		<lastmod>2022-04-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:WSL2代理</loc>
@@ -660,6 +678,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:模块化开发</loc>
+		<lastmod>2022-04-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:浏览器</loc>
 		<lastmod>2022-02-03</lastmod>
 		<changefreq>monthly</changefreq>
@@ -780,6 +804,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:脚手架</loc>
+		<lastmod>2022-04-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:自动化构建</loc>
 		<lastmod>2022-04-26</lastmod>
 		<changefreq>monthly</changefreq>
@@ -788,6 +818,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:英语</loc>
 		<lastmod>2022-01-28</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:规范化标准</loc>
+		<lastmod>2022-04-26</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
