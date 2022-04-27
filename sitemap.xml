@@ -612,6 +612,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:开荒基础</loc>
+		<lastmod>2022-04-27</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:异步事件机制</loc>
 		<lastmod>2022-02-02</lastmod>
 		<changefreq>monthly</changefreq>
@@ -632,6 +638,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:总规划</loc>
 		<lastmod>2022-02-23</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:戴森球计划</loc>
+		<lastmod>2022-04-27</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -818,6 +830,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:英语</loc>
 		<lastmod>2022-01-28</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:蓝图</loc>
+		<lastmod>2022-04-27</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
