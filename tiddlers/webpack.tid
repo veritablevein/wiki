@@ -1,6 +1,6 @@
 created: 20220507073355927
 creator: TidGiUser
-modified: 20220507112415140
+modified: 20220509153851450
 modifier: TidGiUser
 tags: 前端 打包
 title: webpack
@@ -38,3 +38,10 @@ yarn webpack
 # 编译转换类：将加载到的模块转换为JavaScript代码（eg：css-loader）
 # 文件操作类：将加载到的模块拷贝到输出目录，同时将文件访问路径对外拷出（eg：file-loader）
 # 代码检查类：代码校验，统一代码风格，提高代码质量，一般不会修改生产环境代码（eg：eslint-loader）
+
+!! 模块加载方式
+# ES Modules标准的import声明
+# CommonJS标准的require函数
+# AMD标准的define函数和require函数
+# *样式代码中的@import指令和url函数
+# *HTML代码中图片标签的src属性
