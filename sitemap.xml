@@ -41,54 +41,6 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;C++&apos;%2520by%2520TidGiUser</loc>
-		<lastmod>2022-01-25</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;LATEX&apos;%2520by%2520TidGiUser</loc>
-		<lastmod>2022-02-02</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;制作简历&apos;%2520by%2520TidGiUser</loc>
-		<lastmod>2022-02-14</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;学习泛化知识自检流程&apos;%2520by%2520TidGiUser</loc>
-		<lastmod>2022-03-22</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;工作&apos;%2520by%2520TidGiUser</loc>
-		<lastmod>2022-02-14</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;手动链接&apos;%2520by%2520TidGiUser</loc>
-		<lastmod>2022-04-11</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;新条目%25201&apos;%2520by%2520TidGiUser</loc>
-		<lastmod>2022-04-22</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;新条目&apos;%2520by%2520TidGiUser</loc>
-		<lastmod>2022-02-02</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
 		<loc>https://onetwo.ren/wiki/#:ES6</loc>
 		<lastmod>2022-04-22</lastmod>
 		<changefreq>monthly</changefreq>
@@ -1932,12 +1884,6 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://onetwo.ren/wiki/#:戴森球计划</loc>
-		<lastmod>2022-04-27</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
 		<loc>https://onetwo.ren/wiki/#:戴森球速通</loc>
 		<lastmod>2022-04-30</lastmod>
 		<changefreq>monthly</changefreq>
@@ -1970,12 +1916,6 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:数据库</loc>
 		<lastmod>2022-01-25</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:新条目</loc>
-		<lastmod>2022-04-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
