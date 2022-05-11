@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132727552
+creator: TidGiUser
+modified: 20220511132727552
+modifier: TidGiUser
+tags: [[twpub/021850e4fdbec5ff/toc/chap-19/19 Data Structures for Disjoint Sets]]
+title: twpub/021850e4fdbec5ff/toc/Rh1-112/19.2 Linked-list representation of disjoint sets
+tmap.id: 6178ab36-8e08-4d40-b0ab-ffd7e71fa0d9
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000010759
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000010830
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

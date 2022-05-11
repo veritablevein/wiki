@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132727343
+creator: TidGiUser
+modified: 20220511132727343
+modifier: TidGiUser
+tags: [[twpub/021850e4fdbec5ff/toc/chap-17/17 Augmenting Data Structures]]
+title: twpub/021850e4fdbec5ff/toc/Rh1-103/17.3 Interval trees
+tmap.id: dc898c27-2275-4d22-9729-cf8f82002db5
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000010148
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000010373
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

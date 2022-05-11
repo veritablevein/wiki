@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132726733
+creator: TidGiUser
+modified: 20220511132726733
+modifier: TidGiUser
+tags: [[twpub/021850e4fdbec5ff/toc/chap-14/14 Dynamic Programming]]
+title: twpub/021850e4fdbec5ff/toc/Rh1-82/14.2 Matrix-chain multiplication
+tmap.id: 761f5bea-1e23-4431-8cf9-fce50161cf3d
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000008058
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000008206
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

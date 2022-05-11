@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132724389
+creator: TidGiUser
+modified: 20220511132724389
+modifier: TidGiUser
+tags: twpub/021850e4fdbec5ff/toc
+title: twpub/021850e4fdbec5ff/toc/part-8/VIII Appendix: Mathematical Background
+tmap.id: f36f3405-c485-498b-882c-d0d602d72b24
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000023410
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000000487
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

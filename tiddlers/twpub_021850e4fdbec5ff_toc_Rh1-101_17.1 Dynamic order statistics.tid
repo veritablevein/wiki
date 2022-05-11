@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132727260
+creator: TidGiUser
+modified: 20220511132727260
+modifier: TidGiUser
+tags: [[twpub/021850e4fdbec5ff/toc/chap-17/17 Augmenting Data Structures]]
+title: twpub/021850e4fdbec5ff/toc/Rh1-101/17.1 Dynamic order statistics
+tmap.id: 9cf1de3c-0535-48be-bccd-003218e9edb3
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000009963
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000010088
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

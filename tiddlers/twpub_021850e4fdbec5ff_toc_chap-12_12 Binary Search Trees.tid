@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132722965
+creator: TidGiUser
+modified: 20220511132722965
+modifier: TidGiUser
+tags: [[twpub/021850e4fdbec5ff/toc/part-3/III Data Structures]]
+title: twpub/021850e4fdbec5ff/toc/chap-12/12 Binary Search Trees
+tmap.id: dc595f7e-747b-4ac1-a659-c74d57053ccc
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000006910
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000007329
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

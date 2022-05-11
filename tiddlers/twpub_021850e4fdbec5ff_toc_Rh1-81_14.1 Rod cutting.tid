@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132726693
+creator: TidGiUser
+modified: 20220511132726693
+modifier: TidGiUser
+tags: [[twpub/021850e4fdbec5ff/toc/chap-14/14 Dynamic Programming]]
+title: twpub/021850e4fdbec5ff/toc/Rh1-81/14.1 Rod cutting
+tmap.id: e28ee2e1-b033-4ae6-aa28-a29a0703cde2
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000007874
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000008058
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

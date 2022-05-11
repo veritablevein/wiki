@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132725425
+creator: TidGiUser
+modified: 20220511132725425
+modifier: TidGiUser
+tags: [[twpub/021850e4fdbec5ff/toc/chap-6/6 Heapsort]]
+title: twpub/021850e4fdbec5ff/toc/Rh1-34/6.3 Building a heap
+tmap.id: dddcc908-b748-43a8-b4bc-21d55b7d5c64
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000003943
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000004004
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

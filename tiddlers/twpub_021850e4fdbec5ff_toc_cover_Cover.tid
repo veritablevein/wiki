@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132724010
+creator: TidGiUser
+modified: 20220511132724010
+modifier: TidGiUser
+tags: twpub/021850e4fdbec5ff/toc
+title: twpub/021850e4fdbec5ff/toc/cover/Cover
+tmap.id: 86060f81-314f-4cba-bd45-b5a04d16e2bd
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000000000
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000026599
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132727302
+creator: TidGiUser
+modified: 20220511132727302
+modifier: TidGiUser
+tags: [[twpub/021850e4fdbec5ff/toc/chap-17/17 Augmenting Data Structures]]
+title: twpub/021850e4fdbec5ff/toc/Rh1-102/17.2 How to augment a data structure
+tmap.id: d1e6c763-7ef5-4729-ba93-626f1cd5818a
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000010088
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000010148
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}

@@ -1,0 +1,14 @@
+caption: {{||Excerpt}}
+created: 20220511132725628
+creator: TidGiUser
+modified: 20220511132725628
+modifier: TidGiUser
+tags: [[twpub/021850e4fdbec5ff/toc/chap-7/7 Quicksort]]
+title: twpub/021850e4fdbec5ff/toc/Rh1-41/7.3 A randomized version of quicksort
+tmap.id: 80157700-d0c0-4e7e-bc51-3d12f305be15
+twpub: $:/plugins/twpub/021850e4fdbec5ff
+twpub-after: $:/plugins/twpub/021850e4fdbec5ff/text/000004412
+twpub-before: $:/plugins/twpub/021850e4fdbec5ff/text/000004441
+type: text/vnd.tiddlywiki
+
+{{||$:/Import/TWPUB/twpub-text}}
