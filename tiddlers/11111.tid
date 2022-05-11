@@ -1,0 +1,13 @@
+created: 20220511160002320
+creator: TidGiUser
+modified: 20220511160106352
+modifier: TidGiUser
+tags: 
+title: 11111
+tmap.id: 74a6b911-d4e1-438e-8174-23f716357830
+type: text/vnd.tiddlywiki
+
+<$button>
+<$action-deletetiddler $filter="[[$:/plugins/oflg/fishing-cannedfish/2022黄皮书考研一大纲词汇背诵宝典]plugintiddlers[]tag[?]]"/>
+Delete tiddlers tagged "~TableOfContents"
+</$button>
