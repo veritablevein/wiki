@@ -1,0 +1,13 @@
+conversion-errors: 0
+converter-version: 0.1.0
+count-chunks: 33919
+count-images: 1845
+description: Introduction to Algorithms, Fourth Edition
+epub-creator: Clifford Stein
+epub-title: Introduction to Algorithms, Fourth Edition
+list: readme errors cover text
+name: TWPUB
+plugin-type: plugin
+title: $:/plugins/twpub/021850e4fdbec5ff
+type: application/json
+version: v0.0.1

@@ -1,8 +1,16 @@
 created: 20220511063951165
 creator: TidGiUser
-modified: 20220511064008725
+modified: 20220511132253102
 modifier: TidGiUser
 tags: webpack 源码
 title: webpack源码
 tmap.id: 08397dae-1e9e-47e8-8d9a-8cb600c7e19a
 type: text/vnd.tiddlywiki
+
+! 生成打包js代码分析
+# __webpack_require__函数
+# __webpack_require__.r
+# __webpack_require__.n
+# __webpack_require__.d
+# __webpack_require__.o
+# __webpack_require__.p
