@@ -1,0 +1,12 @@
+created: 20220511180051543
+creator: TidGiUser
+modified: 20220511180101295
+modifier: TidGiUser
+tags: 
+title: 优先待办列表
+tmap.id: fb2d7937-a5d1-489e-91fe-657296697c77
+type: text/vnd.tiddlywiki
+
+<$macrocall $name=table-dynamic caption="优先待办列表" filter="[tag[任务]]+[field:priority[very high]]-[tag[done]]" fields="title tags" class="w-100"/>
+
+<$macrocall $name=table-dynamic caption="想做的事" filter="[tag[任务]]+[kin::to[意义]]-[tag[done]]" fields="title tags" class="w-100"/>
