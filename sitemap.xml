@@ -214,6 +214,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Parcel</loc>
+		<lastmod>2022-05-11</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Question</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
@@ -221,6 +227,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:React</loc>
 		<lastmod>2022-04-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Rollup</loc>
+		<lastmod>2022-05-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -439,7 +451,13 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:webpack</loc>
-		<lastmod>2022-05-09</lastmod>
+		<lastmod>2022-05-11</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:webpack源码</loc>
+		<lastmod>2022-05-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
