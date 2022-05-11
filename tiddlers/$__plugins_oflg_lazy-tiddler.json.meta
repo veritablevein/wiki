@@ -1,0 +1,10 @@
+author: oflg
+core-version: >=5.2.22
+dependents: $:/plugins/tiddlywiki/dynaview
+description: Lazy load tiddler
+list: readme
+name: Lazy Tiddler
+plugin-type: plugin
+title: $:/plugins/oflg/lazy-tiddler
+type: application/json
+version: 0.0.1
