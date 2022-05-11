@@ -1,11 +1,11 @@
 caption: 图谱
 created: 20220417095627643
 creator: TidGiUser
-modified: 20220419072302140
+modified: 20220511185419306
 modifier: TidGiUser
 tags: $:/tags/SideBar
 title: TheBrain
 tmap.id: adee828f-78ff-4c74-97dc-4fe866a9a3d5
 type: text/vnd.tiddlywiki
 
-<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TheBrain.js" aliasField="caption" levels=10/>
+<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TheBrain.js" aliasField="caption" levels=5/>
