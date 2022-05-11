@@ -1,8 +1,8 @@
 created: 20220507073355927
 creator: TidGiUser
-modified: 20220509153851450
+modified: 20220511063932657
 modifier: TidGiUser
-tags: 前端 打包
+tags: 前端 打包 工程化
 title: webpack
 tmap.id: 2d1845ec-0464-423d-b608-723579ccbbc2
 type: text/vnd.tiddlywiki
@@ -45,3 +45,28 @@ yarn webpack
 # AMD标准的define函数和require函数
 # *样式代码中的@import指令和url函数
 # *HTML代码中图片标签的src属性
+
+!! Plugin
+
+!! webpack-dev-server
+
+!! source map
+!!! devtool模式对比
+# none
+# eval
+# cheap
+# module
+
+!! HMR
+
+!! 生产环境优化
+
+!! Tree-Shaking
+
+代码分割
+多入口打包
+提取公共模块
+动态导入魔法注释
+MiniCExtractPlugin
+OptimizieCAetWebpackPlugin
+文件名Hash优化缓存

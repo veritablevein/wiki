@@ -1,0 +1,18 @@
+created: 20220511063658162
+creator: TidGiUser
+modified: 20220511063935582
+modifier: TidGiUser
+tags: 打包 前端 工程化
+title: Rollup
+tmap.id: c7d479e5-e262-4da9-9864-9fc1764fc002
+type: text/vnd.tiddlywiki
+
+! 概述
+! 快速上手
+! 配置文件
+! 使用插件
+! 加载NPM模块
+! 加载CommonJS模块
+! 代码拆分
+! 多入口打包
+! 选用原则
