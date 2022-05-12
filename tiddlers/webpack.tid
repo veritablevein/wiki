@@ -1,6 +1,6 @@
 created: 20220507073355927
 creator: TidGiUser
-modified: 20220511133452625
+modified: 20220512102518526
 modifier: TidGiUser
 tags: 前端 打包 工程化
 title: webpack
@@ -48,6 +48,8 @@ yarn webpack
 
 !! Plugin
 
+!! Hook 
+
 !! webpack-dev-server
 
 !! source map
@@ -58,6 +60,7 @@ yarn webpack
 # module
 
 !! HMR
+模块热替换对开发环境友好：自动编译刷新、HMR API自定义替换保留组件状态
 
 !! 生产环境优化
 
