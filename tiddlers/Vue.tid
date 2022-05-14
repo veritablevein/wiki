@@ -1,8 +1,17 @@
 created: 20220426091935795
 creator: TidGiUser
-modified: 20220513113605582
+modified: 20220513161158794
 modifier: TidGiUser
 tags: 前端 框架
 title: Vue
 tmap.id: 136c24f7-3fbf-45c8-bd57-9537611d42af
 type: text/vnd.tiddlywiki
+
+! 基础
+# 语法
+## 计算属性和侦听器
+## v-if、v-show、v-for
+## 双向绑定
+# 组件
+
+! 
