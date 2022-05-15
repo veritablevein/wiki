@@ -1,8 +1,12 @@
 created: 20220514121849819
 creator: TidGiUser
-modified: 20220514121900910
+modified: 20220515101554595
 modifier: TidGiUser
 tags: Vue-Router
 title: 实现Vue-Router
 tmap.id: 70599657-c6ce-4b45-a514-663ba850c8d9
 type: text/vnd.tiddlywiki
+
+从使用看结构，Vue.use(Vue-Router)看出是类，并有一个静态install方法启动，构造函数传入路由参数
+{{mermaid_VueRouter类}}
+

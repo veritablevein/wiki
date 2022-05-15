@@ -1,0 +1,11 @@
+classDiagram
+    class VueRuoter
+    VueRuoter: +options
+    VueRuoter: +data
+    VueRuoter: +routeMap
+    VueRuoter: +Constructor(options)VueRuoter
+    VueRuoter: install(Vue)$void
+    VueRuoter: +init()void
+    VueRuoter: +initEvent()void
+    VueRuoter: +createRouteMap()void
+    VueRuoter: +initComponents(Vue)void
