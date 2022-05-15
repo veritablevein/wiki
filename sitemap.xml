@@ -360,6 +360,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:mermaid_VueRouter类</loc>
+		<lastmod>2022-05-15</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:resolvePromise</loc>
 		<lastmod>2022-04-22</lastmod>
 		<changefreq>monthly</changefreq>
@@ -511,7 +517,7 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:实现Vue-Router</loc>
-		<lastmod>2022-05-14</lastmod>
+		<lastmod>2022-05-15</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
