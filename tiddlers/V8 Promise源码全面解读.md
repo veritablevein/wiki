@@ -13,7 +13,7 @@
 
 你知道 浏览器 & Node 中真正的 `Promise` 执行顺序是怎么样的吗，如果你只是看过 `Promise/A+` 规范的 `Promise` 实现，那么我肯定的告诉你，你对 `Promise` 执行顺序的认知是错误的。不信的话你就看看下面这两道题。
 
-```
+```JavaScript
 Promise.resolve().then(() => {
     console.log(0);
     return Promise.resolve(4)
@@ -44,7 +44,6 @@ new Promise((resolve, reject) => {
     });
 }).then(v => console.log(v));
 // 2 1
-复制代码
 ```
 
 按照 `Promise/A+` 规范来说，上面的代码打印的结果应该是 0 1 2 4 3 5 6，因为当 `then` 返回一个 `Promise` 的时候需要等待这个 `Promise` 完成后再同步状态和值给 `then` 的结果。
@@ -67,7 +66,6 @@ new Promise((resolve, reject) => {
 2.  对于后续贴出的 c++ 代码大家只需要着重看带有中文注释的地方即可
 3.  因为代码块不会自动换行，所以建议 PC 端阅读可以有更好的阅读体验
 4.  文章很长，可以收藏，有时间静下心来慢慢看也可以。
-5.  点赞👍🏻、点赞👍🏻、点赞👍🏻
 
 进入正题
 
@@ -76,7 +74,7 @@ PromiseState
 
 Promise 的 3 种状态，`pending`、 `fulfilled` 和 `rejected` ，[源码如下](https://link.juejin.cn?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fbase.tq%2523190 "https://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/base.tq%23190")：
 
-```
+```JavaScript
 // Promise constants
 extern enum PromiseState extends int31 constexpr 'Promise::PromiseState' {
   kPending,// 等待状态
@@ -92,7 +90,7 @@ extern enum PromiseState extends int31 constexpr 'Promise::PromiseState' {
 
 JSPromise 描述 `Promise` 的基本信息，[源码如下](https://link.juejin.cn?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fobjects%2Fjs-promise.tq%252313 "https://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/objects/js-promise.tq%2313")：
 
-```
+```JavaScript
 bitfield struct JSPromiseFlags extends uint31 {
   // Promise 的状态，kPending/kFulfilled/kRejected
   status: PromiseState: 2 bit; 
@@ -162,7 +160,7 @@ let p = new Promise((resolve, reject) => {
 
 构造函数[源码如下](https://link.juejin.cn?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-constructor.tq%252347 "https://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-constructor.tq%2347")：
 
-```
+```Javascript
 PromiseConstructor(
     js-implicit context: NativeContext, receiver: JSAny,
     newTarget: JSAny)(executor: JSAny): JSAny {
@@ -215,7 +213,7 @@ new Promise() // Uncaught TypeError: Promise resolver undefined is not a functio
 
 `executor` 的类型是函数，在 JavaScript 的世界里，回调函数通常是异步调用，但 `executor` 是同步调用。在 `Call(context, UnsafeCast(executor), Undefined, resolve, reject)` 这一行，同步调用了 `executor`。
 
-```
+```JavaScript
 console.log('同步执行开始')
 new Promise((resolve, reject) => {
   resolve()
@@ -227,7 +225,6 @@ console.log('同步执行结束')
 // 同步执行开始
 // executor 同步执行
 // 同步执行结束
-复制代码
 ```
 
 > Promise 构造函数接收的参数 `executor`，是被同步调用的
@@ -243,7 +240,7 @@ then
 
 JavaScript 层的 `then` 函数实际上是 `V8` 中的 `PromisePrototypeThen` 函数，[源码如下](https://link.juejin.cn?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-then.tq%252321 "https://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-then.tq%2321")：
 
-```
+```JavaScript
 PromisePrototypeThen(js-implicit context: NativeContext, receiver: JSAny)(
     onFulfilled: JSAny, onRejected: JSAny): JSAny {
   const promise = Cast<JSPromise>(receiver) otherwise ThrowTypeError(
@@ -273,12 +270,11 @@ PromisePrototypeThen(js-implicit context: NativeContext, receiver: JSAny)(
   // 返回一个新的 Promise
   return resultPromise;
 }
-复制代码
 ```
 
 `PromisePrototypeThen` 函数创建了一个新的 `Promise` 对象，获取 `then` 接收到的两个参数，调用 `PerformPromiseThenImpl` 完成大部分工作。这里有一点值得注意，`then` 方法返回的是一个新创建的 `Promise`。
 
-```
+```JavaScript
 const myPromise2 = new Promise((resolve, reject) => {
   resolve('foo')
 })
@@ -288,7 +284,6 @@ const myPromise3 = myPromise2.then(console.log)
 // myPromise2 和 myPromise3 是两个不同的对象
 // 有不同的状态和不同的处理函数
 console.log(myPromise2 === myPromise3) // 打印 false
-复制代码
 ```
 
 > then 方法返回的是一个新的 Promise
@@ -413,7 +408,7 @@ macro NewPromiseReaction(implicit context: Context)(
 
 > **下图不是 microtask 队列，下图不是 microtask 队列，下图不是 microtask 队列。**
 
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACbklEQVRoQ+2aMU4dMRCGZw6RC1CSSyQdLZJtKQ2REgoiRIpQkCYClCYpkgIESQFIpIlkW+IIcIC0gUNwiEFGz+hlmbG9b1nesvGW++zxfP7H4/H6IYzkwZFwQAUZmpJVkSeniFJKA8ASIi7MyfkrRPxjrT1JjZ8MLaXUDiJuzwngn2GJaNd7vyP5IoIYY94Q0fEQIKIPRGS8947zSQTRWh8CwLuBgZx479+2BTkHgBdDAgGAC+fcywoyIFWqInWN9BSONbTmFVp/AeA5o+rjKRJ2XwBYRsRXM4ZXgAg2LAPzOCDTJYQx5pSIVlrC3EI45y611osMTHuQUPUiYpiVooerg7TWRwDAlhSM0TuI+BsD0x4kGCuFSRVzSqkfiLiWmY17EALMbCAlMCmI6IwxZo+INgQYEYKBuW5da00PKikjhNNiiPGm01rrbwDwofGehQjjNcv1SZgddALhlJEgwgJFxDNr7acmjFLqCyJuTd6LEGFttpmkYC91Hrk3s1GZFERMmUT01Xv/sQljjPlMRMsxO6WULwnb2D8FEs4j680wScjO5f3vzrlNJszESWq2LYXJgTzjZm56MCHf3zVBxH1r7ftU1splxxKYHEgoUUpTo+grEf303rPH5hxENJqDKQEJtko2q9zGeeycWy3JhpKhWT8+NM/sufIhBwKI+Mta+7pkfxKMtd8Qtdbcx4dUQZcFCQ2I6DcAnLUpf6YMPxhIDDOuxC4C6djoQUE6+tKpewWZ1wlRkq0qUhXptKTlzv93aI3jWmE0Fz2TeujpX73F9TaKy9CeMk8vZusfBnqZ1g5GqyIdJq+XrqNR5AahKr9CCcxGSwAAAABJRU5ErkJggg==)
+![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0e7d609a276049d3a018946dec7d5c10~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
 
 > 图中使用 onFulfilled 代替 fulfill_handler 是为了方便理解，onRejected 也是如此，且只包含于当前内容相关的字段，不用太过于纠结。
 

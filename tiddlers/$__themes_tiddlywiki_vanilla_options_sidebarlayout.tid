@@ -1,8 +1,8 @@
 created: 20200605100438813
 creator: 林一二
-modified: 20220507090602009
+modified: 20220515042028845
 modifier: TidGiUser
 title: $:/themes/tiddlywiki/vanilla/options/sidebarlayout
 type: text/vnd.tiddlywiki
 
-fixed-fluid
+fluid-fixed
