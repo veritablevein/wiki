@@ -1,12 +1,41 @@
 created: 20220514121754501
 creator: TidGiUser
-modified: 20220514121847596
+modified: 20220515040408043
 modifier: TidGiUser
 tags: Vue
 title: Vue-Router
 tmap.id: 6a975e56-fb48-4573-bbef-df97b6aad442
 type: text/vnd.tiddlywiki
 
+!基本使用
+# 创建跟路由相关的视图组件
+# 注册路由插件：`Vue.use(VueRouter)`
+# 创建Router对象，配置路由规则
+# 选项里配置注册Router对象
+# 通过`<router-view/>`设置占位
+# 通过`<router-link></router-link>`创建链接，
+
+! 动态路由
+
+# 形式：`routes[x].path='/xxx/xxx/:id'`
+
+# 获取id方式：
+## 通过当前路由规则获取数据：`{{$route.params.id}}`，强依赖路由
+## 路由规则中开启Props传参：`{{id}}`，`routes[x].props=true`
+
+# 
+## routes.push()
+## routes.place()
+## routes.go()
+
+路由懒加载：`component:()=>import('../views/Detail.vue')`
+
 !! Hash模式
+基于锚点以及onhashchange事件
+
 !! History模式
+基于HTML5中的History API
+* history.pushState()
+* history.replaceState()
+
 ! 实现自己的Vue-Router

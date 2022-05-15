@@ -9,5 +9,13 @@ type: text/vnd.tiddlywiki
  "b456d09d-3e26-4d3f-aea6-cebce2754379": {
   "x": 13,
   "y": 33
+ },
+ "f648c5fd-5d37-43d1-89c5-7aa71eafedda": {
+  "x": 0,
+  "y": 0
+ },
+ "ed5d06a5-fe9f-43b7-b214-07828b10cb05": {
+  "x": 100,
+  "y": 100
  }
 }
