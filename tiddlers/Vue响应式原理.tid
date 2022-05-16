@@ -1,0 +1,16 @@
+created: 20220516073055738
+creator: TidGiUser
+modified: 20220516092306790
+modifier: TidGiUser
+tags: Vue 响应式
+title: Vue响应式原理
+type: text/vnd.tiddlywiki
+
+! 准备工作
+!! 数据驱动
+* 数据响应式
+** 数据模型仅仅是普通的JavaScript对象，而当我们修改数据时，视图会进行更新，避免了繁琐的DOM操作，提高开发效率
+* 双向绑定
+* 数据驱动是Vue最独特的特性之一
+!! 响应式的核心原理
+!! 发布订阅模式和观察者模式
