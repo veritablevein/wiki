@@ -1,0 +1,19 @@
+created: 20220516133858858
+creator: TidGiUser
+modified: 20220516134705675
+modifier: TidGiUser
+tags: eslint solution
+title: defineProps is not defined
+type: text/vnd.tiddlywiki
+
+! Example .eslintrc.js：
+
+defineProps 属于 Vue3 的规则校验，需要在 eslint-plugin-vue官方指南中寻找对应配置。
+
+```JavaScript
+module.exports = {
+  env: {
+    'vue/setup-compiler-macros': true
+  }
+}
+```
