@@ -134,7 +134,6 @@ extern class JSPromise extends JSObject {
   reactions_or_result: Zero|PromiseReaction|JSAny;
   flags: SmiTagged<JSPromiseFlags>;
 }
-复制代码
 ```
 
 当 `Promise` 状态改变时，比如调用了 `resolve/reject` 函数，`SetStatus` 方法会被调用；`Javascript` 层调用 `resolve` 方法时，`reactions_or_result` 字段会被赋值为 `resolve` 传入的参数；`Javascript` 层调用 `then` 方法时，说明已经有了处理函数，`SetHasHandler()` 会被调用。`Status/SetStatus` 这两个方法一个获取 `Promise` 状态，一个设置 `Promise` 状态；
@@ -144,7 +143,7 @@ extern class JSPromise extends JSObject {
 *   executor：是一个函数，`Promise` 构造函数接收的参数，调用 `executor` 时传入的参数分别是 `resolve` 和 `reject`。
 *   PromiseReaction：是对象，表示 `Promise` 的处理函数，因为一个 `Promise` 多次调用 `then` 方法就会有多个处理函数，所以底层数据结构是个链表，每一个节点都存储着 `onFulfilled` 和 `onRejected` 函数。
 
-```
+```JavaScript
 let p = new Promise((resolve, reject) => {
   resolve(123)
   // 会将 reactions_or_result 设置为 123
@@ -190,23 +189,20 @@ PromiseConstructor(
   }
   return result;
 }
-复制代码
 ```
 
 首先分析两个 `ThrowTypeError`，以下代码可触发第一个 `ThrowTypeError`。
 
-```
+```Javascript
 Promise()  // Uncaught TypeError: undefined is not a promise
-复制代码
 ```
 
 原因是没有使用 `new` 操作符调用 `Promise` 构造函数，此时 `newTarget` 等于 `Undefined`，触发了 `ThrowTypeError(MessageTemplate::kNotAPromise, newTarget)`。
 
 以下代码可触发第二个 `ThrowTypeError`。
 
-```
+```Javascript
 new Promise() // Uncaught TypeError: Promise resolver undefined is not a function
-复制代码
 ```
 
 此时 `newTarget` 不等于 `Undefined`，不会触发第一个 `ThrowTypeError`。但调用 `Promise` 构造函数时没传参数 `executor`，触发了第二个 `ThrowTypeError`。
@@ -296,7 +292,7 @@ console.log(myPromise2 === myPromise3) // 打印 false
 
 PerformPromiseThenImpl [源码如下](https://link.juejin.cn?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-abstract-operations.tq%2523409 "https://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-abstract-operations.tq%23409")：
 
-```
+```Javascript
 transitioning macro PerformPromiseThenImpl(implicit context: Context)(
     promise: JSPromise, 
   	onFulfilled: Callable|Undefined,
@@ -354,7 +350,6 @@ transitioning macro PerformPromiseThenImpl(implicit context: Context)(
   }
   promise.SetHasHandler();
 }
-复制代码
 ```
 
 ### PerformPromiseThenImpl 函数的 pending 分支
@@ -363,7 +358,7 @@ PerformPromiseThenImpl 有三个分支，分别对应 Promise 的三个状态，
 
 考虑一个 Promise 可以会连续调用多个 then 的情况，比如：
 
-```
+```Javascript
 const p = new Promise((resolve, reject) => {
   setTimeout(_ => {
     resolve('my code delay 2000 ms') 
@@ -377,14 +372,13 @@ p.then(result => {
 p.then(result => {
   console.log('第 2 个 then')
 })
-复制代码
 ```
 
 p 调用了两次 then 方法，每个 then 方法都会生成一个 `PromiseReaction` 对象。第一次调用 then 方法时生成对象 PromiseReaction1，此时 p 的 `reactions_or_result` 存的是 PromiseReaction1。
 
 第二次调用 then 方法时生成对象 PromiseReaction2，调用 `NewPromiseReaction` 函数时，`PromiseReaction2.next = PromiseReaction1`，PromiseReaction1 变成了 PromiseReaction2 的下一个节点，最后 p 的 `reactions_or_result` 存的是 PromiseReaction2。PromiseReaction2 后进入 Promise 处理函数的链表，却是链表的头结点。`NewPromiseReaction` 函数[源码如下](https://link.juejin.cn?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-misc.tq%2523134 "https://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-misc.tq%23134")：
 
-```
+```Javascript
 macro NewPromiseReaction(implicit context: Context)(
     handlerContext: Context, next: Zero|PromiseReaction,
     promiseOrCapability: JSPromise|PromiseCapability|Undefined,
@@ -401,7 +395,6 @@ macro NewPromiseReaction(implicit context: Context)(
         [NativeContextSlot::CONTINUATION_PRESERVED_EMBEDDER_DATA_INDEX]
   };
 }
-复制代码
 ```
 
 在 p 处于 pending 状态时，p 的 reactions_or_result 字段大致内容如下图。
@@ -418,7 +411,7 @@ fulfilled 分支逻辑则简单的多，处理的是当 Promise 处于 fulfilled
 
 先调用 `NewPromiseFulfillReactionJobTask` 生成 `microtask`，然后 `EnqueueMicrotask(handlerContext, microtask)` 将刚才生成的 `microtask` 放入 `microtask 队列`，最后调用 `promise.SetHasHandler()` 将 `has_handler` 设置为 `true`。
 
-```
+```Javascript
 new Promise((resolve, reject) => {
   resolve()
 }).then(result => {
@@ -429,7 +422,6 @@ console.log('同步执行结束')
 // 本段代码的打印顺序是:
 // 同步执行结束
 // 进入 microtask 队列后执行
-复制代码
 ```
 
 尽管调用 then 方法时，Promise 已经处于 fulfilled 状态，但 then 方法的 onFulfilled 回调函数不会立即执行，而是进入 microtask 队列等待执行。
@@ -438,11 +430,10 @@ console.log('同步执行结束')
 
 rejected 分支逻辑与 fulfilled 分支的逻辑大致相同，但是 rejected 分支中将 onRejected 处理函数加入 microtask 队列之前，会先判断当前 promise 是否已经存在处理函数，如果已经存在则会先调用 `runtime::PromiseRevokeReject(promise)`，最后调用 `promise.SetHasHandler()` 将 `has_handler` 设置为 `true`。
 
-```
+```Javascript
 if (!promise.HasHandler()) {
        runtime::PromiseRevokeReject(promise);
    }
-复制代码
 ```
 
 这里的`runtime::PromiseRevokeReject(promise)` 就是 [ECMAScript 规范](https://link.juejin.cn?target=https%3A%2F%2F262.ecma-international.org%2F11.0%2F%23sec-performpromisethen "https://262.ecma-international.org/11.0/#sec-performpromisethen") 中的 `HostPromiseRejectionTracker(promise, "handle")`，`HostPromiseRejectionTracker` 是一个抽象方法，这表示没有规定它的具体的逻辑。大致的作用是标记一下 `promise` 已经绑定了 `rejected` 状态的处理函数。不用疑惑为什么要这么做，后面会单独重点说。
@@ -480,7 +471,7 @@ if (!promise.HasHandler()) {
 reslove
 -------
 
-```
+```Javascript
 new Promise((resolve, reject) => {
   setTimeout(_ => resolve('fulfilled'), 5000)
 }).then(value => {
@@ -488,7 +479,6 @@ new Promise((resolve, reject) => {
 }, reason => {
   console.log('rejected')
 })
-复制代码
 ```
 
 上述代码 5s 后执行 resolve 函数，控制台打印 fulfilled。
@@ -501,7 +491,7 @@ new Promise((resolve, reject) => {
 
 resolve 函数归根到底调用了 V8 的 FulfillPromise 函数，[源码如下](https://link.juejin.cn?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-abstract-operations.tq%2523182 "https://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-abstract-operations.tq%23182")：
 
-```
+```Javascript
 // https://tc39.es/ecma262/#sec-fulfillpromise
 transitioning builtin
 FulfillPromise(implicit context: Context)(
@@ -526,7 +516,6 @@ FulfillPromise(implicit context: Context)(
   TriggerPromiseReactions(reactions, value, kPromiseReactionFulfill);
   return Undefined;
 }
-复制代码
 ```
 
 `FulfillPromise` 的逻辑是获取 Promise 的处理函数到 `reactions`，`reactions` 的类型是 `PromiseReaction`，是个链表，忘记的同学可以回看上面的那张链表图片；设置 `promise` 的 `reactions_or_result` 为 `value`，这个 `value` 就是 JavaScript 层传给 `resolve` 的参数；调用 `promise.SetStatus(PromiseState::kFulfilled)` 设置 `promise` 的状态为 `fulfilled`，最后调用 `TriggerPromiseReactions` 来将 `reactions` 中的处理函数添加到 microtask 队列。
@@ -535,7 +524,7 @@ FulfillPromise(implicit context: Context)(
 
 [源码如下](https://link.juejin.cn?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-abstract-operations.tq%2523140 "https://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-abstract-operations.tq%23140")：
 
-```
+```Javascript
 // https://tc39.es/ecma262/#sec-triggerpromisereactions
 transitioning macro TriggerPromiseReactions(implicit context: Context)(
     reactions: Zero|PromiseReaction, argument: JSAny,
@@ -572,7 +561,6 @@ transitioning macro TriggerPromiseReactions(implicit context: Context)(
     }
   }
 }
-复制代码
 ```
 
 `TriggerPromiseReactions` 做了两件事：
@@ -588,7 +576,7 @@ MorphAndEnqueuePromiseReaction 接收 3 个参数，PromiseReaction 是前面提
 
 MorphAndEnqueuePromiseReaction 的逻辑很简单，因为此时已经知道了 Promise 的最终状态，所以可以从 promiseReaction 对象得到 promiseReactionJobTask 对象，promiseReactionJobTask 的变量命名与 ECMAScript 规范相关描述一脉相承，其实就是传说中的 microtask。MorphAndEnqueuePromiseReaction 源码如下，仅保留了和本小节相关的内容。
 
-```
+```JavaScript
 transitioning macro MorphAndEnqueuePromiseReaction(implicit context: Context)(
     promiseReaction: PromiseReaction, argument: JSAny,
     reactionType: constexpr PromiseReactionType): void {
@@ -629,12 +617,11 @@ transitioning macro MorphAndEnqueuePromiseReaction(implicit context: Context)(
     EnqueueMicrotask(handlerContext, promiseReactionJobTask);
   }
 }
-复制代码
 ```
 
 MorphAndEnqueuePromiseReaction 的功能很简单，就是根据 Promise 的状态选取 onFulfilled 还是 onRejected 放到 microtask 队列准备执行。这里走的是 fulfilled 分支，所以选取的是 onFulfilled。
 
-```
+```JavaScript
 const myPromise4 = new Promise((resolve, reject) => {
   setTimeout(_ => {
     resolve('my code delay 1000') 
@@ -654,7 +641,6 @@ myPromise4.then(result => {
 // 如果把 TriggerPromiseReactions 中链表反转的代码注释掉，打印顺序为
 // 第 2 个 then
 // 第 1 个 then
-复制代码
 ```
 
 ### 小结
@@ -691,7 +677,7 @@ new Promise((resolve, reject) => {
 
 `reject(season)` 函数调用了 V8 的 `RejectPromise(promise, season)` 函数，[源码如下](https://link.juejin.cn?target=http%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-abstract-operations.tq%2523210 "http://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-abstract-operations.tq%23210") ：
 
-```
+```JavaScript
 // https://tc39.es/ecma262/#sec-rejectpromise
 transitioning builtin
 RejectPromise(implicit context: Context)(
@@ -715,7 +701,6 @@ RejectPromise(implicit context: Context)(
   TriggerPromiseReactions(reactions, reason, kPromiseReactionReject);
   return Undefined;
 }
-复制代码
 ```
 
 ### HostPromiseRejectionTracker
@@ -740,17 +725,16 @@ HostPromiseRejectionTracker 用于跟踪 Promise 的 rejected，例如全局的 
 
 当我们调用一个 Promise 的状态为 reject 且未为其绑定 onRejected 的处理函数时， JavaScript 会抛出错误
 
-```
+```JavaScript
 const myPromise1 = new Promise((resolve, reject) => {
     reject()
 })
 // 报错
-复制代码
 ```
 
 并且检测是否绑定处理函数是一个异步的过程
 
-```
+```JavaScript
 console.log(1);
 const myPromise1 = new Promise((resolve, reject) => {
     reject()
@@ -759,17 +743,15 @@ console.log(2);
 // 1
 // 2
 // 报错
-复制代码
 ```
 
 我们可以为其绑定一个 onRejected 处理函数来解决我们报错
 
-```
+```JavaScript
 const myPromise1 = new Promise((resolve, reject) => {
     reject()
 })// 得到一个 rejected 状态的 Promise
 myPromise1.then(undefined, console.log)
-复制代码
 ```
 
 你一定会疑惑，Promise 是在何时检测它是否绑定了 onRejected 处理函数，如何检测的？
@@ -778,7 +760,7 @@ myPromise1.then(undefined, console.log)
 
 回到上面的逻辑，当一个 Promise 的 reject 函数被调用时， 如果没有 onRejected 处理函数，则会调用 `runtime::RejectPromise` 来为其添加一个处理函数，然后后面会调用 `TriggerPromiseReactions` 将这个处理函数加入到 microtask 队列，这个处理函数执行时做的事情就是再次检测 Promise 是否被绑定了新的 onRejected（也就是有没有在此期间执行了 `HostPromiseRejectionTracker(promise, 'handle')` ），如果没有则抛出错误，如果有则什么也不发生。
 
-```
+```JavaScript
 // 不可运行的js伪代码
 function HostPromiseRejectionTracker(promise, status) {
   if (status === 'handle') {
@@ -814,7 +796,7 @@ FulfillPromise(){
 
 所以你必须要赶在这个检测的 microtask 执行之前绑定处理函数才能防止这个错误的抛出。
 
-```
+```JavaScript
 const myPromise1 = new Promise((resolve, reject) => {
     // 同步执行
     reject()
@@ -827,7 +809,6 @@ setTimeout(() => {
   	// 此时 microtask 已经执行，错误已经抛出，来不及了
     myPromise1.then(undefined, console.log)
 }, 0)
-复制代码
 ```
 
 > **注意：**  浏览器控制台有一个非常奇怪的特性，如果在这个错误输出后在为其绑定 onrejected 处理函数，浏览器会将控制台的错误覆盖掉。所以如果你在浏览器执行这段代码，**请将 setTimeout 的时间设置长一点**，这样效果更加容易肉眼可见，或者切换到 node 环境中来运行。
@@ -844,20 +825,19 @@ reject 和 resolve 的逻辑基本相同，分为 4 步：
 catch
 -----
 
-```
+```JavaScript
 new Promise((resolve, reject) => {
     setTimeout(reject, 2000)
 }).catch(_ => {
     console.log('rejected')
 })
-复制代码
 ```
 
 ### PromisePrototypeCatch
 
 以上面代码为例，当 catch 方法执行时，调用了 V8 的 [PromisePrototypeCatch](https://link.juejin.cn?target=http%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-constructor.tq%2523100 "http://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-constructor.tq%23100") 方法，源码如下：
 
-```
+```JavaScript
 transitioning javascript builtin
 PromisePrototypeCatch(
     js-implicit context: Context, receiver: JSAny)(onRejected: JSAny): JSAny {
@@ -865,7 +845,6 @@ PromisePrototypeCatch(
   return UnsafeCast<JSAny>(
       InvokeThen(nativeContext, receiver, Undefined, onRejected));
 }
-复制代码
 ```
 
 PromisePrototypeCatch 的源码确实只有就这几行，除了调用 InvokeThen 方法再无其它 。
@@ -874,7 +853,7 @@ PromisePrototypeCatch 的源码确实只有就这几行，除了调用 InvokeThe
 
 从名字可以推测出，InvokeThen 调用的是 Promise 的 then 方法，[InvokeThen](https://link.juejin.cn?target=http%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-misc.tq%2523199 "http://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-misc.tq%23199") 源码如下：
 
-```
+```JavaScript
 transitioning
 macro InvokeThen<F: type>(implicit context: Context)(
     nativeContext: NativeContext, receiver: JSAny, arg1: JSAny, arg2: JSAny,
@@ -893,14 +872,13 @@ macro InvokeThen<F: type>(implicit context: Context)(
       return callFunctor.Call(nativeContext, then, receiver, arg1, arg2);
     }
 }
-复制代码
 ```
 
 InvokeThen 方法有 if/else 两个分支，两个分支的逻辑差不多，本小节的 JS 示例代码走的是 if 分支。先是拿到 V8 原生的 then 方法，然后通过 `callFunctor.Call(nativeContext, then, receiver, arg1, arg2)` 调用 then 方法。then 方法之前有介绍，这里不再赘述。
 
 既然 catch 方法底层调用了 then 方法，那么 catch 方法也有和 then 方法一样的返回值，catch 方法可以继续抛出异常，可以继续链式调用。
 
-```
+```JavaScript
 new Promise((resolve, reject) => {
     setTimeout(reject, 2000)
 }).catch(_ => {
@@ -908,7 +886,6 @@ new Promise((resolve, reject) => {
 }).catch(_ => {
     console.log('last catch')
 })
-复制代码
 ```
 
 上面的代码第 2 个 catch 捕获第 1 个 catch 抛出的异常，最后打印 last catch。
@@ -920,7 +897,7 @@ catch 方法通过底层调用 then 方法来实现 假如 obj 是一个 Promise
 then 的链式调用与 microtask 队列（重要）
 ----------------------------
 
-```
+```JavaScript
 Promise.resolve('123')
     .then(() => {throw new Error('456')})
     .then(_ => {
@@ -928,12 +905,11 @@ Promise.resolve('123')
     })
     .catch((e) => console.log(e))
     .then((data) => console.log(data));
-复制代码
 ```
 
 以上代码运行后，打印 Error: 456 和 undefined。为了便于叙述，将 then 的链式调用写法改为啰嗦写法。
 
-```
+```JavaScript
 const p0 = Promise.resolve('123')
 const p1 = p0.then(() => {throw new Error('456')})
 const p2 = p1.then(_ => {
@@ -941,7 +917,6 @@ const p2 = p1.then(_ => {
 })
 const p3 = p2.catch((e) => console.log(e))
 const p4 = p3.then((data) => console.log(data));
-复制代码
 ```
 
 then 方法返回新的 Promise，所以 p0、p1、p2、p3 和 p4 这 5 个 Promise 互不相等。
@@ -958,7 +933,7 @@ then 方法返回新的 Promise，所以 p0、p1、p2、p3 和 p4 这 5 个 Prom
 
 在执行 microtask 的过程中，MicrotaskQueueBuiltinsAssembler::RunSingleMicrotask 会调用 [PromiseReactionJob](https://link.juejin.cn?target=http%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%252B%2Frefs%2Fheads%2F8.4-lkgr%2Fsrc%2Fbuiltins%2Fpromise-reaction-job.tq%252343 "http://link.zhihu.com/?target=https%3A//chromium.googlesource.com/v8/v8.git/%2B/refs/heads/8.4-lkgr/src/builtins/promise-reaction-job.tq%2343")，源码如下：
 
-```
+```JavaScript
 transitioning
 macro PromiseReactionJob(
     context: Context, argument: JSAny, handler: Callable|Undefined,
@@ -990,14 +965,13 @@ macro PromiseReactionJob(
     }
   }
 }
-复制代码
 ```
 
 PromiseReactionJob 中会判断当前任务是否存在需要执行的处理函数，如果不存在则直接将上一个 Promise 的值作为参数调用 FuflfillPromiseReactionJob ，如果存在则执行这个处理函数，将执行结果当做参数调用 FuflfillPromiseReactionJob。
 
 也就是说，只要一个 Promise 的 onFulfilled 或者 onRejected 在执行过程中只要没有抛出异常，这个 Promise 就会执行 FuflfillPromiseReactionJob 将状态修改为 fulfilled。如果抛出异常则执行 RejectPromiseReactionJob。
 
-```
+```JavaScript
 let p0 = new Promise((resolve, reject) => {
     reject(123)
 })
@@ -1021,7 +995,6 @@ p1.then(_ => {
 
 // 成功执行 handler, 所以调用 FuflfillPromiseReactionJob 
 // 执行 p1 的 resolve
-复制代码
 ```
 
 > 注意：FuflfillPromiseReactionJob 做的事情很多，执行 resolve 只是其中的一个分支
@@ -1032,7 +1005,7 @@ p1.then(_ => {
 
 源码如下：
 
-```
+```JavaScript
 transitioning
 macro FuflfillPromiseReactionJob(
     context: Context,
@@ -1057,7 +1030,6 @@ macro FuflfillPromiseReactionJob(
     }
   }
 }
-复制代码
 ```
 
 FuflfillPromiseReactionJob 有 3 个分支，这里走的是第一个分支，调用 [ResolvePromise](https://link.juejin.cn?target=https%3A%2F%2Fchromium.googlesource.com%2Fv8%2Fv8.git%2F%2B%2Frefs%2Fheads%2F9.0-lkgr%2Fsrc%2Fbuiltins%2Fpromise-resolve.tq%2388 "https://chromium.googlesource.com/v8/v8.git/+/refs/heads/9.0-lkgr/src/builtins/promise-resolve.tq#88")，这个方法很重要，他是规范中的 [Promise Resolve Functions](https://link.juejin.cn?target=https%3A%2F%2F262.ecma-international.org%2F11.0%2F%23sec-promise-resolve-functions "https://262.ecma-international.org/11.0/#sec-promise-resolve-functions")，他的作用是同步当前处理函数的结果（值和状态）给其产生的 promsie。promiseOrCapability。
@@ -1068,7 +1040,7 @@ FuflfillPromiseReactionJob 有 3 个分支，这里走的是第一个分支，�
 
 这是一个很重要的方法，基本上每一个 Promise 的状态需要变成 fulfilled 都会调用它，它的逻辑也产生了许多 PromiseA+ 中没有的特性。 下面的代码我删除了不重要的部分
 
-```
+```JavaScript
 // https://tc39.es/ecma262/#sec-promise-resolve-functions
 transitioning builtin
 ResolvePromise(implicit context: Context)(
@@ -1115,12 +1087,11 @@ ResolvePromise(implicit context: Context)(
     return EnqueueMicrotask(task.context, task);
   }
 }
-复制代码
 ```
 
 ResolvePromise 方法中有几个很重要的逻辑，一个是调用 FulfillPromise，这个在 resolve 的时候已经介绍过了，作用是修改 promise 的状态为 fulfilled 并为其设置值，然后将 promise 的处理函数推到微任务队列。
 
-```
+```JavaScript
 let p0 = Promise.resolve()
 let p1 = p0.then(() => {
   return 1;
@@ -1134,12 +1105,11 @@ p1.then(console.log)
 // ResolvePromise 做如下操作
 // 将 p1 变成 fulfilled, 并将 p1 的处理函数 console.log 加到队列，参数为 1
 // p1 的 onFulfilled 出队列执行，输出 1
-复制代码
 ```
 
 还有一种情况就是 **当 resolution 的值是一个 Promise 对象或者是一个包含 then 方法的对象时。会调用 NewPromiseResolveThenableJobTask 生成一个 microtask，然后将其加入 microtask 队列中。**
 
-```
+```JavaScript
 let p0 = Promise.resolve()
 // 两种特殊情况
 let p1 = p0.then(() => {
@@ -1150,20 +1120,18 @@ let p2 = p0.then(() => {
 })
 
 p1.then(console.log)
-复制代码
 ```
 
 ### NewPromiseResolveThenableJobTask（重要）
 
 NewPromiseResolveThenableJobTask 的目的是调用 resolution 的 then 方法，在回调函数中同步状态给 promise。 这可能不是很好理解，我把他转化为 js 来大致就是这样的。
 
-```
+```JavaScript
 microtask(() => {
   resolution.then((value) => {
     ReslovePromise(promise, value) 
   })
 })
-复制代码
 ```
 
 这个任务中会调用 resolution.then ，然后同步到 promsie。但是这个整体的过程需要加入 microtask 队列中等待运行，当这个任务运行时，如果 resolution 也是一个 Promise 的话，则 `(value) => {ReslovePromise(promise, value) }` 又会被作为一个 microtask 加入 microtask 队列中等待运行。
@@ -1180,7 +1148,7 @@ microtask(() => {
 
 『以确保在对任何周围代码的评估完成后对 then 方法进行评估』指的是什么呢？我唯一能想到的就是下面这种情况。
 
-```
+```JavaScript
 const p1 = new Promise((resolve, reject) => {
     const p2 = Promise.resolve().then(() => {
         resolve({
@@ -1190,7 +1158,6 @@ const p1 = new Promise((resolve, reject) => {
     });
 }).then(v => console.log(v));
 // 2 1
-复制代码
 ```
 
 上面 p2 的 onFulfilled 回调 会先进入 microtask 队列，等待其执行时 调用 p1 的 resolve，但是参数是一个包含 then 方法的对象。这时 p1 不会立即改变为 fulfilled，而是创建一个 microtask 来执行这个 then 方法，然后将 p2 的 onFulfilled 加入 microtask 队列。这时 microtask 队列中有两个 microtask，一个是执行 resolve 返回值中的 then 函数，另一个则是 p3 的 onFulfilled 函数。
@@ -1207,17 +1174,16 @@ const p1 = new Promise((resolve, reject) => {
 
 PromiseReactionJob 中如果处理函数 handler 执行时抛出异常则会执行 RejectPromiseReactionJob，也就是下面这种情况
 
-```
+```JavaScript
 let p0 = Promise.resolve()
 let p1 = p0.then(() => {
     throw 'error'; // handler 执行时出错
 })
-复制代码
 ```
 
 这是会调用 RejectPromiseReactionJob，其源码如下
 
-```
+```JavaScript
 macro RejectPromiseReactionJob(
     context: Context,
     promiseOrCapability: JSPromise|PromiseCapability|Undefined, reason: JSAny,
@@ -1242,7 +1208,6 @@ macro RejectPromiseReactionJob(
     return PromiseRejectReactionJob(reason, Undefined, promiseOrCapability);
   }
 }
-复制代码
 ```
 
 RejectPromiseReactionJob 与 FuflfillPromiseReactionJob 是类似的，就是调用 RejectPromise 来调用 Promsie 的 reject 方法，这个在上面 reject 的地方介绍过了。
@@ -1251,7 +1216,7 @@ RejectPromiseReactionJob 与 FuflfillPromiseReactionJob 是类似的，就是调
 
 PromiseReactionJob 中还有一个 handler == Undefined 的分支也很重要，当一个 task 中的 handler 为 undefined 时会进入这个分支，为了方便阅读，这里再贴一下代码
 
-```
+```JavaScript
 transitioning
 macro PromiseReactionJob(
     context: Context, argument: JSAny, handler: Callable|Undefined,
@@ -1272,12 +1237,11 @@ macro PromiseReactionJob(
     // 删除
   }
 }
-复制代码
 ```
 
 进入分支后会直接获取上一个 Promise 对象的 value 和 状态 同步到当前 promise 来，我们来通过一段 js 了解他
 
-```
+```JavaScript
 let p0 = new Promise((resolve, reject) => {
     reject(123)
 })
@@ -1315,7 +1279,6 @@ PromiseReaction{
 
 //p2 onRejected
 //p3 onFulfilled
-复制代码
 ```
 
 同步代码执行完毕后（执行过程大致如注释）, 开启取 microtask 执行，此时 microtask 队列中只有一个 handler 为 undefined 的任务。进入 PromiseReactionJob 的 handler == Undefined 分支。
@@ -1346,7 +1309,7 @@ PromiseReaction{
 
 如果上面你看懂了，那么下面这段代码我想你也应该能知道结果
 
-```
+```JavaScript
 Promise.resolve('123')
     .then(() => {throw new Error('456')})
     .then(_ => {
@@ -1354,7 +1317,6 @@ Promise.resolve('123')
     })
     .catch((e) => console.log(e))
     .then((data) => console.log(data));
-复制代码
 ```
 
 > catch(onRejected) 的本质是 then(undefined, onRejected)
@@ -1366,7 +1328,7 @@ Promise 的几个高难度题目
 
 ### 题目 1
 
-```
+```JavaScript
 Promise.resolve().then(() => {
     console.log(0);
     return Promise.resolve(4);
@@ -1386,7 +1348,6 @@ Promise.resolve().then(() => {
     console.log(6);
 })
 // 0 1 2 3 4 5 6
-复制代码
 ```
 
 > 主要考察 当 Promise 的值是 promsie 对象时会如何处理，在本文 的 **then 的链式调用与 microtask 队列** > **ResolvePromise** 目录末尾处开始介绍
@@ -1397,7 +1358,7 @@ Promise.resolve().then(() => {
 
 为了方便描述，我们将上面的代码转化为下面这样
 
-```
+```JavaScript
 let p1 = Promise.resolve()
 let p2 = p1.then(() => {
     console.log(0);
@@ -1424,12 +1385,11 @@ let p9 = p8.then(() => {
 let p10 = p9.then(() => {
     console.log(6);
 })
-复制代码
 ```
 
 先执行所有的同步代码，执行过程如下面的注释
 
-```
+```JavaScript
 let p1 = Promise.resolve()
 // 1. p1 的状态为 fulfilled
 
@@ -1479,75 +1439,67 @@ let p10 = p9.then(() => {
     console.log(6);
 })
 // 9. 同上，是给 p9 添加 reactions
-复制代码
 ```
 
 10.  当同步代码执行完成后，microtask 队列只有
 
-```
+```JavaScript
 [p1.onFulfilled, p5.onFulfilled]
-复制代码
 ```
 
 11.  然后取出 p1.onFulfilled 来执行，此时输出 `0`，但是发现 p1.onFulfilled 返回值的 p3 是一个 Promise 对象。所以会执行 ResolvePromise 的 Enqueue 代码块，里面会调用 NewPromiseResolveThenableJobTask 产生一个微任务，这个微任务的要做的事情上面已经介绍过，大致就是下面这样
 
-```
+```JavaScript
 let promiseResolveThenableJobTask = () => {
     p3.then((value) => { // p3的value是4
         ReslovePromise(p2, value) 
     })
 }
-复制代码
 ```
 
 然后将其加入 microtask 队列， 这时 microtask 队列就变成了 :
 
-```
+```JavaScript
 [p5.onFulfilled, promiseResolveThenableJobTask]
-复制代码
 ```
 
 12.  继续取出 p5.onFulfilled 执行，此时输出 `1`，因为 p5.onFulfilled 返回值是 undefined，所以就将 undefined 作为 p6 的值，然后将 p6 的状态变为 fulfilled。
 
 因为 p6 的状态被改变，所以它的 reactions 也会加入 microtask 队列，这时 microtask 队列就变成这样：
 
-```
+```JavaScript
 [promiseResolveThenableJobTask，p6.onFulfilled]
-复制代码
 ```
 
 13.  同样是取 promiseResolveThenableJobTask 执行，因为 promiseResolveThenableJobTask 的内容是下面这样
 
-```
+```JavaScript
 let promiseResolveThenableJobTask = () => {
     p3.then((value) => { 
         ReslovePromise(p2, value) // ReslovePromise 的作用上面有介绍
     })
 }
-复制代码
 ```
 
 所以执行 promiseResolveThenableJobTask 时就相当于执行了 `p3.then((value) => {ReslovePromise(p2, value)})`
 
 因为 p3 的状态是 fulfilled ，所以会将其 onFulfilled 加入 microtask 队列（value 参数就是 p3 的值 4，后序他将传递给 p2），这时 microtask 队列就变成这样：
 
-```
+```JavaScript
 [p6.onFulfilled，p3.onFulfilled]
-复制代码
 ```
 
 14.  同样是取 p6.onFulfilled 执行，然后输出 `2` 并将其返回值 undefined 设置为 p7 的值，并将 p7 变为 fulfilled 状态，所以 p7 的 reactions 也会加入 microtask 队列，这时 microtask 队列就变成这样：
 
-```
+```JavaScript
 [p3.onFulfilled，p7.onFulfilled]
-复制代码
 ```
 
 15.  p3.onFulfilled 出队执行，p3.onFulfilled 是 `(value) => {ReslovePromise(p2, value)}`, 参数 value 是 4，所以此时就执行 `ReslovePromise(p2, 4)`, 这就相当于调用了 p2 的 resolve。
 
 所以此时 p2 的 值变为 4， 状态为变 fulfilled，然后将其 reactions 挨个加入 microtask 队列，这时 microtask 队列就变成这样：
 
-```
+```JavaScript
 [p7.onFulfilled，p2.onFulfilled]
 复制代码
 ```
