@@ -297,7 +297,7 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:V8%2520Promise源码全面解读</loc>
-		<lastmod>2022-05-15</lastmod>
+		<lastmod>2022-05-17</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -355,6 +355,18 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:change%2520log</loc>
+		<lastmod>2022-05-17</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:commit%2520message</loc>
+		<lastmod>2022-05-17</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:defineProps%2520is%2520not%2520defined</loc>
 		<lastmod>2022-05-16</lastmod>
 		<changefreq>monthly</changefreq>
@@ -363,6 +375,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:favicon.ico</loc>
 		<lastmod>2020-06-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:git%2520commit</loc>
+		<lastmod>2022-05-17</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
