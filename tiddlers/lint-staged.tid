@@ -1,0 +1,22 @@
+created: 20220517042039669
+creator: TidGiUser
+modified: 20220517043404492
+modifier: TidGiUser
+tags: hook [[git commit]] npm模块
+title: lint-staged
+type: text/vnd.tiddlywiki
+
+npx mrm@2	lint-staged
+
+`#Package.json`
+
+```JSON
+{
+	"lint-staged": {
+		"*.{js,jsx,vue,ts,tsx}": [
+			"npm run lint",
+			"git add"
+		]
+	}
+}
+```
