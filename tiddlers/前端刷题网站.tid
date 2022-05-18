@@ -1,6 +1,6 @@
 created: 20220518154501349
 creator: TidGiUser
-modified: 20220518155524698
+modified: 20220518161107900
 modifier: TidGiUser
 tags: 🌎️参考 前端 面试
 title: 前端刷题网站
@@ -9,5 +9,7 @@ type: text/vnd.tiddlywiki
 * [[面试鸭|https://www.mianshiya.com/]]：题目回答活跃度不错
 * [[剑指前端Offer|https://febook.hzfe.org/awesome-interview/]]：题目和解析质量比较高，题算少而精
 * [[You-need-to-know-css|https://lhammer.cn/You-need-to-know-css/#/zh-cn/]]:Web开发者应该掌握的CSS tricks
+* [[前端工作面试问题|https://h5bp.org/Front-end-Developer-Interview-Questions/translations/chinese/#html-questions]]：查缺补漏，问题中很多都是开放性的，可以引发有趣的讨论。这比直接的答案更能体现此人的能力。
+* [[大厂面试每日一题|https://q.shanyue.tech/]]： 
 
 [img[https://user-images.githubusercontent.com/17002181/135719463-b9602209-2192-4fe5-af17-ca04f9986150.png]]
