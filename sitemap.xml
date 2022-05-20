@@ -65,6 +65,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Draft%2520of%2520&apos;Index&apos;%2520by%2520TidGiUser</loc>
+		<lastmod>2022-05-20</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:ES6</loc>
 		<lastmod>2022-04-22</lastmod>
 		<changefreq>monthly</changefreq>
@@ -89,7 +95,7 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:Fishing%25201</loc>
-		<lastmod>2022-05-09</lastmod>
+		<lastmod>2022-05-20</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
