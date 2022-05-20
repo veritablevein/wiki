@@ -1,0 +1,24 @@
+caption: StartUp
+code-body: yes
+created: 20220520124445613
+creator: TidGiUser
+modified: 20220520124650531
+modifier: TidGiUser
+tags: $:/tags/StartupAction
+title: Control sidebar
+type: text/vnd.tiddlywiki
+
+\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+
+<!--
+<$reveal type="lt" state="$:/info/browser/screen/width" text="3001">
+<$action-setfield $tiddler="$:/state/notebook-sidebar" $value="no"/>
+</$reveal>
+
+<$reveal type="gteq" state="$:/info/browser/screen/width" text="3000">
+<$action-setfield $tiddler="$:/state/notebook-sidebar" $value="yes"/>
+</$reveal>
+-->
+
+<$reveal type="lt" state="$:/info/browser/screen/width" text={{{ [{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}removesuffix[px]] }}}><$action-setfield $tiddler="$:/state/notebook-sidebar" $value="no"/></$reveal>
+<$reveal type="gteq" state="$:/info/browser/screen/width" text={{{ [{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}removesuffix[px]] }}}><$action-setfield $tiddler="$:/state/notebook-sidebar" $value="yes"/></$reveal>

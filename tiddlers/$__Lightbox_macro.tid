@@ -1,0 +1,19 @@
+created: 20220520125852541
+creator: TidGiUser
+modified: 20220520125955973
+modifier: TidGiUser
+tags: $:/Lightbox $:/tags/Macro
+title: $:/Lightbox/macro
+type: text/vnd.tiddlywiki
+
+\define lightbox(img,title,note)
+\whitespace trim
+
+
+<$button class="lightbox tc-btn-invisible">
+<$action-sendmessage $message="tm-modal" $param="$:/Lightbox/SampleModal" title="$title$" img="$img$" note="$note$"/>
+<$image source="$img$"/>
+</$button>
+
+
+\end
