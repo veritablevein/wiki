@@ -196,6 +196,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Pinia</loc>
+		<lastmod>2022-05-20</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Question</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
@@ -322,6 +328,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:Vue</loc>
 		<lastmod>2022-05-13</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Vuex</loc>
+		<lastmod>2022-05-20</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
