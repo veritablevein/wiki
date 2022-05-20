@@ -1,0 +1,9 @@
+created: 20220520130427675
+creator: TidGiUser
+modified: 20220520131247228
+modifier: TidGiUser
+tags: $:/Lightbox
+title: $:/Lightbox/demo
+type: text/vnd.tiddlywiki
+
+<<lightbox "http://placekitten.com/200/300" "Kitten 1" "https://placekitten.com/">> <<lightbox "http://placekitten.com/300/300" "Kitten 2" "https://placekitten.com/">> <<lightbox "http://placekitten.com/350/300" "Kitten 3" "https://placekitten.com/">>

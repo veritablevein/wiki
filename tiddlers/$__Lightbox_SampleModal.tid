@@ -1,0 +1,12 @@
+class: lightbox
+created: 20220520130931326
+creator: TidGiUser
+modified: 20220520131022528
+modifier: TidGiUser
+subtitle: <<title>>
+tags: $:/Lightbox
+title: $:/Lightbox/SampleModal
+type: text/vnd.tiddlywiki
+
+<$image source=<<img>> />
+<span class="lightbox-note"><<note>></span>
