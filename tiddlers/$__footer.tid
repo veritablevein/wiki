@@ -1,0 +1,58 @@
+caption: BodyFooter
+code-body: yes
+created: 20211001231029099
+creator: Télumire
+modified: 20220514093501183
+modifier: oeyoews
+tagging: after
+tags: $:/TiddlyTweaks $:/footer $:/tags/RawMarkupWikified/BottomBody
+title: $:/footer
+type: text/vnd.tiddlywiki
+
+<!-- https://www.telumire.be/TiddlyTweaks/index.html#:%5B%5B%24:/footer%5D%5D 
+https://tiddlywiki.com/#SystemTag%3A%20%24%3A%2Ftags%2FRawMarkupWikified%2FBottomBody
+
+$:/tags/RawMarkupWikified/BottomBody
+
+Bug: this uptime not union
+
+`<footer>`
+<$list filter="[tag[$:/tags/footer]]">
+
+<$transclude/>
+
+</$list>
+`</footer>`
+-->
+
+<!-- hitokoto 
+`<footer id="hitokoto" style="color: black;text-decoration: 3px underline lightblue;font-family: "jetbrains mono";font-size:14px;">`
+`</footer>`
+-->
+`<footer id="hitokoto">`
+`</footer>`
+
+
+<!-- music -->
+<!-- can't use single with special have popup error tip -->
+
+<!--
+2144015214
+6733209548
+3218667513
+lyctype="1" 
+mutex="true"
+--> 
+<!-- https://ftzzloo.com/hexo-add-aplayer-plugins/ -->
+<!-- https://github.com/webcomponents/polyfills/tree/master/packages/custom-elements 
+	lrc-type="1"
+-->
+`<meting-js 
+	id="6733209548"
+	server="netease"
+	order="random"
+	type="playlist"
+	fixed="true"
+	lrc-type="1"
+	list-olded="true">`
+`</meting-js>`

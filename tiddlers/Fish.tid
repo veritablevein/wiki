@@ -1,0 +1,43 @@
+color: #b8f316
+created: 20220321161022091
+creator: @oeyoews
+icon: $:/plugins/oflg/fishing/icon
+modified: 20220520142405677
+modifier: TidGiUser
+tags: 
+title: Fish
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+<div style="text-align:center">
+<$button
+    popup=<<qualify "$:/state/popup/fishingdeck">>
+    tooltip=<<lan "$:/plugins/oflg/fishing/languages" "fishingtip">>
+    aria-label=<<lan "$:/plugins/oflg/fishing/languages" "fishingtip">>
+    class=<<tv-config-toolbar-class>>
+    selectedClass="tc-selected"
+>
+    <$list filter="[<tv-config-toolbar-icons>match[yes]]">
+			<div style="text-aligh:center">
+			<!-- {{$:/plugins/oflg/fishing/icon}}&nbsp; -->
+{{Fishing 1}}
+
+			</div>
+    </$list>
+    <$list filter="[<tv-config-toolbar-text>match[yes]]">
+        <span class="tc-btn-text">
+            <$text text=<<lan "$:/plugins/oflg/fishing/languages" "fishingtip">>/>
+        </span>
+    </$list>
+</$button><$reveal state=<<qualify "$:/state/popup/fishingdeck">> type="popup" position="below" animate="yes">
+    <div
+        class="tc-drop-down tc-popup-keep"
+        style="min-width:0;"
+    >
+        <!-- creat fishingpond -->
+        {{$:/plugins/oflg/fishing/fishingpond}}
+        <!-- creat fishingrod -->
+        {{$:/plugins/oflg/fishing/fishingrod}}
+    </div>
+</$reveal>
+</div>

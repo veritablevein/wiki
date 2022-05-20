@@ -1,0 +1,34 @@
+author: oeyoews
+color: #b8f316
+created: 20220321161854553
+creator: @oeyoews
+icon: $:/plugins/oflg/fishing/icon
+modified: 20220509011612166
+modifier: oeyoews
+tags: image
+title: Fishing 1
+type: text/vnd.tiddlywiki
+
+<!--
+<div style="text-align:left">
+{{$:/plugins/oflg/fishing/fishingfloat}} 
+</div>
+-->
+
+<!--
+<div>
+<div style="text-align: center; background:cyan;overflow: auto; border-radius: 5px;">
+Click me
+</div>
+-->
+
+<!--
+<img src="https://cdn.jsDelivr.net/gh/oeyoews/img/fishing.png
+" title="Click me to fish" alt="Fishing" style="zoom: 30%" />
+</div>
+<<image-basic "fishing.png" align:"left">>
+<div class="home-fish fa-beat-fade" style="text-align: center;width: 230px;">
+-->
+<div class="fa-beat-fade" style="text-align: center;width: 200px;">
+{{fishing.png}}
+</div>

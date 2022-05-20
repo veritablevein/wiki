@@ -1,0 +1,34 @@
+caption: Footer
+created: 20220310033519322
+creator: @oeyoews
+modified: 20220520142634670
+modifier: TidGiUser
+tags: config $:/tags/footer
+title: $:/config/veritablevein/subtitlefooter
+type: text/vnd.tiddlywiki
+
+<!--
+<$view field="modified" format="date" template="YYYY-0MM-0DD 
+0hh:0mm:0ss"/> 
+🐟🐬
+[[GITHUB|https://github.com/veritablevein/wiki]]
+<i style="color:green;" class="fa fa-spinner fa-spin"></i>
+<i class="fa-solid fa-code-compare"></i>
+{{phoenix}}
+<p style="text-align:right;" id="hitokoto">&nbsp; 
+<p id="hitokoto"><a target="_blank" href="#" id="hitokoto_text"></a></p> float: right; display: inline-block; color:#2aa198;
+-->
+
+<div style="font-weight: regular;font-style: italic; border-radius: 4px;background:#002b36; color:gray;font-size:50%; padding: 2px 5px 2px;user-select: none;text-align:center;">
+
+<i style="color: red;" class="fa-beat-fade fa-solid fa-microchip"></i>
+<i style="color: cyan" class="fab fa-shake fa-git"></i>
+<i style="color: #07ff07" class="fa-spin fas fa-sync"></i>
+<$list filter="[!is[system]!has[draft.of]!sort[modified]limit[1]]">
+Updated
+<$view field="modified" format="relativedate"/>
+
+and have
+<$count filter="[tag[?]]"/> tiddlers ! 
+</$list> &nbsp; 
+</div>
