@@ -7,4 +7,4 @@ name: Lazy Tiddler
 plugin-type: plugin
 title: $:/plugins/oflg/lazy-tiddler
 type: application/json
-version: 0.0.2
+version: 0.0.3
