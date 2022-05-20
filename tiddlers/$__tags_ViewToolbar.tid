@@ -1,0 +1,7 @@
+created: 20220520152236748
+creator: TidGiUser
+list: $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/plugins/kookma/favorites/ui/buttons/add-remove $:/plugins/Gk0Wk/page-toc/PageTOCButton $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/edit $:/plugins/linonetwo/slate-write/ui/ViewToolbar/Buttons/edit-wysiwyg $:/plugins/kookma/trashbin/ui/toolbar-button $:/core/ui/Buttons/fold-bar $:/core/ui/Buttons/close $:/core/ui/Buttons/delete $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/plugins/bimlas/locator/viewtemplate/open-in-sidebar $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/plugins/linonetwo/open-in-external-app/ViewToolbarButton $:/plugins/linonetwo/zx-script/ViewToolbarButton $:/plugins/tiddlywiki/qrcode/ViewToolbarButton $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold
+modified: 20220520152317941
+modifier: TidGiUser
+title: $:/tags/ViewToolbar
+type: text/vnd.tiddlywiki
