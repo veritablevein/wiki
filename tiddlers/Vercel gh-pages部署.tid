@@ -1,0 +1,9 @@
+created: 20220521005328904
+creator: TidGiUser
+modified: 20220521005705215
+modifier: TidGiUser
+tags: Vercel solution
+title: Vercel gh-pages部署
+type: text/vnd.tiddlywiki
+
+部署修改Settings->Git-> Production Branch中的Branch name后，重新git commit就会部署gh-pages页面了
