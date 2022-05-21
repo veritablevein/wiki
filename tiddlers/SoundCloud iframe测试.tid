@@ -1,0 +1,9 @@
+created: 20220521164828053
+creator: TidGiUser
+modified: 20220521164906004
+modifier: TidGiUser
+tags: iframe
+title: SoundCloud iframe测试
+type: text/vnd.tiddlywiki
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1250609230&amp;auto_play=false&amp;hide_related=false&amp;visual=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;color=ff5500" __idm_id__="3162113"></iframe>
