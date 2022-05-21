@@ -1,0 +1,16 @@
+created: 20220521144442506
+creator: TidGiUser
+modified: 20220521151251326
+modifier: TidGiUser
+tags: Sass CSS
+title: CSS样式管理
+type: text/vnd.tiddlywiki
+
+<<<
+常见的工作流程是，全局样式都在`/src/styles`目录下，每个页面对应自己对应的样式都写在自己的`.vue`文件之中。
+<<<
+
+样式目录结构:
+
+{{CSS样式管理_LT}}
+{{CSS样式管理_Table}}
