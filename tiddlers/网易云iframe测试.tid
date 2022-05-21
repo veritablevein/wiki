@@ -1,9 +1,16 @@
 created: 20220521163955914
 creator: TidGiUser
-modified: 20220521164010303
+modified: 20220521170143440
 modifier: TidGiUser
 tags: 
 title: 网易云iframe测试
 type: text/vnd.tiddlywiki
 
-<iframe loading="lazy" src="//music.163.com/outchain/player?type=2&amp;id=548556499&amp;auto=0&amp;height=66" width="330" height="86"></iframe>
+! 单曲测试
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=300333&auto=1&height=66"></iframe>
+
+! 专辑测试
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=1&id=29764&auto=0&height=430"></iframe>
+
+! 歌单测试
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=5379686356&auto=0&height=430"></iframe>
