@@ -1,4 +1,4 @@
-name: Deploy Tiddlywiki To Github Pages
+name: 部署 Tiddlywiki 静态页面到 Github Pages
 
 on:
   push:
@@ -9,23 +9,30 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '16'
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             **/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
-      - name: Install Dependency
-        run: npm install
-      - name: Build
-        run: npm run build
 
-      - name: Deploy
+      - name: 安装 NodeJS 依赖
+        run: npm install
+      - name: 构建在线版本网页
+        run: npm run buildonline
+      - name: 构建可下载离线版本的网页
+        run: npm run buildoffline
+      - name: Workbox 离线缓存
+        run: npx workbox injectManifest workbox-config.js
+      - name: 构建插件库
+        run: npm run buildlibrary
+
+      - name: 部署
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
