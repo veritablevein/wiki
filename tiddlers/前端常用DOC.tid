@@ -1,12 +1,13 @@
 created: 20220518083301085
 creator: TidGiUser
-modified: 20220518085735455
+modified: 20220522032625668
 modifier: TidGiUser
 tags: 文档
 title: 前端常用DOC
 type: text/vnd.tiddlywiki
 
-* [[Vue3最新中文文档|https://staging-cn.vuejs.org/]]
-* [[MDN Web Docs|https://developer.mozilla.org/zh-CN/]]
-* [[Vite官方中文文档|https://cn.vitejs.dev/]]
-* 
+* [ext[MDN Web Docs|https://developer.mozilla.org/zh-CN/]]
+* [ext[Vue3最新中文文档|https://staging-cn.vuejs.org/]]
+* [ext[Vite官方中文文档|https://cn.vitejs.dev/]]
+* [ext[Pinia状态管理文档|https://pinia.vuejs.org/]]
+
