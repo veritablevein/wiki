@@ -1,6 +1,6 @@
 created: 20220521144442506
 creator: TidGiUser
-modified: 20220521163704678
+modified: 20220522095302781
 modifier: TidGiUser
 tags: Sass CSS
 title: CSS样式管理
@@ -14,3 +14,6 @@ type: text/vnd.tiddlywiki
 
 {{CSS样式管理_LT}}
 {{CSS样式管理_Table}}
+
+`index.scss` @import其他所有scss统一导出,`main.ts` import `index.scss`,`.vue`页面style使用变量自动注入需要配置`vite.config.ts`:
+{{Vite <style>标签自动导入scss配置}}

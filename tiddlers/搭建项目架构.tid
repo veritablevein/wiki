@@ -1,0 +1,20 @@
+created: 20220522042315269
+creator: TidGiUser
+modified: 20220522043945759
+modifier: TidGiUser
+tags: 
+title: 搭建项目架构
+type: text/vnd.tiddlywiki
+
+! 和服务端交互
+
+* 基于axios的二次封装
+* 关于接口的类型问题
+* 多环境baseURL
+* 跨域处理
+* 数据mock
+
+! 基于[[axios]]封装请求模块
+
+!! 安装axios：
+
