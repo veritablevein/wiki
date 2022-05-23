@@ -1,0 +1,13 @@
+created: 20220523025656366
+creator: TidGiUser
+modified: 20220523030231290
+modifier: TidGiUser
+tags: 
+title: 传统网页开发缺点
+type: text/vnd.tiddlywiki
+
+# DOM操作频繁，代码繁杂
+# DOM操作与逻辑代码混合，可维护性差
+# 不同功能区域书写在一起，可维护性低
+# 模块之间依赖关系复杂
+
