@@ -1,0 +1,17 @@
+created: 20220523142240189
+creator: TidGiUser
+modified: 20220523144037417
+modifier: TidGiUser
+tags: 前端 例子
+title: web不同源例子
+type: text/vnd.tiddlywiki
+
+| 例子 | 原因 |h
+| `http://example.com/app1` | different schemes |
+| `https://example.com/app2` |~|
+| `http://example.com` | different hosts |
+| `http://www.example.com` |~|
+| `http://myapp.example.com` |~|
+| `http://example.com` | different ports |
+| `http://example.com:8080` |~|
+|不同源的例子|c

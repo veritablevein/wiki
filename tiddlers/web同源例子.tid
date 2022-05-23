@@ -1,0 +1,14 @@
+created: 20220523142216577
+creator: TidGiUser
+modified: 20220523144013399
+modifier: TidGiUser
+tags: 前端 例子
+title: web同源例子
+type: text/vnd.tiddlywiki
+
+| 例子 | 原因 |h
+| `http://example.com/app1/index.html` | same origin because same scheme (http) and host (example.com) |
+| `http://example.com/app2/index.html` |~|
+| `http://Example.com:80` | same origin because a server delivers HTTP content through port 80 by default |
+| `http://example.com` |~|
+|同源的例子|c
