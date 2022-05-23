@@ -1,0 +1,23 @@
+created: 20220523140519797
+creator: TidGiUser
+modified: 20220523141557549
+modifier: TidGiUser
+tags: 
+title: Origin
+type: text/vnd.tiddlywiki
+wysiwyg: yes
+
+Web内容的源由用于访问它的URL的方案(`协议`)，主机(`域名`)和`端口`定义。只有当`协议`，`域名`和`端口`都匹配时，两个对象具有相同的起源。
+
+某些操作仅限于同源内容，而可以使用[[CORS]]解除这个限制。
+
+!! 同源的例子
+
+| <a >http://example.com/app1/index.html</a> | same origin because same scheme (http) and host (example.com) |
+
+| <a >http://example.com/app2/index.html</a> | ~ |
+
+| <a >http://Example.com:80</a> | same origin because a server delivers HTTP content through port 80 by default |
+
+| <a >http://example.com</a> | ~ |
+
