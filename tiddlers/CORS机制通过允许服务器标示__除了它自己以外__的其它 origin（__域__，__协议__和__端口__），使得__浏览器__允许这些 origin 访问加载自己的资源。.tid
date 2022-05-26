@@ -1,0 +1,26 @@
+annotate-blend-mode: multiply
+annotate-colour: LightSkyBlue
+annotate-prefix: ORS，Cross-origin resource sharing)是一种基于 HTTP 头的机制，
+annotate-suffix: 跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托
+annotate-text: CORS机制通过允许服务器标示除了它自己以外的其它 origin（域，协议和端口），使得浏览器允许这些 origin 访问加载自己的资源。
+caption: {{||Cloze}}
+created: 20220526122945811
+creator: TidGiUser
+difficulty: 5
+due: 20220528123223864
+grade: -1
+history: []
+interval: 0
+lapses: 0
+modified: 20220526123223864
+modifier: TidGiUser
+priority: 0
+reps: 1
+retrievability: 1
+review: 20220526123223864
+stability: 2
+tags: CORS ?
+title: CORS机制通过允许服务器标示__除了它自己以外__的其它 origin（__域__，__协议__和__端口__），使得__浏览器__允许这些 origin 访问加载自己的资源。
+type: text/vnd.tiddlywiki
+
+CORS机制通过允许服务器标示__除了它自己以外__的其它 origin（__域__，__协议__和__端口__），使得__浏览器__允许这些 origin 访问加载自己的资源。
