@@ -2,7 +2,7 @@ caption: BodyFooter
 code-body: yes
 created: 20211001231029099
 creator: Télumire
-modified: 20220526085005617
+modified: 20220528140738771
 modifier: TidGiUser
 tagging: after
 tags: $:/tags/RawMarkupWikified/BottomBody
@@ -23,6 +23,7 @@ type: text/vnd.tiddlywiki
         fixed="true" 
         preload="auto"
         loop="all"
+				autoplay="true"
         mutex="true" 
-        list-olded="true">`
+        listfolded="true">`
 `</meting-js>`

@@ -1,0 +1,27 @@
+created: 20220528134427326
+creator: TidGiUser
+keywords: eslint plugin vue
+modified: 20220528135830559
+modifier: TidGiUser
+responder: eslint-plugin-vue issues #1355
+tags: eslint-plugin-vue solution
+title: index.html </html>报错：clear eslint(vue/comment-directive)
+type: text/vnd.tiddlywiki
+url: https://github.com/vuejs/eslint-plugin-vue/issues/1355
+
+[[eslint-plugin-vue, issues, #1355|https://github.com/vuejs/eslint-plugin-vue/issues/1355]]
+
+```JavaScript
+// .eslintrc.js
+module.exports = {
+ // ...
+  overrides: [
+    {
+      files: ['*.html'],
+      rules: {
+        'vue/comment-directive': 'off'
+      }
+    }
+  ]
+};
+```
