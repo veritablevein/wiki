@@ -1,13 +1,12 @@
 created: 20220530141951763
 creator: TidGiUser
-modified: 20220530145607922
+modified: 20220530162213873
 modifier: TidGiUser
 tags: JavaScript XML
 title: AJAX
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
-> AJAX（Asynchronous JavaScript and XML），就是浏览器提供的一套 API，可以通过 JavaScript 调用，从而实现通过代码控制请求与响应。实现通过 JavaScript 进行网络编程。用现有技术集合的‘新’方法，包括：HTML 或 XHTML,  CSS, JavaScript, DOM, XML, XSLT, 以及最重要的 XMLHttpRequest。当使用结合了这些技术的 AJAX 模型以后， 网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面。这使得程序能够更快地回应用户的操作。XML：最早在客户端与服务端之间传递数据时所采用的数据格式</cite><<<
+> AJAX（Asynchronous JavaScript and XML），就是浏览器提供的一套 API，可以通过 JavaScript 调用，从而实现通过代码控制请求与响应。实现通过 JavaScript 进行网络编程。用现有技术集合的‘新’方法，包括：HTML 或 XHTML,  CSS, JavaScript, DOM, XML, XSLT, 以及最重要的 XMLHttpRequest。当使用结合了这些技术的 AJAX 模型以后， 网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面。这使得程序能够更快地回应用户的操作。XML：最早在客户端与服务端之间传递数据时所采用的数据格式
 
 ! 背景
 
