@@ -1,0 +1,13 @@
+created: 20220531053507645
+creator: TidGiUser
+modified: 20220531054348853
+modifier: TidGiUser
+tags: 
+title: CodePen iframe测试
+type: text/vnd.tiddlywiki
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="two-column" src="https://codepen.io/suzukaze-yoru/embed/preview/ZEKKxJm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/suzukaze-yoru/pen/ZEKKxJm">
+  two-column</a> by yola (<a href="https://codepen.io/suzukaze-yoru">@suzukaze-yoru</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
