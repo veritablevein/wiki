@@ -1,0 +1,17 @@
+created: 20220603141418174
+creator: TidGiUser
+modified: 20220603145206383
+modifier: TidGiUser
+tags: CSS
+title: 盒模型
+type: text/vnd.tiddlywiki
+wysiwyg: yes
+
+对一个文档进行布局（layout）的时候，浏览器的渲染引擎会根据标准之一的 CSS 基础框盒模型（CSS basic box model），将所有元素表示为一个个矩形的盒子（box），视觉格式化模型决定这些盒子的大小、位置以及属性（例如颜色、背景、边框尺寸等等）。
+
+* box（盒子）：{{box（盒子）}}
+* principal box（主要盒子）：{{principal box（主要盒子）}}
+* block-level box（块级盒子）：{{block-level box（块级盒子）}}
+* block container box（块容器）：{{block container box（块容器）}}
+* block box（块盒子）：{{block box（块盒子）}}
+* block（块）：{{block（块）}}

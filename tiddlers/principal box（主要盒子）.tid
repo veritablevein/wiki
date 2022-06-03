@@ -1,0 +1,8 @@
+created: 20220603143544502
+creator: TidGiUser
+modified: 20220603143547552
+modifier: TidGiUser
+title: principal box（主要盒子）
+type: text/vnd.tiddlywiki
+
+元素生成的多个盒子中，用来包含它的后代盒子和它生成的内容的盒子，也是参与任何定位方案的盒子。

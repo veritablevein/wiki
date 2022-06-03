@@ -1,0 +1,8 @@
+created: 20220603143632206
+creator: TidGiUser
+modified: 20220603145016162
+modifier: TidGiUser
+title: BFC
+type: text/vnd.tiddlywiki
+
+块级格式化上下文(BFC, block formatting context)是一个只有块级盒子参与的独立块级渲染区域，它规定了内部的块级盒子如何布局，且与区域外部无关。

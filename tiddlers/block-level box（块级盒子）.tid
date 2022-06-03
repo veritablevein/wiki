@@ -1,0 +1,8 @@
+created: 20220603143756974
+creator: TidGiUser
+modified: 20220603143800764
+modifier: TidGiUser
+title: block-level box（块级盒子）
+type: text/vnd.tiddlywiki
+
+参与 [[BFC]] 布局的盒子，通常由块级元素生成。

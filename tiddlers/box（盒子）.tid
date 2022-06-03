@@ -1,0 +1,8 @@
+created: 20220603143436382
+creator: TidGiUser
+modified: 20220603143442921
+modifier: TidGiUser
+title: box（盒子）
+type: text/vnd.tiddlywiki
+
+一个抽象概念，在画布上占据一块空间，通常由元素（element）生成。一个元素可能生成多个盒子（如伪元素、list-item 元素）。

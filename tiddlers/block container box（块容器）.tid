@@ -1,0 +1,8 @@
+created: 20220603144832580
+creator: TidGiUser
+modified: 20220603144833521
+modifier: TidGiUser
+title: block container box（块容器）
+type: text/vnd.tiddlywiki
+
+在 CSS2.2 中，除了 table box 或替换元素的主要盒子，一个块级盒子也是块容器，但不是所有的块容器都是块级盒子（如非替换内联块盒子）。块容器主要侧重于其子元素的定位、布局。
