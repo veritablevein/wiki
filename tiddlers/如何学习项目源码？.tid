@@ -1,0 +1,13 @@
+created: 20220607031025881
+creator: TidGiUser
+modified: 20220607031532339
+modifier: TidGiUser
+tags: 编程
+title: 如何学习项目源码？
+type: text/vnd.tiddlywiki
+
+# 第一步是编译部署运行起来，尽量选择哪些文档齐全，issue活跃的项目
+# 第二步是找到程序入口，厘清模块组件之间的关系
+# 第三步调试并修改自己感兴趣的模块组件
+# 第四步可以在原有项目上添加功能和复刻项目
+
