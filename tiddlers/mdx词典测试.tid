@@ -5,3 +5,4 @@ modifier: TidGiUser
 tags: 
 title: mdx词典测试
 type: text/vnd.tiddlywiki
+wysiwyg: yes
