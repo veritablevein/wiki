@@ -1,8 +1,8 @@
 created: 20200408113649017
 creator: Lin Onetwo - 林一二
-modified: 20220526122240864
+modified: 20220608105335023
 modifier: TidGiUser
 title: $:/config/RelinkOnRename
 type: text/vnd.tiddlywiki
 
-yes
+no

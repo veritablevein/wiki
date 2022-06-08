@@ -1,7 +1,7 @@
 created: 20220124135902019
 creator: TidGiUser
 icon: 🔰
-modified: 20220603161205597
+modified: 20220608114114025
 modifier: TidGiUser
 title: Index
 tmap.id: 0dc1cb92-0912-4c69-ab9e-89d9a194bfe6
@@ -18,8 +18,8 @@ type: text/vnd.tiddlywiki
 <details><summary>优先待办列表</summary><<reuse-tiddler "优先待办列表">></details>
 
 <$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TagCloud.js"/>
-<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TheBrain.js" levels=1/>
-<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/oflg/CalendarHeatmap/CalendarHeatmap.js" $height="150px" />
+<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TheBrain.js" levels=2/>
+<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/oflg/CalendarHeatmap.js" $height="150px" />
 
 ---
 {{$:/config/veritablevein/subtitlefooter}}
