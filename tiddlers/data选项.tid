@@ -1,0 +1,11 @@
+created: 20220614093033817
+creator: TidGiUser
+modified: 20220614093645970
+modifier: TidGiUser
+tags: Vue
+title: data选项
+type: text/vnd.tiddlywiki
+
+响应式数据，数据改变自动重新渲染到相应视图
+
+自动挂载到vm.$data.xxx、vm.xxx

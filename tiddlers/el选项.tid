@@ -1,0 +1,13 @@
+created: 20220614092537339
+creator: TidGiUser
+modified: 20220614093318745
+modifier: TidGiUser
+tags: Vue
+title: el选项
+type: text/vnd.tiddlywiki
+
+节点挂载组件，选择器或者DOM元素
+el:'#app'
+el:xxx.getElementById()
+
+vm.$el可以查看

@@ -1,0 +1,10 @@
+created: 20220614092813752
+creator: TidGiUser
+modified: 20220614093208120
+modifier: TidGiUser
+title: 插值表达式
+type: text/vnd.tiddlywiki
+
+`<div>{{ statement }}</div>`
+
+表达式而非语句，可以调用method函数
