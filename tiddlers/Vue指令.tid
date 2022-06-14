@@ -1,18 +1,18 @@
 created: 20220614091809375
 creator: TidGiUser
-modified: 20220614093709697
+modified: 20220614093835169
 modifier: TidGiUser
 tags: Vue
 title: Vue指令
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 html标签属性
 
-# vue-once
-# vue-text=""
-# vue-html=""
-# vue-bind
-# vue-if
-# vue-show
-# vue-for
+# [[vue-once]]
+# [[vue-text]]=""
+# [[vue-html]]=""
+# [[vue-bind]]
+# [[vue-if]]
+# [[vue-show]]
+# [[vue-for]]
+
