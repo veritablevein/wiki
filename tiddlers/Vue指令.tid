@@ -1,6 +1,6 @@
 created: 20220614091809375
 creator: TidGiUser
-modified: 20220614093835169
+modified: 20220616063930627
 modifier: TidGiUser
 tags: Vue
 title: Vue指令
@@ -8,11 +8,19 @@ type: text/vnd.tiddlywiki
 
 html标签属性
 
-# [[vue-once]]
-# [[vue-text]]=""
-# [[vue-html]]=""
-# [[vue-bind]]
-# [[vue-if]]
-# [[vue-show]]
-# [[vue-for]]
+# [[v-once]]
+# [[v-text]]=""
+# [[v-html]]=""
+
+属性绑定
+
+# [[v-bind]]
+# [[class绑定]]
+# [[style绑定]]
+
+渲染指令
+
+# [[v-for]]
+# [[v-if]]
+# [[v-show]]
 
