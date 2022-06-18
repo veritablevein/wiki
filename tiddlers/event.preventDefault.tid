@@ -1,0 +1,9 @@
+created: 20220618135936965
+creator: TidGiUser
+modified: 20220618145523140
+modifier: TidGiUser
+tags: [[Web API]]
+title: event.preventDefault
+type: text/vnd.tiddlywiki
+
+Event 接口的''`preventDefault()`''方法，告诉user agent：如果此事件没有被''显式''处理，它''默认的动作''也不应该照常执行。此事件还是''继续传播''，除非碰到''事件侦听器''调用''`stopPropagation()`''或''`stopImmediatePropagation()`''，才''停止传播''。
