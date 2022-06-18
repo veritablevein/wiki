@@ -1,10 +1,11 @@
 created: 20220614091809375
 creator: TidGiUser
-modified: 20220616063930627
+modified: 20220618064306544
 modifier: TidGiUser
 tags: Vue
 title: Vue指令
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 html标签属性
 
@@ -23,4 +24,8 @@ html标签属性
 # [[v-for]]
 # [[v-if]]
 # [[v-show]]
+
+事件指令
+
+# 
 

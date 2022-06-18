@@ -65,9 +65,9 @@
 
 "$:/showInfo/search/SystemImage": {
     "created": "20210911212256922",
-    "text": "<!--\nList of all system images (ie, tiddlers tagged {{$:/tags/Image||$:/core/ui/TagTemplate}}). Click on an icon to copy its title !\n-->\n\n<$vars\nsearch-list=\"[[$:/tags/Image]tagging[]]  {{$:/plugins/oeyoews/search-images/add-image-filter}}\"\nitem-template=\"$:/showInfo/search/img\"\nlist-class=\"\"\nlist-style=\"\"\"padding:0; \"\"\"\n>\n{{{[<item-template>is[blank]then[$:/showInfo/search/list/titles]else<item-template>]}}}\n{{$:/showInfo/search/template}}\n</$vars>",
+    "text": "List of all system images (ie, tiddlers tagged {{$:/tags/Image||$:/core/ui/TagTemplate}}). Click on an icon to copy its title !\n\n<$vars\nsearch-list=\"[[$:/tags/Image]tagging[]]  {{$:/plugins/oeyoews/search-images/add-image-filter}}\"\nitem-template=\"$:/showInfo/search/img\"\nlist-class=\"\"\nlist-style=\"\"\"padding:0; \"\"\"\n>\n{{{[<item-template>is[blank]then[$:/showInfo/search/list/titles]else<item-template>]}}}\n{{$:/showInfo/search/template}}\n</$vars>",
     "title": "$:/showInfo/search/SystemImage",
-    "modified": "20220517111150620",
+    "modified": "20220517090048585",
     "tags": "$:/tags/SideBar $:/showInfo/search $:/showInfo",
     "type": "text/vnd.tiddlywiki",
     "caption": " {{$:/core/images/picture}} Images",
@@ -151,10 +151,10 @@
     "title": "$:/showInfo/search/SystemImage/search/style",
     "created": "20210911022400630",
     "fill-fallback": "",
-    "modified": "20220517110839390",
+    "modified": "20220517090048585",
     "tags": "$:/tags/Stylesheet $:/showInfo/search $:/showInfo",
     "type": "text/vnd.tiddlywiki",
-    "text": "<pre>\n.search-list-container {\ndisplay:flex;\nalign-items: center;\n}\n\n.search-list-container button {\npadding:.5em;\n}\n\n.system-image-search svg {\n\nfill:<<color foreground>>;\n\n}\n\n.tc-edit-texteditor {\n  width:100%;\n\tpadding: 3px 3px 3px 3px;\n\tborder: 0px solid cyan;\n\tline-height: 1.3em;\n\t-webkit-appearance: none;\n}",
+    "text": "<pre>\n.search-list-container {\ndisplay:flex;\nalign-items: center;\n}\n\n.search-list-container button {\npadding:.5em;\n}\n\n.system-image-search svg {\n\nfill:<<color foreground>>;\n\n}\n\n.tc-edit-texteditor {\n  width:100%;\n\tpadding: 3px 3px 3px 3px;\n\tborder: 1px solid rgb(63, 63, 63);\n\tline-height: 1.3em;\n\t-webkit-appearance: none;\n}",
     "revision": "0",
     "bag": "default"
 },
