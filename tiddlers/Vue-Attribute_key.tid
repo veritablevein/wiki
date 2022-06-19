@@ -1,8 +1,21 @@
 created: 20220619103832338
 creator: TidGiUser
-modified: 20220619104024237
+modified: 20220619144419062
 modifier: TidGiUser
 tags: Vue特殊属性
 title: Vue-Attribute:key
 type: text/vnd.tiddlywiki
-wysiwyg: yes
+
+key 这个特殊的 attribute 主要作为 Vue 的虚拟 DOM 算法提示，在比较新旧节点列表时用于识别 vnode。
+
+在没有 key 的情况下，Vue 将使用一种最小化元素移动的算法，并尽可能地就地更新/复用相同类型的元素。如果传了 key，则将根据 key 的变化顺序来重新排列元素，并且将始终移除/销毁 key 已经不存在的元素。
+
+同一个父元素下的子元素必须具有唯一的 key。重复的 key 将会导致渲染异常。
+
+最常见的用例是与 v-for 结合：
+
+```html
+<ul>
+  <li v-for="item in items" :key="item.id">...</li>
+</ul>
+```
