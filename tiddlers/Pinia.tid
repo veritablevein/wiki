@@ -1,11 +1,10 @@
 created: 20220520090710007
 creator: TidGiUser
-modified: 20220520092456426
+modified: 20220619104834699
 modifier: TidGiUser
 tags: Vue 状态管理
 title: Pinia
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
-> Pinia
+[ext[Pinia Doc|https://pinia.vuejs.org/]]
 
