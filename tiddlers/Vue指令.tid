@@ -1,15 +1,13 @@
 created: 20220614091809375
 creator: TidGiUser
-modified: 20220618135451298
+modified: 20220619103147316
 modifier: TidGiUser
-tags: Vue
+tags: Vue 内置内容
 title: Vue指令
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 html标签属性
 
-# [[v-once]]
 # [[v-text]]=""
 # [[v-html]]=""
 
@@ -22,11 +20,13 @@ html标签属性
 渲染指令
 
 # [[v-for]]
-# [[v-if]]
+# [[v-if]]、[[v-else-if]]、[[v-else]]
 # [[v-show]]
+# [[v-slot]]
+# [[v-pre]]
+# [[v-once]]
 
 事件指令
 
 # [[v-on]]
 # [[v-model]]
-
