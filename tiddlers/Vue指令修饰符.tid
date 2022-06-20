@@ -1,0 +1,33 @@
+created: 20220620092137868
+creator: TidGiUser
+modified: 20220620094158355
+modifier: TidGiUser
+tags: 
+title: Vue指令修饰符
+type: text/vnd.tiddlywiki
+wysiwyg: yes
+
+# 事件修饰符
+## .prevent
+## .stop
+## .once
+## self
+## capture
+## passive
+# 按键修饰符
+## .enter
+## .tab
+## .delete
+## .esc
+## .space
+## .up
+## .down
+## .left
+## .right
+# 系统修饰符
+# 鼠标修饰符
+## .left
+## .right
+## .middle
+# v-model修饰符
+
