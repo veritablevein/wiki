@@ -1,6 +1,6 @@
 created: 20220614091809375
 creator: TidGiUser
-modified: 20220619103147316
+modified: 20220620153745615
 modifier: TidGiUser
 tags: Vue 内置内容
 title: Vue指令
@@ -30,3 +30,9 @@ html标签属性
 
 # [[v-on]]
 # [[v-model]]
+
+自定义指令
+
+# 自定义全局指令
+# 自定义局部指令
+
