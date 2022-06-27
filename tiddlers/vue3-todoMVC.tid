@@ -1,23 +1,38 @@
 created: 20220626154036471
 creator: TidGiUser
-modified: 20220626182916155
+modified: 20220627084816474
 modifier: TidGiUser
 tags: Vue 项目
 title: vue3-todoMVC
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 pnpm初始化vite环境
 
-# git clone https://github.com/tastejs/todomvc-app-template.git
+# git clone [ext[https://github.com/tastejs/todomvc-app-template.git]]
 # pnpm create vite@latest
 # project-name vue vue/ts 
 # pnpm install -D todomvc-app-css todomvc-common
 # 清空App.vue删除其他文件，将模板index.html body内容放入App.vue的template中
-# App.vue中style导入
+# App.vue中style导入@import
 
-```css
-@import "../node_modules/todomvc-app-css/index.css";
-@import "../node_modules/todomvc-common/base.css"
-```
+! 需求分析
 
-! 事项列表展示
+# 事项列表显示
+## v-for创建li，配合:key=使用
+## 
+# 状态信息显示
+## 剩余个数 计算属性 remaining
+## 个数单位 pluralize(todo)
+# 事项状态切换
+# 事项新增
+## input双向绑定
+## 回车按键事件addTodo新增事项
+# 事项删除
+## 删除按钮绑定删除事件removeTodo(todo)
+## 通过todos.indexof(todo)获取index
+## todos.splice(index, 1)删除对应事项
+# 事项编辑
+## 双击事件newTodo显示编辑框并聚焦（通过editing和edit类控制）
+
+
