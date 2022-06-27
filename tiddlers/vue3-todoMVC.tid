@@ -1,0 +1,23 @@
+created: 20220626154036471
+creator: TidGiUser
+modified: 20220626182916155
+modifier: TidGiUser
+tags: Vue 项目
+title: vue3-todoMVC
+type: text/vnd.tiddlywiki
+
+pnpm初始化vite环境
+
+# git clone https://github.com/tastejs/todomvc-app-template.git
+# pnpm create vite@latest
+# project-name vue vue/ts 
+# pnpm install -D todomvc-app-css todomvc-common
+# 清空App.vue删除其他文件，将模板index.html body内容放入App.vue的template中
+# App.vue中style导入
+
+```css
+@import "../node_modules/todomvc-app-css/index.css";
+@import "../node_modules/todomvc-common/base.css"
+```
+
+! 事项列表展示
