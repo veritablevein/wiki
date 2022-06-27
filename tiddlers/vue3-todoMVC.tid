@@ -1,11 +1,10 @@
 created: 20220626154036471
 creator: TidGiUser
-modified: 20220627094809249
+modified: 20220627101517525
 modifier: TidGiUser
 tags: Vue 项目
 title: vue3-todoMVC
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 pnpm初始化vite环境
 
@@ -19,49 +18,58 @@ pnpm初始化vite环境
 ! 需求分析
 
 # 事项列表显示
-## v-for创建li，配合:key=todo.id使用
-## label内容为todo.title
+## `v-for`创建li，配合`:key=todo.id`使用
+## label内容为`todo.title`
 # 状态信息显示
-## 剩余个数 计算属性 remaining：todos.filter(todo => !todo.completed).length
-## 个数单位 pluralize(word)：word + (remaining === 1 ? '' : 's')
+## 剩余个数 计算属性 `remaining`：`todos.filter(todo => !todo.completed).length`
+## 个数单位 `pluralize(word)`：`word + (remaining === 1 ? '' : 's')`
 # 事项状态切换
-## 通过:class绑定complete类控制完成状态
-## 通过事项复选框双向绑定todo.completed控制是否勾选
-## 全选框双向绑定计算属性allDone get方法根据剩余个数判断复选框是否为全选状态：剩余0为全选
-## allDone set方法控制复选框全选全不选功能：遍历todos，让每一个todo.completed的值和全选框状态一致
+## 通过`:class`绑定complete类控制完成状态
+## 通过事项复选框双向绑定`todo.completed`控制是否勾选
+## 全选框双向绑定计算属性`allDone` `get`方法根据剩余个数判断复选框是否为全选状态：剩余0为全选
+## `allDone` `set`方法控制复选框全选全不选功能：遍历todos，让每一个`todo.completed`的值和全选框状态一致
 # 事项新增
-## 顶部输入框双向绑定newTodo
-## 回车按键事件addTodo新增事项
-### 去除newTodo首尾空格：value = newTodo.trim()
-### 处理后为空直接return：if (!value) return
-### 新增事项：todos.push({id: todos.length + 1, title: newTodo, completed: false})
-### 清空输入框：newTodo = ''
+## 顶部输入框双向绑定`newTodo`
+## 回车按键事件`addTodo`新增事项
+### 去除`newTodo`首尾空格：`value = newTodo.trim()`
+### 处理后为空直接return：`if (!value) return`
+### 新增事项：`todos.push({id: todos.length + 1, title: newTodo, completed: false})`
+### 清空输入框：`newTodo = ''`
 # 事项删除
-## 删除按钮绑定删除事件removeTodo(todo)
-### 通过todos.indexof(todo)获取index
-### todos.splice(index, 1)删除对应事项
+## 删除按钮绑定删除事件`removeTodo(todo)`
+### 通过`todos.indexof(todo)`获取index
+### `todos.splice(index, 1)`删除对应事项
 ## 删除已完成的事项
-### v-show控制显示按钮，只有remaining = todos.length时不显示：v-show="todos.length > remaining"
-### 绑定按钮点击事件removeCompleted，用未完成过滤后的todos赋值给原来的todos：todos = todos.filter(todo => !todo.completed)
+### `v-show`控制显示按钮，只有`remaining = todos.length`时不显示：`v-show="todos.length > remaining"`
+### 绑定按钮点击事件`removeCompleted`，用未完成过滤后的todos赋值给原来的todos：`todos = todos.filter(todo => !todo.completed)`
 # 事项编辑
-## 双击事件editTodo(todo)显示编辑框并聚焦（通过editing和edit类控制）
-### li绑定editing类控制隐藏，显示输入框：:class = "{editing: todo === editingTodo}"
-### 输入框双向绑定todo.title，创建自定义指令v-todo-focus完成双击后自动聚焦
-### 控制显示输入框：editingTood = todo
-### 保存todo.title供取消还原使用：titleBeforeEdit = todo.title
-## esc按键绑定cancelEdit(todo)，取消编辑：@keyup.esc = "cancelEdit(todo)"
-### 清空输入框并隐藏：editingTodo = null
-### 还原事项内容：todo.title = titleBeforeEdit.trim
-## enter按键和失去焦点绑定editDone(todo)：@keyup.enter="editDone(todo)" @blur="editDone(todo)"
-### 防止enter触发后自动触发blur多次删除，判断输入框是否已经隐藏：if (!editingTodo) return
-### 清空输入框并隐藏：editingTodo = null
-### 输入内容首尾去空格：todo.title = todo.title.trim()
-### 内容为空则删除该todo：if (!todo.title) removeTodo(todo)
+## 双击事件`editTodo(todo)`显示编辑框并聚焦（通过editing和edit类控制）
+### li绑定editing类控制隐藏，显示输入框：`:class = "{editing: todo === editingTodo}"`
+### 输入框双向绑定`todo.title`，创建自定义指令`v-todo-focus`完成双击后自动聚焦：`const vTodoFocus = {updated: (el, binding) => {if (binding.value) el.focus()}}`
+### 控制显示输入框：`editingTood = todo`
+### 保存todo.title供取消还原使用：`titleBeforeEdit = todo.title`
+## esc按键绑定`cancelEdit(todo)`，取消编辑：`@keyup.esc = "cancelEdit(todo)"`
+### 清空输入框并隐藏：`editingTodo = null`
+### 还原事项内容：`todo.title = titleBeforeEdit.trim`
+## enter按键和失去焦点绑定`editDone(todo)`：`@keyup.enter="editDone(todo)" @blur="editDone(todo)"`
+### 防止enter触发后自动触发blur多次删除，判断输入框是否已经隐藏：`if (!editingTodo) return`
+### 清空输入框并隐藏：`editingTodo = null`
+### 输入内容首尾去空格：`todo.title = todo.title.trim()`
+### 内容为空则删除该todo：`if (!todo.title) removeTodo(todo)`
 # 事项筛选
-## 创建filters：let filters = {all(todos){return todos}, active(todos){return todos.filter(todo => !todo.completed)}, completed(todos){return todos.filter(todo => todo.completed)}}
-## 根据todoType生成计算属性filterTodos：() => {filters.[todoType](todos)}
-## 用filterTodos替换v-for中的todos
+## 底部按钮绑定selected由`todoType`类型控制，点击后自动切换到相应类型：`:class="todoType === 'all | active | completed'" @click="todoType = 'all | active | completed'"`
+## 创建`filters`：`let filters = {all(todos){return todos}, active(todos){return todos.filter(todo => !todo.completed)}, completed(todos){return todos.filter(todo => todo.completed)}}`
+## 根据`todoType`生成计算属性`filterTodos`：`() => {filters.[todoType](todos)}`
+## 用`filterTodos`替换`v-for`中的todos
+## 有了`filters`后可以优化`remaining`和`removeCompleted`
+### `remaining`优化：`() => filters.active(todos).length`
+### `removeCompleted`优化：`() => todos = filters.active(todos)`
 # 事项数据持久化
-## 创建todoStorage，根据TODO_KEY获取和本地存储todos：
+## 创建`todoStorage`，根据`TODO_KEY`获取和本地存储todos：`let todoStorage = {get(){},set(todos){}}`
+### `get(){return JSON.parse(localStorage.getItem(TODO_KEY) || '0') || []}`
+### `set(todos){localStorage.setItem(TODO_KEY, JSON.stringify(todos))}`
+### `todos = todoStorage.get()`
+## 添加侦听器监听todos的变化，即时存储到本地：`watch(todos, (newValue, oldValue) => {todoStorage.set(newValue)})`
 
 
+注意：vue3使用`ref()`和`.value`，判断`editingTodo`为空时可用`Object.keys(editingTodo.value).length === 0`
