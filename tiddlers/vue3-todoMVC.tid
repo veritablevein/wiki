@@ -1,6 +1,6 @@
 created: 20220626154036471
 creator: TidGiUser
-modified: 20220627084816474
+modified: 20220627091811360
 modifier: TidGiUser
 tags: Vue 项目
 title: vue3-todoMVC
@@ -19,20 +19,32 @@ pnpm初始化vite环境
 ! 需求分析
 
 # 事项列表显示
-## v-for创建li，配合:key=使用
-## 
+## v-for创建li，配合:key=todo.id使用
+## label内容为todo.title
 # 状态信息显示
-## 剩余个数 计算属性 remaining
-## 个数单位 pluralize(todo)
+## 剩余个数 计算属性 remaining：todos.filter(todo => !todo.completed).length
+## 个数单位 pluralize(word)：word + (remaining === 1 ? '' : 's')
 # 事项状态切换
+## 通过:class绑定complete类控制完成状态
+## 通过事项复选框双向绑定todo.completed控制是否勾选
+## 全选框双向绑定计算属性allDone get方法根据剩余个数判断复选框是否为全选状态：剩余0为全选
+## allDone set方法控制复选框全选全不选功能：遍历todos，让每一个todo.completed的值和全选框状态一致
 # 事项新增
-## input双向绑定
+## 顶部输入框双向绑定newTodo
 ## 回车按键事件addTodo新增事项
+### 去除newTodo首尾空格：value = newTodo.trim()
+### 处理后为空直接return：if (!value) return
+### 新增事项：todos.push({id: todos.length + 1, title: newTodo, completed: false})
+### 清空输入框：newTodo = ''
 # 事项删除
 ## 删除按钮绑定删除事件removeTodo(todo)
-## 通过todos.indexof(todo)获取index
-## todos.splice(index, 1)删除对应事项
+### 通过todos.indexof(todo)获取index
+### todos.splice(index, 1)删除对应事项
+## 删除已完成的事项
+### v-show控制显示按钮，只有remaining = todos.length时不显示：v-show="todos.length > remaining"
+### 绑定按钮点击事件removeCompleted，用未完成过滤后的todos赋值给原来的todos：todos = todos.filter(todo => !todo.completed)
 # 事项编辑
-## 双击事件newTodo显示编辑框并聚焦（通过editing和edit类控制）
+## 双击事件editTodo(todo)显示编辑框并聚焦（通过editing和edit类控制）
+### li绑定editing类控制隐藏，显示输入框：
 
 
