@@ -1,6 +1,6 @@
 created: 20220626154036471
 creator: TidGiUser
-modified: 20220627091811360
+modified: 20220627094809249
 modifier: TidGiUser
 tags: Vue 项目
 title: vue3-todoMVC
@@ -45,6 +45,23 @@ pnpm初始化vite环境
 ### 绑定按钮点击事件removeCompleted，用未完成过滤后的todos赋值给原来的todos：todos = todos.filter(todo => !todo.completed)
 # 事项编辑
 ## 双击事件editTodo(todo)显示编辑框并聚焦（通过editing和edit类控制）
-### li绑定editing类控制隐藏，显示输入框：
+### li绑定editing类控制隐藏，显示输入框：:class = "{editing: todo === editingTodo}"
+### 输入框双向绑定todo.title，创建自定义指令v-todo-focus完成双击后自动聚焦
+### 控制显示输入框：editingTood = todo
+### 保存todo.title供取消还原使用：titleBeforeEdit = todo.title
+## esc按键绑定cancelEdit(todo)，取消编辑：@keyup.esc = "cancelEdit(todo)"
+### 清空输入框并隐藏：editingTodo = null
+### 还原事项内容：todo.title = titleBeforeEdit.trim
+## enter按键和失去焦点绑定editDone(todo)：@keyup.enter="editDone(todo)" @blur="editDone(todo)"
+### 防止enter触发后自动触发blur多次删除，判断输入框是否已经隐藏：if (!editingTodo) return
+### 清空输入框并隐藏：editingTodo = null
+### 输入内容首尾去空格：todo.title = todo.title.trim()
+### 内容为空则删除该todo：if (!todo.title) removeTodo(todo)
+# 事项筛选
+## 创建filters：let filters = {all(todos){return todos}, active(todos){return todos.filter(todo => !todo.completed)}, completed(todos){return todos.filter(todo => todo.completed)}}
+## 根据todoType生成计算属性filterTodos：() => {filters.[todoType](todos)}
+## 用filterTodos替换v-for中的todos
+# 事项数据持久化
+## 创建todoStorage，根据TODO_KEY获取和本地存储todos：
 
 
