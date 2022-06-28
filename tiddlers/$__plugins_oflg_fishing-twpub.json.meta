@@ -1,7 +1,7 @@
 author: oflg
 core-version: >=5.2.2
 dependents: $:/plugins/oflg/fishing-catchfish
-description: Import TWPUB into Fishing
+description: Import TWPUB books to Fishing for Incremental Reading
 list: readme license
 name: Fishing TWPUB
 parent-plugin: $:/plugins/oflg/fishing
@@ -9,4 +9,4 @@ plugin-type: plugin
 source: https://github.com/oflg/fishing-twpub
 title: $:/plugins/oflg/fishing-twpub
 type: application/json
-version: 0.3.4
+version: 0.3.5
