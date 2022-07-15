@@ -1,0 +1,19 @@
+created: 20220715090642900
+creator: TidGiUser
+modified: 20220715090826205
+modifier: TidGiUser
+tags: 
+title: 新条目
+type: text/vnd.tiddlywiki
+
+<$list>
+{"name": "<<currentTiddler>>"},
+</$list>
+
+<$list counter="counter">
+<$set name=current value=<<currentTiddler>> >
+<$list filter="[all[current]links[]]">
+{"source":"<<current>>", "target": "{{!!title}}"},
+</$list>
+</$set>
+</$list>
