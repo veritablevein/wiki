@@ -21,10 +21,10 @@
         "$:/plugins/nico/shields/stylesheet": {
             "title": "$:/plugins/nico/shields/stylesheet",
             "created": "20201215172003456",
-            "modified": "20201215173919738",
+            "modified": "20201215172036497",
             "tags": "$:/tags/Stylesheet",
             "type": "text/vnd.tiddlywiki",
-            "text": "\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n.shield {\n  font-weight: normal;\n  display: inline-block;\n  color: white;\n  font-size: .8em;\n}\n\n.shield:hover {\n  text-decoration: none;\n}\n\n.shield .label {\n  background: #555;\n  border-top-left-radius: 4px;\n  border-bottom-left-radius: 4px;\n  padding: 3px 6px;\n}\n\n.shield .status {\n  background: #40ba12;\n  border-top-right-radius: 4px;\n  border-bottom-right-radius: 4px;\n  padding: 3px 6px;\n}\n\n.shield.shield-purple .status {\n  background: #923293;\n}\n\n.shield.shield-red .status {\n  background: #cc5640;\n}\n\n.shield.shield-blue .status {\n  background: #0e7fbf;\n}\n"
+            "text": "\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n.shield {\n  font-weight: normal;\n  display: inline-block;\n  color: white;\n  font-size: .8em;\n}\n\n.shield .label {\n  background: #555;\n  border-top-left-radius: 4px;\n  border-bottom-left-radius: 4px;\n  padding: 3px 6px;\n}\n\n.shield .status {\n  background: #40ba12;\n  border-top-right-radius: 4px;\n  border-bottom-right-radius: 4px;\n  padding: 3px 6px;\n}\n\n.shield.shield-purple .status {\n  background: #923293;\n}\n\n.shield.shield-red .status {\n  background: #cc5640;\n}\n\n.shield.shield-blue .status {\n  background: #0e7fbf;\n}\n"
         }
     }
 }
