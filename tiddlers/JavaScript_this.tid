@@ -1,0 +1,16 @@
+created: 20220809092027664
+creator: TidGiUser
+modified: 20220809092437458
+modifier: TidGiUser
+tags: JavaScript
+title: JavaScript:this
+type: text/vnd.tiddlywiki
+
+this是根据调用方式和位置按照绑定规则动态绑定的
+
+绑定规则
+
+# 默认绑定
+# 隐式绑定
+# 显式绑定
+# new绑定
