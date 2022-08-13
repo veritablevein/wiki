@@ -1,0 +1,16 @@
+created: 20220813104729540
+creator: TidGiUser
+modified: 20220813105227293
+modifier: TidGiUser
+tags: CSS
+title: 伪类
+type: text/vnd.tiddlywiki
+
+CSS ''伪类'' 是添加到选择器的关键字，指定要选择的元素的特殊状态。例如，<a >`:hover`</a> 可被用于在用户将鼠标悬停在按钮上时改变按钮的颜色。
+
+```css
+/* 所有用户指针悬停的按钮 */
+button:hover {
+  color: blue;
+}
+```
