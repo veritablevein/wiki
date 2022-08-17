@@ -1,10 +1,11 @@
 created: 20220809092027664
 creator: TidGiUser
-modified: 20220809092437458
+modified: 20220817090458000
 modifier: TidGiUser
 tags: JavaScript
 title: JavaScript:this
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 this是根据调用方式和位置按照绑定规则动态绑定的
 
@@ -13,4 +14,11 @@ this是根据调用方式和位置按照绑定规则动态绑定的
 # 默认绑定
 # 隐式绑定
 # 显式绑定
+## apply
+### 绑定this，传入参数组，直接运行
+## call
+### 绑定this，传入参数，直接运行
+## bind
+### 返回函数
 # new绑定
+
