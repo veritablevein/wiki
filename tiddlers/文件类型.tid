@@ -1,19 +1,19 @@
 created: 20220824100910506
 creator: TidGiUser
-modified: 20220824103142960
+modified: 20220824112342095
 modifier: TidGiUser
 tags: MHRS MOD
 title: 文件类型
 type: text/vnd.tiddlywiki
 wysiwyg: yes
 
-! 模型
+! 模型贴图
 
-!! mesh.2109148288
+!! mesh.2109148288——noesis v4464
 
-!! mdf2.23
+!! mdf2.23——MDF Manager
 
-!! tex.28
+!! tex.28——Asterisk_MHR_Tex_Chopper、PS、Intel DDS
 
 贴图类型：
 
@@ -38,10 +38,11 @@ wysiwyg: yes
 ** FxMap——高光贴图（推测），作用同怪猎世界的XM贴图效果类似需要mdf内相关材质支持。（补充：流光效果需要该贴图支持，比如冥渊龙武器的流光）
 * NRMR
 ** NRMR_NRRTMap——法线贴图（RG通道）+阴影贴图（B通道）+镜面反射度贴图（alpha通道）NRMR中的阴影贴图部分越黑阴影度越高越白阴影度越低，镜面反射贴图同怪猎世界RMT的镜面反射贴图相同越白镜面反射度越低越黑镜面反射度越高。
-** NRMR_NRRTMap——法线贴图（G通道与alpha通道）+阴影贴图（B通道）+镜面反射度贴图（R通道）NRRT中阴影贴图部分越白阴影度越高越黑阴影度越低，镜面反射贴图与NRMR一样。
 * NRRT
+** NRMR_NRRTMap——法线贴图（G通道与alpha通道）+阴影贴图（B通道）+镜面反射度贴图（R通道）NRRT中阴影贴图部分越白阴影度越高越黑阴影度越低，镜面反射贴图与NRMR一样。
 
-!! chain.48
+
+!! chain.48——010 Editor、RE
 
 !! drv.jcns
 
