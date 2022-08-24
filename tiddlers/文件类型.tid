@@ -1,6 +1,6 @@
 created: 20220824100910506
 creator: TidGiUser
-modified: 20220824112342095
+modified: 20220824115006113
 modifier: TidGiUser
 tags: MHRS MOD
 title: 文件类型
@@ -9,7 +9,7 @@ wysiwyg: yes
 
 ! 模型贴图
 
-!! mesh.2109148288——noesis v4464
+!! mesh.2109148288——noesis、Blender、Better FBX Importer
 
 !! mdf2.23——MDF Manager
 
@@ -42,9 +42,17 @@ wysiwyg: yes
 ** NRMR_NRRTMap——法线贴图（G通道与alpha通道）+阴影贴图（B通道）+镜面反射度贴图（R通道）NRRT中阴影贴图部分越白阴影度越高越黑阴影度越低，镜面反射贴图与NRMR一样。
 
 
-!! chain.48——010 Editor、RE
+!! chain.48——010 Editor、RE-RSZ
 
 !! drv.jcns
 
 ! 声音
+
+!! pck↔wem——RingingBloom
+
+!! wem→ogg——ww2ogg
+
+!! ogg→wav——Total Audio Converter
+
+!! wav→wem——Wwise
 
