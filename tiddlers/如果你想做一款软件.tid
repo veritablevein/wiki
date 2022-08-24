@@ -1,13 +1,21 @@
 created: 20220824131441015
 creator: TidGiUser
-modified: 20220824132327394
+modified: 20220824151244369
 modifier: TidGiUser
 tags: 项目
 title: 如果你想做一款软件
 type: text/vnd.tiddlywiki
 wysiwyg: yes
 
-我想要Marginnote的优秀的PDF处理能力，OCR在线校验，父子脑图，双向链接词典，复习功能的完善，能直接渐近阅读，Anki的模板形式web兼容性，Typora的所见即所得，VSCode插件能力
+* PDF处理能力
+* OCR在线校验
+* 父子脑图、焦点
+* 双向链接词典mdx
+* 渐近阅读、SM18算法
+* Anki的模板形式web兼容性
+* 所见即所得
+* 插件拓展能力
+* 视频音频时间轴
 
 
 
