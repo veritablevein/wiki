@@ -1,0 +1,49 @@
+created: 20220824100910506
+creator: TidGiUser
+modified: 20220824103142960
+modifier: TidGiUser
+tags: MHRS MOD
+title: 文件类型
+type: text/vnd.tiddlywiki
+wysiwyg: yes
+
+! 模型
+
+!! mesh.2109148288
+
+!! mdf2.23
+
+!! tex.28
+
+贴图类型：
+
+* ALBD
+** BaseDielectricMap——纹理贴图（RGB通道）+金属反射度贴图（alpha通道）
+** Rise的金属反射度贴图反射度为越白金属度越低越黑金属度越高，若要屏蔽该贴图可以将ALBD贴图的alpha通道涂白或者删除
+* ALP
+** AlphaMap——透明贴图，本贴图支持灰度透明根据灰度来决定透明度 越白透明度越低越黑透明度越高。（简称“黑透白不透”）
+* CMM
+** UserColorchangeMap——变色贴图，作用类似世界的CMM贴图，于防具上是表示防具自定义颜色的部分。
+* DEMI
+** DetailEmissiveMap——呼吸灯发光贴图，与EMI的区别是多了一个Alpha通道表示“呼吸”的效果。
+** 做呼吸灯时请保留其中“两边黑中间白”的Alpha通道。同样需要mdf相关材质支持并需要在mdf内调发光相关参数。
+* EMI
+** EmissiveMap（WE_EmissiveMap）——自发光贴图，作用和组成同怪猎世界的EM贴图效果一样，需要mdf相关材质支持并需要在mdf内调发光相关参数。
+* FM
+* FVM_MSK1
+* FVM_MSK2
+* FVM_MSK3
+** FurVelocityMap——毛发功能贴图，推测本贴图的作用效果同怪猎世界的带有毛发材质的FM贴图效果类似，其中RG通道是类似法线贴图的功能而B通道决定了毛发效果的范围其中白色部分代表有毛发效果黑色部分没有毛发效果，需要mdf内相关材质支持
+* FX
+** FxMap——高光贴图（推测），作用同怪猎世界的XM贴图效果类似需要mdf内相关材质支持。（补充：流光效果需要该贴图支持，比如冥渊龙武器的流光）
+* NRMR
+** NRMR_NRRTMap——法线贴图（RG通道）+阴影贴图（B通道）+镜面反射度贴图（alpha通道）NRMR中的阴影贴图部分越黑阴影度越高越白阴影度越低，镜面反射贴图同怪猎世界RMT的镜面反射贴图相同越白镜面反射度越低越黑镜面反射度越高。
+** NRMR_NRRTMap——法线贴图（G通道与alpha通道）+阴影贴图（B通道）+镜面反射度贴图（R通道）NRRT中阴影贴图部分越白阴影度越高越黑阴影度越低，镜面反射贴图与NRMR一样。
+* NRRT
+
+!! chain.48
+
+!! drv.jcns
+
+! 声音
+
