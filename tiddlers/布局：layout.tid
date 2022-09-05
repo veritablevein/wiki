@@ -1,18 +1,17 @@
 created: 20220905162815114
 creator: TidGiUser
-modified: 20220905164001299
+modified: 20220905175050481
 modifier: TidGiUser
-tags: 
+tags: CSS HTML
 title: 布局：layout
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 # 正常布局流
 # display属性
-# 弹性盒子：flex
-# 网格：grid
-# 浮动：float
-# 定位：position
+# [[弹性盒子：flex]]
+# [[网格：grid]]
+# [[浮动：float]]
+# [[定位：position]]
 # 表格布局display: table-cell
 # 多列布局
 
