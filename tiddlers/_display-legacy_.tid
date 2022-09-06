@@ -1,0 +1,11 @@
+created: 20220906083728742
+creator: TidGiUser
+modified: 20220906084020445
+modifier: TidGiUser
+title: <display-legacy>
+type: text/vnd.tiddlywiki
+
+# [[inline-block|display:inline-block]]
+# [[inline-table|display:inline-table]]
+# [[inline-flex|display:inline-flex]]
+# [[inline-grid|display:inline-grid]]

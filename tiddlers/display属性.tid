@@ -1,6 +1,6 @@
 created: 20220906081012546
 creator: TidGiUser
-modified: 20220906083417092
+modified: 20220906084034475
 modifier: TidGiUser
 tags: 
 title: display属性
@@ -8,39 +8,9 @@ type: text/vnd.tiddlywiki
 
 分类：
 
-# `<display-outside>`
-## [[block|display:block]]
-## [[inline|display:inline]]
-## [[run-in|display:run-in]]🧪
-# `<display-inside>`
-## [[flow|display:flow]]🧪
-## [[flow-root|display:flow-root]]
-## [[table|display:table]]
-## [[flex|display:flex]]
-## [[grid|display:grid]]
-## [[ruby|display:ruby]]🧪
-# `<display-listitem>`
-## [[list-item|display:list-item]]
-# `<display-internal>`
-## [[table-row-group|display:table-row-group]]
-## [[table-header-group|display:table-header-group]]
-## [[table-footer-group|display:table-footer-group]]
-## [[table-row|display:table-row]]
-## [[table-cell|display:table-cell]]
-## [[table-column-group|display:table-column-group]]
-## [[table-column|display:table-column]]
-## [[table-caption|display:table-caption]]
-## [[ruby-base|display:ruby-base]]🧪
-## [[ruby-text|display:ruby-text]]🧪
-## [[ruby-base-container|display:ruby-base-container]]🧪
-## [[ruby-text-container|display:ruby-text-container]]🧪
-# `<display-box>`
-## [[contents|display:contents]]🧪
-## [[none|display:none]]
-# `<display-legacy>`
-## [[inline-block|display:inline-block]]
-## [[inline-table|display:inline-table]]
-## [[inline-flex|display:inline-flex]]
-## [[inline-grid|display:inline-grid]]
-
-
+# [[<display-outside>]]
+# [[<display-inside>]]
+# [[<display-listitem>]]
+# [[<display-internal>]]
+# [[<display-box>]]
+# [[<display-legacy>]]
