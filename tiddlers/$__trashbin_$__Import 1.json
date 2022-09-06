@@ -1,7 +1,0 @@
-{
-    "title": "$:/Import",
-    "type": "application/json",
-    "plugin-type": "import",
-    "status": "pending",
-    "text": "{\n    \"tiddlers\": {\n        \"Untitled\": {\n            \"title\": \"Untitled\",\n            \"text\": \"定位允许你从正常的文档流布局中取出元素，并使它们具有不同的行为，例如放在另一个元素的上面，或者始终保持在浏览器视窗内的同一位置。\",\n            \"type\": \"text/plain\"\n        }\n    }\n}"
-}
