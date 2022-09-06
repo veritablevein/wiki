@@ -1,32 +1,14 @@
 created: 20220906073314448
 creator: TidGiUser
 icon: 
-modified: 20220906074544329
+modified: 20220906075744448
 modifier: TidGiUser
-tags: 
+tags: CSS
 title: display属性
 type: text/vnd.tiddlywiki
 wysiwyg: yes
 
 分类六类：
 
-# <display-outside>
-## block
-## inline
-## run-in🧪
-# <display-inside>
-## flow🧪
-## flow-root
-## table
-## flex
-## grid
-## ruby🧪
-# <display-listitem>
-## list-item
-# <display-internal>
-## table-row-group
-## table-header-group
-## table-row
-# <display-box>
-# <display-legacy>
+# 
 
