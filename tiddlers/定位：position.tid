@@ -1,6 +1,6 @@
 created: 20220821103053665
 creator: TidGiUser
-modified: 20220824100758331
+modified: 20220906071531311
 modifier: TidGiUser
 tags: HTML CSS
 title: 定位：position
@@ -8,8 +8,8 @@ type: text/vnd.tiddlywiki
 
 定位允许你从正常的文档流布局中取出元素，并使它们具有不同的行为，例如放在另一个元素的上面，或者始终保持在浏览器视窗内的同一位置。
 
-# static——[[静态定位]]（默认）
-# relative——[[相对定位]]
-# absolute——[[绝对定位]]
-# fixed——[[固定定位]]
-# sticky——[[粘性定位]]
+# static——[[静态定位|静态定位：static]]（默认）
+# relative——[[相对定位|相对定位：relative]]
+# absolute——[[绝对定位|绝对定位：absolute]]
+# fixed——[[固定定位|固定定位：fixed]]
+# sticky——[[粘性定位|粘性定位：sticky]]

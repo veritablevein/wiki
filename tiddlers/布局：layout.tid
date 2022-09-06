@@ -1,6 +1,6 @@
 created: 20220905162815114
 creator: TidGiUser
-modified: 20220905175050481
+modified: 20220906065416987
 modifier: TidGiUser
 tags: CSS HTML
 title: 布局：layout
@@ -12,6 +12,6 @@ type: text/vnd.tiddlywiki
 # [[网格：grid]]
 # [[浮动：float]]
 # [[定位：position]]
-# 表格布局display: table-cell
+# 表格布局display: table-xxx
 # 多列布局
 
