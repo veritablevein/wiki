@@ -1,26 +1,25 @@
 created: 20220809092027664
 creator: TidGiUser
-modified: 20220905044344362
+modified: 20220906112457061
 modifier: TidGiUser
 tags: JavaScript
 title: JavaScript:this
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 this是根据调用方式和位置按照绑定规则动态绑定的
 
 绑定规则
 
-# 默认绑定
-# 隐式绑定
-# 显式绑定
+# [[默认绑定]]
+# [[隐式绑定]]
+# [[显式绑定]]
 ## apply
 ### 绑定this，传入参数组，直接运行
 ## call
 ### 绑定this，传入参数，直接运行
 ## bind
 ### 返回函数
-# new绑定
+# [[new绑定]]
 ## 创建
 ## 继承
 ## 绑定this

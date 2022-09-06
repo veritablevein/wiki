@@ -1,11 +1,10 @@
 created: 20220905162815114
 creator: TidGiUser
-modified: 20220906072810444
+modified: 20220906112236798
 modifier: TidGiUser
 tags: CSS HTML
 title: 布局：layout
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 # 正常布局流
 # display：inline，block
@@ -14,5 +13,5 @@ wysiwyg: yes
 # [[浮动：float]]
 # [[定位：position]]
 # 表格布局display: table-xxx
-# 多列布局
+# 多列布局column-count、column-width
 
