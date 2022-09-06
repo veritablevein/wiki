@@ -1,7 +1,7 @@
 created: 20220906073314448
 creator: TidGiUser
 icon: 
-modified: 20220906075744448
+modified: 20220906080438905
 modifier: TidGiUser
 tags: CSS
 title: display属性
@@ -10,5 +10,26 @@ wysiwyg: yes
 
 分类六类：
 
-# 
+# <display-outside>
+## block
+## inline
+## run-in
+# <display-inside>
+## flow
+## flow-root
+## table
+## flex
+## grid
+## ruby
+# <display-listitem>
+## 
+# <display-internal>
+# <display-box>
+## 
+# <display-legacy>
+## inline-block
+## inline-table
+## inline-flex
+## inline-grid
+
 
