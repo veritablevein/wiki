@@ -1,6 +1,6 @@
 created: 20220907124457691
 creator: TidGiUser
-modified: 20220907130846772
+modified: 20220907140539365
 modifier: TidGiUser
 tags: 
 title: 手写bind
@@ -15,9 +15,9 @@ type: text/vnd.tiddlywiki
 // 手写bind()
 Function.prototype.myBind = function (thisArg, ...argArray) {
 	const fn = this
-	const fnName = Symbol()
 	thisArg = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : globalThis
 	function proxyFn(...args) {
+		const fnName = Symbol()
 		thisArg[fnName] = fn
 		const finalArgs = [...argArray, ...args]
 		const result = thisArg[fnName](...finalArgs)
