@@ -1,6 +1,6 @@
 created: 20220907091241320
 creator: TidGiUser
-modified: 20220907100427156
+modified: 20220907124107215
 modifier: TidGiUser
 tags: JavaScript 实践 面试
 title: 手写call/apply
@@ -8,23 +8,44 @@ type: text/vnd.tiddlywiki
 
 首先了解JS内置call是如何使用的，有哪些常见的边界条件（edge cases）
 
+# 非严格模式null、undefined返回globalThis，会被Object转换为功能函数fn
+# 数字0
+# 防止添加属性名重复，使用Symbol
+# ES6使用剩余参数和展开，了解下ES5写法
+
 ```javascript
-Function.prototype.mybind = function (thisArg, ...args) {
-	thisArg = (thisArg != null && thisArg != undefined) ? Object(thisArg) : window
-	const fn = Symbol("fn")
+// 手写call()
+Function.prototype.myCall = function (thisArg, ...args) {
+	thisArg = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : globalThis
+	const fn = Symbol()
 	thisArg[fn] = this
 	const result = thisArg[fn](...args)
 	delete thisArg[fn]
 	return result 
 }
 
+// 对比
 function foo () {console.log("foo call...", this)}
 function sum (num1, num2) {return num1 + num2}
 foo.call("abc")
-foo.mycall("abc")
+foo.myCall("abc")
 ```
 # this和thisArg，this在调用call时隐式绑定到函数foo上
-# tihs（foo）添加到thisArg对象上，利用隐式绑定将
+# tihs（foo）添加到thisArg对象上，利用隐式绑定将函数this绑定thisArg
 # 判断传入的thisArg值和对象类型，进行判断包装
 # 执行函数后删除多出的属性，返回函数返回值结果
 
+```javascript
+// 手写apply()
+Function.prototype.myApply = function (thisArg, argArray) {
+	thisArg = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : globalThis
+	const fn = Symbol()
+	thisArg[fn] = this
+	argArray = argArray || []
+	const result = thisArg[fn](...argArray)
+	delete thisArg[fn]
+	return result 
+}
+
+// 对比
+```
