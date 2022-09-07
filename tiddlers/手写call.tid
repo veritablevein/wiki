@@ -1,0 +1,30 @@
+created: 20220907091241320
+creator: TidGiUser
+modified: 20220907093541853
+modifier: TidGiUser
+tags: JavaScript 实践 面试
+title: 手写call
+type: text/vnd.tiddlywiki
+
+首先了解JS内置call是如何使用的，有哪些常见的边界条件（edge cases）
+
+```javascript
+Function.prototype.mybind = function (thisArg, ...args) {
+	var fn = this
+	thisArg = (thisArg != null && thisArg != undefined) ? Object(thisArg) : window
+	thisArg.fn = fn
+	var result = thisArg.fn(...args)
+	delete thisArg.fn
+	return result 
+}
+
+function foo () {console.log("foo call...", this)}
+function sum (num1, num2) {return num1 + num2}
+foo.call("abc")
+foo.mycall("abc")
+```
+# this和thisArg，this在调用call时隐式绑定到函数foo上
+# 利用隐式绑定将foo的this绑定到传入的thisArg上
+# 判断传入的thisArg值和对象类型，进行判断包装
+# 执行函数后删除多出的属性，返回函数返回值结果
+
