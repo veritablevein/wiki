@@ -1,6 +1,6 @@
 created: 20220907091241320
 creator: TidGiUser
-modified: 20220907124107215
+modified: 20220907130746576
 modifier: TidGiUser
 tags: JavaScript 实践 面试
 title: 手写call/apply
@@ -16,11 +16,12 @@ type: text/vnd.tiddlywiki
 ```javascript
 // 手写call()
 Function.prototype.myCall = function (thisArg, ...args) {
+	const fn = this
 	thisArg = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : globalThis
-	const fn = Symbol()
-	thisArg[fn] = this
-	const result = thisArg[fn](...args)
-	delete thisArg[fn]
+	const fnName = Symbol()
+	thisArg[fnName] = fn
+	const result = thisArg[fnName](...args)
+	delete thisArg[fnName]
 	return result 
 }
 
@@ -38,12 +39,13 @@ foo.myCall("abc")
 ```javascript
 // 手写apply()
 Function.prototype.myApply = function (thisArg, argArray) {
+	const fn = this
 	thisArg = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : globalThis
-	const fn = Symbol()
-	thisArg[fn] = this
+	const fnName = Symbol()
+	thisArg[fnName] = fn
 	argArray = argArray || []
-	const result = thisArg[fn](...argArray)
-	delete thisArg[fn]
+	const result = thisArg[fnName](...argArray)
+	delete thisArg[fnName]
 	return result 
 }
 

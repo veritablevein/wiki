@@ -1,0 +1,34 @@
+created: 20220907124457691
+creator: TidGiUser
+modified: 20220907130846772
+modifier: TidGiUser
+tags: 
+title: 手写bind
+type: text/vnd.tiddlywiki
+
+首先了解JS内置bind是如何使用的，和call/apply有什么区别，有哪些常见边界条件
+
+# 返回新函数proxyFn
+# 分开传参
+
+```javascript
+// 手写bind()
+Function.prototype.myBind = function (thisArg, ...argArray) {
+	const fn = this
+	const fnName = Symbol()
+	thisArg = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : globalThis
+	function proxyFn(...args) {
+		thisArg[fnName] = fn
+		const finalArgs = [...argArray, ...args]
+		const result = thisArg[fnName](...finalArgs)
+		delete thisArg[fnName]
+		return result
+	}
+	return proxyFn
+}
+
+// 对比
+function foo () {}
+var fn = foo.bind({name: "abc"})
+fn()
+```
