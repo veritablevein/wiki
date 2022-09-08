@@ -1,8 +1,9 @@
 created: 20220907124457691
 creator: TidGiUser
-modified: 20220907140539365
+icon: 
+modified: 20220908123943306
 modifier: TidGiUser
-tags: 
+tags: JavaScript 面试 实践
 title: 手写bind
 type: text/vnd.tiddlywiki
 
@@ -30,5 +31,30 @@ Function.prototype.myBind = function (thisArg, ...argArray) {
 // 对比
 function foo () {}
 var fn = foo.bind({name: "abc"})
+fn()
+```
+
+softbind
+
+```javascript
+// 手写bind()
+Function.prototype.mySoftBind = function (thisArg, ...argArray) {
+	const fn = this
+	thisArg = (this === globalThis || this === undefined) ? thisArg : fn
+	thisArg = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : globalThis
+	function proxyFn(...args) {
+		const fnName = Symbol()
+		thisArg[fnName] = fn
+		const finalArgs = [...argArray, ...args]
+		const result = thisArg[fnName](...finalArgs)
+		delete thisArg[fnName]
+		return result
+	}
+	return proxyFn
+}
+
+// 对比
+function foo () {}
+var fn = foo.mySoftBind({name: "abc"})
 fn()
 ```

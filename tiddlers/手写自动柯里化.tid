@@ -1,0 +1,33 @@
+created: 20220908112217399
+creator: TidGiUser
+modified: 20220908115719305
+modifier: TidGiUser
+tags: JavaScript 实践 面试
+title: 手写自动柯里化
+type: text/vnd.tiddlywiki
+
+# 传入函数返回函数
+# 剩余参数，递归调用
+# 保持this的正确绑定
+# 递归结束条件，最后传入全部参数执行
+
+```javascript
+function myCurrying (fn) {
+	function curried (...args) {
+		if (args.length >= fn.length) {
+			return fn.apply(this, args)
+		} else {
+			function curried2 (...args2) {
+				return curried.apply(this, [...args, ...args2])
+			}
+			return curried2
+		}
+	}
+	return curried
+}
+
+function sum (num1, num2, num3) {return num1 + num2 + num3}
+const currySum = curried(sum)
+console.log(currySum(10, 20)(30))
+console.log(currySum(10)(20)(30))
+```
