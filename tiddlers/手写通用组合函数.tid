@@ -1,0 +1,40 @@
+created: 20220909094424326
+creator: TidGiUser
+modified: 20220909152915470
+modifier: TidGiUser
+tags: 实践 JavaScript 面试
+title: 手写通用组合函数
+type: text/vnd.tiddlywiki
+
+组合函数的作用：按照一定顺序传入一系列函数，每调用一个函数并将其结果作为参数传给下一个函数调用，最终返回一个函数
+
+# 遍历并判断传入的是否都是函数，不是函数抛出TypeError
+# 返回一个组合后的函数，第一次根据传入函数参数长度是否为空，为第一个函数结果或者调用参数
+# 
+
+```javascript
+function myCompose(...fns) {
+	const length = fns.length
+	for (let i = 0; i < length; i++) {
+		if (typeof fns.[i] !== 'function') {
+			throw TypeError("Excepted Arguments are functions")
+		}
+	}
+	
+	function compose (...args) {
+		let index = 0
+		let result = length ? fns[index].apply(this, args) : args
+		while( ++index < length) {
+			result = fns[index].call(this, result)
+		}
+	}
+	
+	return compose
+}
+
+function double (num) { return num * 2 }
+function square (num) { return num ** 2 }
+
+const doubleAndSquare = myCompose(double, square)
+doubleAndSquare(10) //400
+```
