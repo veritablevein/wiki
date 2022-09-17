@@ -1,0 +1,15 @@
+created: 20220915140102487
+creator: TidGiUser
+modified: 20220915154042376
+modifier: TidGiUser
+tags: JavaScript
+title: JavaScript：with
+type: text/vnd.tiddlywiki
+
+指定对象作用域，不推荐生产环境使用，严格模式报错
+
+```javascript
+with(Object){
+	
+}
+```
