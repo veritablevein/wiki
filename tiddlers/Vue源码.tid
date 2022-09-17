@@ -1,0 +1,26 @@
+created: 20220917103944608
+creator: TidGiUser
+modified: 20220917105331775
+modifier: TidGiUser
+tags: Vue 源码
+title: Vue源码
+type: text/vnd.tiddlywiki
+
+三大核心：
+
+# Compiler模块：编译模板系统
+# Runtime模块：也可称为Render模块，真正的渲染模块
+# Reactivity模块：响应式系统
+
+目录结构：
+
+@@.list-tree
+*src
+**styles
+***variables.scss
+***mixin.scss
+***common.scss
+***transition.scss
+***index.scss
+@@
+	
