@@ -1,6 +1,6 @@
 created: 20220917105348218
 creator: TidGiUser
-modified: 20220917105630862
+modified: 20220917135320585
 modifier: TidGiUser
 tags: git solution
 title: Git - SSL_ERROR_SYSCALL
@@ -10,7 +10,12 @@ type: text/vnd.tiddlywiki
 
 ```
 [http]
-	proxy = socks5://127.0.0.1:7891
+	proxy = socks5://127.0.0.1:xxxx
 [https]
-	proxy = socks5://127.0.0.1:7891
+	proxy = socks5://127.0.0.1:xxxx
+```
+查看.gitconfig文件位置
+
+```
+git config --list --show-origin
 ```
