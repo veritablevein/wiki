@@ -1,6 +1,6 @@
 created: 20220917125245295
 creator: TidGiUser
-modified: 20220917134834665
+modified: 20220918092332415
 modifier: TidGiUser
 tags: 🌎️参考 前端
 title: 前端组件库
@@ -9,3 +9,4 @@ type: text/vnd.tiddlywiki
 # [[Varlet|https://varlet.gitee.io/varlet-ui/#/zh-CN/index]]是一个基于 Vue3 开发的 Material 风格移动端组件库，全面拥抱 Vue3 生态，由社区团队维护。支持 Typescript、按需引入、暗黑模式、主题定制、国际化，并提供 VSCode 插件保障良好的开发体验
 # [[Element Plus|https://element-plus.gitee.io/zh-CN/]]基于 Vue 3，面向设计师和开发者的组件库
 # [[arco design|https://arco.design/vue/docs/start]]字节跳动出品的企业级设计系统
+# [[NutUI|https://nutui.jd.com/#/]]京东风格的轻量级移动端 Vue 组件库
