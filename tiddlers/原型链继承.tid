@@ -1,0 +1,55 @@
+created: 20220925091019664
+creator: TidGiUser
+modified: 20220925101137174
+modifier: TidGiUser
+tags: 原型链
+title: 原型链继承
+type: text/vnd.tiddlywiki
+
+方案：子类构造函数的prototype指向新建父类实例，注意和往原型上添加函数之间的顺序
+
+```javascript
+function Person(){
+	this.name = "veritablevein"
+	this.friends = []
+}
+Person.prototype.eating = function (){
+	console.log(this.name + " eating~")
+}
+
+function Student(){
+	this.sno = 111
+}
+Student.prototype = new Person()	// 注意添加函数之前赋值
+Student.prototype.studying = function (){
+	console.log(this.name + " studying~")
+}
+
+var stu = new Student()
+console.log(stu.name)
+stu.eating()
+
+
+// 弊端
+// 1.打印子类实例对象，某些属性无法看到，不会打印原型上的属性
+console.log(stu) // 类名也会显示父类的Person
+
+// 2.创建两个对象如果修改引用属性会互相影响
+var stu1 = new Student()
+var stu2 = new Student()
+
+//如果直接给属性赋值，会在子类实例上直接添加新属性，不会暴露此问题
+stu1.friends.push("Xiaoxiao")
+
+console.log(stu1.friends)	// ["Xiaoxiao"]
+console.log(stu2.friends)	// ["Xiaoxiao"]
+
+// 3.没有实现传递参数，子类不好处理父类上属性的接收
+var stu3 = new Studnet("Xiaoming", 112)
+```
+
+缺点
+
+# 打印对象无法显示父类上的属性
+# 不同子类实例之间修改父类上的引用属性会互相影响
+# 无法实现构造函数传递参数

@@ -1,0 +1,57 @@
+created: 20220925094642660
+creator: TidGiUser
+modified: 20220925101148019
+modifier: TidGiUser
+tags: 原型链
+title: 借用构造函数继承
+type: text/vnd.tiddlywiki
+
+方案：在[[原型链继承]]的基础上，在子类构造函数通过借用父类构造函数实现参数传递。这时原型链继承的弊端就都已经解决了。
+
+```javascript
+function Person(name, age, friends){
+	this.name = name
+	this.age = age
+	this.friends = friends
+}
+Person.prototype.eating = function (){
+	console.log(this.name + " eating~")
+}
+
+function Student(name, age, friends, sno){
+	// 借用父类构造函数继承
+	Person.call(this, name, age, friends)
+	
+	this.sno = sno
+}
+Student.prototype = new Person()	// 未传递传输会导致属性存在且值为undefined
+Student.prototype.studying = function (){
+	console.log(this.name + " studying~")
+}
+
+var stu = new Student("Xiaoxiao", 18, ["Xiaoming"], 111)
+console.log(stu.name)
+stu.eating()
+
+
+// 原型链继承弊端
+// 1.此时已经解决了不能显示父类属性的弊端了
+console.log(stu)
+
+// 2.此时已经解决了父类引用属性互相影响的弊端
+var stu1 = new Student("Xiaoming", 17, ["Xiaoxiao"], 112)
+var stu2 = new Student("Xiaohong", 16, ["Yunxi"], 113)
+
+stu1.friends.push("Yunyang")
+
+console.log(stu1.friends)	// ["Xiaoxiao", "Yunyang"]
+console.log(stu2.friends)	// ["Yunxi"]
+
+// 3.上面两条都是解决传递参数问题顺带解决的
+var stu3 = new Studnet("Yunxi", 20, ["Xiaohong"], 112)
+```
+
+缺点
+
+# Person函数至少会调用两次：一次new Person()，一次每次创建新子类的Person.call()
+# 子类实例的原型对象（父类实例：new Person())上会多出一些没必要的属性

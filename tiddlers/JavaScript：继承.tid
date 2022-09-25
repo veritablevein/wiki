@@ -1,11 +1,12 @@
 created: 20220925082150355
 creator: TidGiUser
-modified: 20220925082437895
+modified: 20220925101203352
 modifier: TidGiUser
 tags: JavaScript
 title: JavaScript：继承
 type: text/vnd.tiddlywiki
 
-原型链继承：
+继承方案
 
-# 
+# [[原型链继承]]
+# [[借用构造函数继承]]
