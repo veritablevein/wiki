@@ -1,6 +1,6 @@
 created: 20220925082440338
 creator: TidGiUser
-modified: 20220925082846980
+modified: 20220928091629660
 modifier: TidGiUser
 tags: JavaScript
 title: 原型链
@@ -11,3 +11,5 @@ type: text/vnd.tiddlywiki
 new创建对象的过程中对__proto__的赋值
 
 prototype的指向，和constructor的指向
+
+目前最理想的继承方式还是寄生组合式继承

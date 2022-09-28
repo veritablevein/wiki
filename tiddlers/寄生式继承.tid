@@ -1,0 +1,31 @@
+created: 20220928083939098
+creator: TidGiUser
+modified: 20220928093322547
+modifier: TidGiUser
+tags: 原型链
+title: 寄生式继承
+type: text/vnd.tiddlywiki
+
+```javascript
+var personObj = {
+  running: function() {
+    console.log("running")
+  }
+}
+
+// 工厂函数
+function createStudent(name) {
+  var stu = Object.create(personObj)	//原型式继承
+  stu.name = name
+	// 弊端：函数多次创建
+  stu.studying = function() {
+    console.log("studying~")
+  }
+  return stu
+}
+
+// 弊端：不能明确究竟是一个什么类型，最好还是用构造函数创建
+var stuObj = createStudent("why")
+var stuObj1 = createStudent("kobe")
+var stuObj2 = createStudent("james")
+```

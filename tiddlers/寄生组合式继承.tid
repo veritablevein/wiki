@@ -1,0 +1,62 @@
+created: 20220928084401999
+creator: TidGiUser
+modified: 20220928092153325
+modifier: TidGiUser
+tags: 原型链
+title: 寄生组合式继承
+type: text/vnd.tiddlywiki
+
+```javascript
+// 原型式继承函数
+function createObject(o){
+	function Fn(){}
+	Fn.prototype = o
+	return new Fn()
+}
+
+function inheritPrototype(SubType, SuperType){
+	// 子类原型指向一个原型为父类原型对象
+	SubType.prototype = createObject(SuperType.prototype)
+	// 解决类名问题，相当于SubType.constructor.name
+	Object.defineProperty(SubType.prototype, "constructor", {
+		enumerable: false,
+		configurable: true,
+		writable: true,
+		value: SubType
+	})
+}
+
+
+
+function Person(name, age, friends){
+	this.name = name
+	this.age = age
+	this.friends = friends
+}
+Person.prototype.eating = function (){
+	console.log(this.name + " eating~")
+}
+
+function Student(name, age, friends, sno){
+	Person.call(this, name, age, friends)
+	this.sno = sno
+}
+
+inheritPrototype(Student, Person)	// 可复用
+
+Student.prototype.studying = function (){
+	console.log(this.name + " studying~")
+}
+
+var stu = new Student("Xiaoxiao", 18, ["Xiaoming"], 111)
+console.log(stu.name)
+stu.eating()
+stu.studying()
+console.log(stu)
+
+var stu1 = new Student("Xiaoming", 17, ["Xiaoxiao"], 112)
+var stu2 = new Student("Xiaohong", 16, ["Yunxi"], 113)
+stu1.friends.push("Yunyang")
+console.log(stu1.friends)
+console.log(stu2.friends)
+```

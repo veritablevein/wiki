@@ -1,0 +1,32 @@
+created: 20220928071434612
+creator: TidGiUser
+modified: 20220928084030035
+modifier: TidGiUser
+tags: 原型链
+title: 原型式继承
+type: text/vnd.tiddlywiki
+
+三种写法都是一样的原理，在借用构造函数的基础上不再new创建父类实例
+
+```javascript
+var obj = {
+	name: "why",
+	age: 18
+}
+
+function createObject1(o){
+	return Object.setPrototypeOf({}, o)
+}
+
+function createObject2(o){
+	function Fn(){}
+	Fn.prototype = o
+	return new Fn()
+}
+
+//var info = createObject1(obj)
+//var info = createObject2(obj)
+var info = Object.create(obj) //es5
+console.log(info)
+console.log(info.__proto__)
+```
