@@ -1,0 +1,18 @@
+created: 20220930062633505
+creator: TidGiUser
+modified: 20220930063902447
+modifier: TidGiUser
+tags: 项目
+title: 如何压缩PDF类似格式？
+type: text/vnd.tiddlywiki
+
+! 目前解决方案
+
+!! 纯文字无图片->灰度图片
+
+扫描图片，CEP批量处理将其转化为TIF灰度纯黑白图片
+
+上传ilovepdf再次压缩，能得到较为完好的
+
+!! OCR扫描+矢量图
+
