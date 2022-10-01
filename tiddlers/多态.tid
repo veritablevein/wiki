@@ -1,0 +1,15 @@
+created: 20221001115905584
+creator: TidGiUser
+modified: 20221001120343540
+modifier: TidGiUser
+tags: 面向对象编程
+title: 多态
+type: text/vnd.tiddlywiki
+
+不同数据类型执行不同操作，表现出不同的行为
+
+多态在传统OOP语言（C++、Java）的几个前提：
+
+# 继承是多态的前提
+# 子类可以重写（overwrite）父类方法
+# 父类引用可以指向子类：Shape s = new Circle()

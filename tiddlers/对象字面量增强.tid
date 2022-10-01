@@ -1,0 +1,51 @@
+created: 20221001120643632
+creator: TidGiUser
+modified: 20221001122443144
+modifier: TidGiUser
+tags: ES6
+title: 对象字面量增强
+type: text/vnd.tiddlywiki
+
+!属性简写 property shorthand
+```javascript
+var name = "veritablevein"
+var age = 23
+//old
+var obj = {
+	name: name,
+	age: age
+}
+
+//es6
+var obj = {
+	name,
+	age
+}
+```
+
+!方法简写 method shorthand
+```javascript
+//old
+var obj = {
+	foo: function () {}
+}
+
+//es6
+var obj = {
+	foo(){},
+	bar: ()=>{console.log(this)}
+}
+```
+
+!计算属性名 computed property name
+
+```javascript
+//old
+var obj = {}
+obj[name + 123] = "veritablevein"
+
+//es6
+var obj = {
+	[name + 123]: 'veritablevein'
+}
+```
