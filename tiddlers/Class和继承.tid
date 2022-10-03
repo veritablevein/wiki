@@ -1,0 +1,63 @@
+created: 20221003141541297
+creator: TidGiUser
+modified: 20221003142956056
+modifier: TidGiUser
+tags: ES6
+title: Class和继承
+type: text/vnd.tiddlywiki
+
+# 构造函数
+# 成员方法
+# 静态方法
+# getter/setter访问器
+
+```javascript
+var names = ["abc", "cba", "nba"]
+
+class Person {
+	constructor (name, age) {
+		this.name = name
+		this.age = age
+		this._address = "武汉市"
+	}
+	
+	eating () {
+		console.log(this.name + " eating~")
+	}
+	
+	running () {
+		console.log(this.name + " running~")
+	}
+	
+	get address () {
+		console.log("拦截访问操作")
+		return this._address
+	}
+	
+	set address (newAddress) {
+		console.log("拦截设置操作")
+		this._address = newAddress
+	}
+	
+	static randomPerson () {
+		var nameIndex = Math.floor(Math.random() * names.length)
+		var name = names[nameIndex]
+		var age = Math.floor(Math.random() * 100)
+		return new Person(name, age)
+	}
+}
+
+var p = new Person("veritablevein", 18)
+p.eating()
+p.running()
+
+console.log(p.address)
+p.address = "北京市"
+console.log(p.address)
+
+// console.log(Object.getOwnPropertyDescriptors(Person.prototype))
+
+for (var i = 0; i < 50; i++) {
+  console.log(Person.randomPerson())
+}
+```
