@@ -1,0 +1,19 @@
+created: 20221003130314751
+creator: TidGiUser
+modified: 20221003130603243
+modifier: TidGiUser
+tags: JavaScript
+title: 作用域提升
+type: text/vnd.tiddlywiki
+
+变量函数在声明前提前被访问，内容为undefined
+
+```javascript
+console.log(foo)
+console.log(bar)
+
+var foo = "foo"
+function bar () {
+	console.log("bar")
+}
+```

@@ -1,0 +1,23 @@
+created: 20221003121543756
+creator: TidGiUser
+modified: 20221003122536544
+modifier: TidGiUser
+tags: ES6
+title: 暂时性死区
+type: text/vnd.tiddlywiki
+
+明明let/const没有作用域提升，却会导致声明前的访问无法访问，这段作用域被社区称作暂时性死区。
+
+```javascript
+let foo = "foo"
+
+function bar () {
+	console.log(foo)	// Cannot access 'foo' before initialization
+	let foo = "bar"
+}
+
+bar()
+```
+其实理解了let/const为什么不算作用域提升，就已经佷清楚了。
+
+let/const变量已经创建了，只是设置了初始化前无法访问

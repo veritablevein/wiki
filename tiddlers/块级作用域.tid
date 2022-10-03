@@ -1,7 +1,72 @@
 created: 20221003085257280
 creator: TidGiUser
-modified: 20221003085303666
+modified: 20221003124352122
 modifier: TidGiUser
 tags: ES6
 title: 块级作用域
 type: text/vnd.tiddlywiki
+
+ES5中只有两个东西会生成块级作用域：
+
+# 全局作用域
+# 函数作用域
+
+ES6的块级作用域对var无效，标准要求对let/const/function/class生效，function考虑兼容问题浏览器会做特殊处理表现出不起作用。
+
+```javascript
+{}
+let obj = {}	// 区分块和字面量
+
+{
+	let foo = "foo"
+	const bar = "bar"
+	function fn () {
+		console.log("function fn")
+	}
+	class Person {}
+}
+
+console.log(foo)
+console.log(bar)
+fn()
+let p = new Pearson()
+```
+除了单独的{}外，if-else、switch、for、while等语句中的{}都算块级作用域
+
+```javascript
+if(true){
+	var foo = "foo"
+	let bar = "bar"
+}
+
+switch(color){
+		case "red":
+			var foo = "foo"
+			let bar = "bar"
+}
+
+
+const btn = document.getElementByTagName('button')
+// 无论点哪个都是“第btn.length个按钮被点击”，用的同一个i，会到上层作用域寻找i
+for (var i = 0; i < btn.length; i++) {
+	btn[i].onclick = function () {
+		console.log("第" + i + "个按钮被点击")
+	}
+}
+// es5的做法，用立即执行函数生成作用域包裹
+for (var i = 0; i < btn.length; i++) {
+	(function(n){
+		btn[i].onclick = function () {
+			console.log("第" + n + "个按钮被点击")
+		}
+	})(i)
+	
+}
+
+// 正确显示第几个按钮被点击
+for (let i = 0; i < ; i++) {
+	btn[i].onclick = function () {
+		console.log("第" + i + "个按钮被点击")
+	}
+}
+```

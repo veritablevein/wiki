@@ -1,26 +1,31 @@
 created: 20221003083930108
 creator: TidGiUser
-modified: 20221003085135692
+modified: 20221003130302928
 modifier: TidGiUser
 tags: ES6
 title: let/const
 type: text/vnd.tiddlywiki
 
+! let/const和var的区别
+
+# let/const无法重复声明
+# const的值无法修改
+# var有作用域提升，可以在声明前创建并访问；let/const因为无法在声明前访问所以不叫[[作用域提升]]，但是他们已经创建出来并添加到VE对应的VariableMap类型（HashMap）的variables_对象中（v8）,导致[[暂时性死区]]
+# var全局创建对象会自动添加到window对象上，let/const还是会放入variables_对象中，但window不会同步
+# let/const会受[[块级作用域]]影响，var不会
+
 ```javascript
-console.log(foo)
-console.log(bar)
-console.log(baz)
+console.log(foo)		// 3. foo
+console.log(bar)		// 3. can't access before initialization
+console.log(baz)		// 3. can't access before initialization
 
 var foo = "foo"
 let bar = "bar"
+let bar = "bar"			// 1. Identifier has already been declared
 const baz = "baz"
-baz = "bay"
+baz = "bay"				// 2. Assignment to constant variable
 
-console.log(window.foo)
-console.log(window.bar)
-console.log(window.baz)
+console.log(window.foo)	// 4. foo
+console.log(window.bar)	// 4. undefined
+console.log(window.baz)	// 4. undefined
 ```
-和var的区别：
-
-# var有作用域提升，可以在声明前创建并访问；let/const因为无法在声明前访问所以不叫作用域提升，但是他们已经创建出来并添加到VE对应的VariableMap类型（HashMap）的variables_对象中（v8）
-# var全局创建对象会自动添加到window对象上，let/const还是会放入variables_对象中，但window不会同步
