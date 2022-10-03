@@ -1,0 +1,9 @@
+created: 20221003060021218
+creator: TidGiUser
+modified: 20221003060547239
+modifier: TidGiUser
+tags: 
+title: 测试tabs宏
+type: text/vnd.tiddlywiki
+
+<<tabs "[tag[JavaScript]]" "About XP" "$:/state/tab/beginner" "tc-vertical">>
