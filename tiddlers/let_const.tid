@@ -1,0 +1,26 @@
+created: 20221003083930108
+creator: TidGiUser
+modified: 20221003085135692
+modifier: TidGiUser
+tags: ES6
+title: let/const
+type: text/vnd.tiddlywiki
+
+```javascript
+console.log(foo)
+console.log(bar)
+console.log(baz)
+
+var foo = "foo"
+let bar = "bar"
+const baz = "baz"
+baz = "bay"
+
+console.log(window.foo)
+console.log(window.bar)
+console.log(window.baz)
+```
+和var的区别：
+
+# var有作用域提升，可以在声明前创建并访问；let/const因为无法在声明前访问所以不叫作用域提升，但是他们已经创建出来并添加到VE对应的VariableMap类型（HashMap）的variables_对象中（v8）
+# var全局创建对象会自动添加到window对象上，let/const还是会放入variables_对象中，但window不会同步
