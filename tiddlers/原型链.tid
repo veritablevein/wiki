@@ -1,14 +1,14 @@
 created: 20220925082440338
 creator: TidGiUser
-modified: 20220928091629660
+modified: 20221003070648359
 modifier: TidGiUser
 tags: JavaScript
 title: 原型链
 type: text/vnd.tiddlywiki
 
-分清__proto__和prototype
+分清&#95;&#95;proto&#95;&#95;和prototype
 
-new创建对象的过程中对__proto__的赋值
+new创建对象的过程中对&#95;&#95;proto&#95;&#95;的赋值
 
 prototype的指向，和constructor的指向
 

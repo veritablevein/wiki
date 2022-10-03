@@ -1,7 +1,7 @@
 caption: Custom Stylesheet
 created: 20220520113035259
 creator: TidGiUser
-modified: 20220520113221503
+modified: 20221003070058716
 modifier: TidGiUser
 tags: $:/tags/Stylesheet
 title: $:/config/veritablevein/customstylesheet
@@ -297,4 +297,13 @@ a.tc-tiddlylink.tc-plugin-info {
 
 button.tc-btn-invisible {
      border-radius: 3px;
+}
+
+.tc-tab-buttons.tc-vertical {
+    font-size: 75%;
+}
+
+.tc-table-of-contents li {
+    font-size: 75%;
+    font-weight: bold;
 }
