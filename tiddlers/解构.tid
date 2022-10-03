@@ -1,0 +1,59 @@
+created: 20221003130637109
+creator: TidGiUser
+modified: 20221003132413962
+modifier: TidGiUser
+tags: ES6
+title: 解构
+type: text/vnd.tiddlywiki
+
+! 数组解构
+```javascript
+let arr = ["abc", "cba", "nba"]
+
+// let item1 = arr[0]
+// let item2 = arr[1]
+// let item3 = arr[2]
+
+// 对数组的解构
+let [item1, item2, item3] = arr
+console.log(item1, item2, item3)
+
+// 解构后面的元素
+let [, , itemZ] = arr
+console.log(itemZ)
+
+// 解构出一个元素，后面的元素放到一个新数组中
+let [itemX, ...newItems] = arr
+console.log(itemX, newItems)
+
+// 元素数量不够时，解构的默认值
+let [itemA, itemB, itemC, itemD = "aaa"] = arr
+console.log(itemD)
+```
+
+! 对象解构
+```javascript
+let obj = {
+	name: "veritablevein",
+	age: 18,
+	height: 1.88
+}
+
+// 对象的解构
+let {name, age, height} = obj
+console.log(name, age, height)
+
+// 对象单独属性解构
+let {age} = obj
+console.log(age)
+
+// 对象解构改名和默认值
+let {name:newName = "kuro"} = obj
+console.log(newName)
+
+// 对象解构传参
+function foo ({name, age}) {
+	console.log(name, age)
+}
+foo(obj)
+```
