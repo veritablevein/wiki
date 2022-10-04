@@ -1,7 +1,7 @@
 color: #f6dd1f
 created: 20220422140224626
 creator: TidGiUser
-modified: 20221004064333660
+modified: 20221004064826252
 modifier: TidGiUser
 tags: JavaScript
 title: ES6
@@ -30,6 +30,6 @@ type: text/vnd.tiddlywiki
 <$macrocall
   $name="toc-tabbed-external-nav"
   tag="ES6"
-	sort=sort[create]
-  selectedTiddler="$:/temp/toc/selectedTiddler"
+	sort="sort[created]"
+  selectedTiddler="$:/temp/toc/selectedTiddler/ES6"
 />
