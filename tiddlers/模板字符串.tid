@@ -1,0 +1,27 @@
+created: 20221004060720312
+creator: TidGiUser
+modified: 20221004063115166
+modifier: TidGiUser
+tags: ES6
+title: 模板字符串
+type: text/vnd.tiddlywiki
+
+形式：&#96;xxx''${statement1}''xxx''${statement2}''...''${statementn}''xxx&#96;
+
+```javascript
+const name = "veritablevein"
+const age = 18
+const height = 1.88
+
+const message = `my name is ${name}, age is ${age}, height is ${1.88}`
+console.log(message)
+
+const info = `age double is ${age * 2}`
+console.log(info)
+
+function doubleAge() {
+	return age * 2
+}
+const info2 = `double age is ${doubleAge()}`
+console.log(info2)
+```

@@ -1,0 +1,25 @@
+created: 20221004062848885
+creator: TidGiUser
+modified: 20221004063826165
+modifier: TidGiUser
+tags: ES6
+title: 标签模板字符串
+type: text/vnd.tiddlywiki
+
+形式：function&#96;xxx''${statement1}''xxx''${statement2}''...''${statementn}''xxx&#96;
+
+函数接收的第一个参数为被分割的字符串分别放入同一数组，后续参数为${statement}依次传入
+
+```javascript
+function foo (x, y, z) {
+	console.log(x, y, z)
+}
+
+const name = "veritablevein"
+const age = 18
+
+foo`Hello${name}World${age}!`
+// x为['Hello', 'World', '!']
+// y为${name}
+// z为${age}
+```
