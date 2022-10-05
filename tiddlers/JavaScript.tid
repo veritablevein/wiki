@@ -1,12 +1,19 @@
 color: #f2e032
 created: 20220202131657706
 creator: TidGiUser
-modified: 20220422132426639
+modified: 20221005121638250
 modifier: TidGiUser
 tags: 前端 语言
 title: JavaScript
 tmap.id: 203345d0-d842-4d14-8adf-6eb72f6ea80d
 type: text/vnd.tiddlywiki
+
+<$macrocall
+  $name="toc-tabbed-external-nav"
+  tag="JavaScript"
+	sort="sort[created]"
+  selectedTiddler="$:/temp/toc/selectedTiddler/JavaScript"
+/>
 
 ! 面试重点
 !! 语言设计
