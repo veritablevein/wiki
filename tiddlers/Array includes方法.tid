@@ -1,0 +1,35 @@
+created: 20221005124413631
+creator: TidGiUser
+modified: 20221005125022414
+modifier: TidGiUser
+tags: ES7
+title: Array includes方法
+type: text/vnd.tiddlywiki
+
+之前可以用indexOf方法得到的索引值判断是否存在元素
+
+includes方法和indexOf方法的区别是：
+
+# includes第二个参数可以从索引后判断是否存在
+# indexOf对特殊值（如：NaN）的结果会和不存在一样
+```javascript
+const names = ["abc", "cba", "nba", "mba", NaN]
+
+if (names.indexOf("cba") !== -1) {
+  console.log("包含abc元素")
+}
+
+// ES7 ES2016
+if (names.includes("cba", 2)) {
+  console.log("包含abc元素")
+}
+
+if (names.indexOf(NaN) !== -1) {
+  console.log("包含NaN")
+}
+
+if (names.includes(NaN)) {
+  console.log("包含NaN")
+}
+
+```
