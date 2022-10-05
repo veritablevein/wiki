@@ -1,0 +1,18 @@
+created: 20221005131657127
+creator: TidGiUser
+modified: 20221005133937641
+modifier: TidGiUser
+tags: ES7 运算符的扩展
+title: 指数运算符
+type: text/vnd.tiddlywiki
+
+指数运算：$$x^y$$，x ** y
+
+相当于以前的Math.pow(x, y)方法
+
+```javascript
+const result1 = Math.pow(3, 3)
+// ES7: **
+const result2 = 3 ** 3
+console.log(result1, result2)
+```
