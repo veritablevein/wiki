@@ -1,0 +1,16 @@
+created: 20221006161344346
+creator: TidGiUser
+modified: 20221007052937135
+modifier: TidGiUser
+tags: 
+title: 云服务器安装
+type: text/vnd.tiddlywiki
+
+获取公钥供SSH MOSH SFTP访问
+安装clash及dashborad，用SFTP传输相关文件，开放相关端口
+部分仓库用gitee镜像替代
+vscpde远程访问一次
+zsh，omz，p10k，.zshrc设置
+vim，neovim
+fnm，node，npm，pnpm，ni
+

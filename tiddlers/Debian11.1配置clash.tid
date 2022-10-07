@@ -1,0 +1,29 @@
+created: 20221006152949267
+creator: TidGiUser
+modified: 20221007044702907
+modifier: TidGiUser
+tags: 
+title: Debian11.1配置clash
+type: text/vnd.tiddlywiki
+
+Clash 下载
+在 Clash release 页面下载相应的版本，对于 Ubuntu 一般使用 clash-linux-amd64-vX.X.X.gz 版本：
+
+```bash
+wget https://github.com/Dreamacro/clash/releases/download/v1.10.0/clash-linux-amd64-v1.10.0.gz
+```
+如果直接 wget 速度较慢的话，可以本地下载完成后，使用 SFTP (如Filezilla设置SFTP和公钥)上传到 Linux 服务器。
+
+然后使用 gunzip 命令解压，并重命名为 clash：
+
+```
+gunzip clash-linux-amd64-v1.10.0.gz
+mv clash-linux-amd64-v1.10.0 clash
+```
+为 clash 添加可执行权限：
+
+```
+chmod u+x clash
+```
+Clash 运行时需要 [[Country.mmdb|https://github.com/Dreamacro/maxmind-geoip/releases]] 文件，当第一次启动 Clash 时（使用 ./clash 命令） 会自动下载（会下载至 /home/XXX/.config/clash 文件夹下）。自动下载可能会因网络原因较慢，可以点击下载。
+Country.mmdb 文件利用 GeoIP2 服务能识别互联网用户的地点位置，以供规则分流时使用。
