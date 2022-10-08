@@ -1,0 +1,13 @@
+created: 20221008131158701
+creator: TidGiUser
+modified: 20221008131335841
+modifier: TidGiUser
+tags: ES8
+title: async/await
+type: text/vnd.tiddlywiki
+
+```javascript
+async function foo() {
+  // await
+}
+```

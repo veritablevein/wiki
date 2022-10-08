@@ -1,9 +1,9 @@
 created: 20221008114922687
 creator: TidGiUser
-modified: 20221008123204689
+modified: 20221008132706401
 modifier: TidGiUser
 tags: ES8
-title: 字符串的padStart/padEnd
+title: 字符串的padStart/padEnd()
 type: text/vnd.tiddlywiki
 
 在字符串头/尾，用字符填充至指定长度

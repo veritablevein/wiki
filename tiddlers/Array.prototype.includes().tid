@@ -1,9 +1,9 @@
 created: 20221005124413631
 creator: TidGiUser
-modified: 20221005125022414
+modified: 20221008132758130
 modifier: TidGiUser
 tags: ES7
-title: Array includes方法
+title: Array.prototype.includes()
 type: text/vnd.tiddlywiki
 
 之前可以用indexOf方法得到的索引值判断是否存在元素

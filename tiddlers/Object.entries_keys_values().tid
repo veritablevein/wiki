@@ -1,9 +1,9 @@
 created: 20221008104028551
 creator: TidGiUser
-modified: 20221008114912357
+modified: 20221008132644084
 modifier: TidGiUser
 tags: ES8 对象的新增方法
-title: Object.entries/keys/values
+title: Object.entries/keys/values()
 type: text/vnd.tiddlywiki
 
 Object新增静态方法entries/keys/values

@@ -1,7 +1,7 @@
 created: 20220124135902019
 creator: TidGiUser
 icon: 
-modified: 20220727065611812
+modified: 20221008131541345
 modifier: TidGiUser
 title: Index
 tmap.id: 0dc1cb92-0912-4c69-ab9e-89d9a194bfe6
@@ -13,7 +13,7 @@ type: text/vnd.tiddlywiki
 
 <<reuse-tiddler "快速创建新笔记按钮">>
 
-<<details label:"本知识库的介绍（来访者㐓点击查看）" src:"前端" labelClass:"bg-secondary text-white">>
+<<details label:"本知识库的介绍（来访者㐓点击查看）" src:"JavaScript" labelClass:"bg-secondary text-white">>
 
 <details><summary>优先待办列表</summary><<reuse-tiddler "优先待办列表">></details>
 
