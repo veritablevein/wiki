@@ -1,0 +1,32 @@
+created: 20221008104028551
+creator: TidGiUser
+modified: 20221008114912357
+modifier: TidGiUser
+tags: ES8 对象的新增方法
+title: Object.entries/keys/values
+type: text/vnd.tiddlywiki
+
+Object新增静态方法entries/keys/values
+
+```javascript
+const obj = {
+  name: "why",
+  age: 18
+}
+
+console.log(Object.entries(obj))                    // [ [ 'name', 'why' ], [ 'age', 18 ] ]
+console.log(Object.keys(obj))                       // [ 'name', 'age' ]
+console.log(Object.values(obj))                     // [ 'why', 18 ]
+
+const objEntries = Object.entries(obj)
+objEntries.forEach(item => {
+  console.log(item[0], item[1])
+})
+
+console.log(Object.entries(["abc", "cba", "nba"]))  // [ [ '0', 'abc' ], [ '1', 'cba' ], [ '2', 'nba' ]]
+console.log(Object.entries("abc"))                  // [ [ '0', 'a' ], [ '1', 'b' ], [ '2', 'c' ] ]
+console.log(Object.keys(["abc", "cba", "nba"]))     // [ '0', '1', '2' ]
+console.log(Object.keys("abc"))                     // [ '0', '1', '2' ]
+console.log(Object.values(["abc", "cba", "nba"]))   // [ 'abc', 'cba', 'nba' ]
+console.log(Object.values("abc"))                   // [ 'a', 'b', 'c' ]
+```

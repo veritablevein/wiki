@@ -1,0 +1,24 @@
+created: 20221008123219619
+creator: TidGiUser
+modified: 20221008125924555
+modifier: TidGiUser
+tags: ES8
+title: 函数参数尾逗号
+type: text/vnd.tiddlywiki
+
+! Trailing Commas
+# 修改代码的时候，想为函数添加参数，或者调整参数的次序，就势必要在原来最后一个参数后面添加一个逗号。
+# 对于版本管理系统来说，就会显示添加逗号的那一行也发生了变动。有点冗余。
+# 函数参数与数组和对象的尾逗号规则，保持一致
+```javascript
+function foo(
+  m,
+  n,
+) {/*statements*/ }
+
+foo(
+  20,
+  30,
+)
+
+```
