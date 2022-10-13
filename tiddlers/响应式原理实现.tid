@@ -1,0 +1,105 @@
+created: 20221010152727394
+creator: TidGiUser
+modified: 20221010164040173
+modifier: TidGiUser
+tags: ES6 响应式 实践
+title: 响应式原理实现
+type: text/vnd.tiddlywiki
+
+* 类：Depend
+* 全局函数: getDepend(target, key)、watchFn(fn)、reactive(obj)
+* 全局变量: activeReactivFn、targetMap
+* 使用案例：用reactive()创建响应式对象，watchFn()添加响应式函数，更改对象属性自动触发响应式函数
+
+# 能给对象属性添加响应式函数：watchFn(fn)，使用全局activeReactiveFn配合收集
+# class Depend，依赖是为了方便关联不同对象属性对应的多个响应式函数。本质就是个集合constructor->Set:reactiveFns，收集对应的响应式函数depend()，通知响应遍历执行响应式函数notify()。为什么要用集合存储
+# 全局targetMap是个WeakMap，存储对象和Map<属性, 依赖>的关系。getDepend(target, key)配合创建响应式对象时，找到对应对象属性的依赖，没有就关联一个新的。
+# reactive(obj)用Proxy或Object.defineProperty()将对象创建为新的响应式对象，监听对象操作进行依赖收集(get)和通知响应执行(set)
+
+```javascript
+// 全局activeReactiveFn配合收集
+let activeReactiveFn = null
+
+// 将函数变成响应式函数
+function watchFn(fn) {
+  activeReactiveFn = fn
+  fn()
+  activeReactiveFn = null
+}
+
+// 关联不同对象属性对应的多个响应式函数
+class Depend {
+  constructor() {
+    this.reactiveFns = new Set()
+  }
+	// 收集对应的响应式函数
+  depend() {
+    if (activeReactiveFn) {
+      this.reactiveFns.add(activeReactiveFn)
+    }
+  }
+	// 通知响应遍历执行响应式函数
+  notify() {
+    this.reactiveFns.forEach(fn => { fn() })
+  }
+}
+
+// 存储对象和Map<属性, 依赖>的关系
+const targetMap = new WeakMap()
+// 找到对应对象属性的依赖，没有就关联一个新的
+function getDepend(target, key) {
+  let map = targetMap.get(target)
+  if (!map) {
+    map = new Map()
+    targetMap.set(target, map)
+  }
+
+  let depend = map.get(key)
+  if (!depend) {
+    depend = new Depend()
+    map.set(key, depend)
+  }
+
+  return depend
+}
+
+// 将对象创建为新的响应式对象
+function reactive(obj) {
+  return new Proxy(obj, {
+    get(target, key, receiver) {
+      const depend = getDepend(target, key)
+      depend.depend()
+      return Reflect.get(target, key, receiver)
+    },
+    set(target, key, newValue, receiver) {
+      Reflect.set(target, key, newValue, receiver)
+      const depend = getDepend(target, key)
+      depend.notify()
+    }
+  })
+}
+
+// 用reactive()创建响应式对象，watchFn()添加响应式函数，更改对象属性自动触发响应式函数
+const objProxy = reactive({
+  name: "veritable",
+  age: 18
+})
+
+watchFn(() => {console.log(objProxy.name)})
+watchFn(() => {console.log(objProxy.age)})
+
+objProxy.name = "vein"
+objProxy.age = 23
+objProxy.age = 19
+
+const infoProxy = reactive({
+  log: "test",
+  level: 10
+})
+
+watchFn(() => { console.log(infoProxy.log) })
+watchFn(() => { console.log(infoProxy.level) })
+
+infoProxy.log = "debug"
+infoProxy.level = 1
+```
