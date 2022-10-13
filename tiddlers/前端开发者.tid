@@ -1,12 +1,15 @@
 created: 20220917145439808
 creator: TidGiUser
-modified: 20220925102043190
+modified: 20221013115142280
 modifier: TidGiUser
 tags: 前端 人 🌎️参考
 title: 前端开发者
 type: text/vnd.tiddlywiki
 
-[[diu|https://ddiu.io/]]
-[[三咲智子|https://github.com/sxzz]]
-[[沈青川|https://github.com/ShenQingchuan]]
-[[Anthony Fu|https://github.com/antfu]]
+|table-caption-top w-100 table-center table-lines table-hover-cyan table-borderless thead-info|k
+|表1.1	教程wiki|c
+| 昵称 | 社交帐号/个人主页 |h
+| {{Anthony Fu!!icon}}<br>[[Anthony Fu]] | {{Anthony Fu}} |
+| [[diu]] | {{diu}} |
+| [[三咲智子|https://github.com/sxzz]] |  |
+| [[沈青川|https://github.com/ShenQingchuan]] |  |

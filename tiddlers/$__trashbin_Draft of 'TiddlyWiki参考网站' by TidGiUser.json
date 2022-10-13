@@ -1,0 +1,14 @@
+{
+    "text": "|table-caption-top w-100 table-center table-lines table-hover-cyan table-borderless thead-info|k\n|表1.1\t教程wiki|c\n| 链接 | 简介 |h\n| [[太微中文教程|https://tw-cn.netlify.app]] | 简单的入门教程 |\n| [[CPL插件源|https://tw-cpl.netlify.app]] | 中文社区插件发布 |\n| [[tiddlywiki xp|https://keatonlao.github.io/tiddlywiki-xp]] | 非常优秀的第三方文档教程，有独特的自定义插件，最佳实践 |\n| [[tiddlywiki舞|https://bramchen.github.io/tw5-docs/zh-Hans/]] | 官方文档汉化，维护得比较好，更新比较即时 |\n| 1 | 2 |\n<<vspace 4vh>>\n|table-caption-top w-100 table-center table-lines table-hover-cyan table-borderless thead-info|k\n|表1.2\t优秀插件文档|c\n| 链接 | 简介 |h\n| [[Shiraz|https://kookma.github.io/TW-Shiraz]] | 一个样式美化插件，提供了徽章、按钮、图片排版、动态表格等等美化 |\n| 1 | 2 |\n| 1 | 2 |\n| 1 | 2 |",
+    "title": "Draft of 'TiddlyWiki参考网站' by TidGiUser",
+    "created": "20220518085740906",
+    "creator": "TidGiUser",
+    "modified": "20221013083412537",
+    "modifier": "TidGiUser",
+    "tags": "TiddlyWiki 🌎️参考",
+    "type": "text/vnd.tiddlywiki",
+    "revision": "0",
+    "bag": "default",
+    "draft.title": "TiddlyWiki参考网站",
+    "draft.of": "TiddlyWiki参考网站"
+}
