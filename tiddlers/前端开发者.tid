@@ -1,6 +1,6 @@
 created: 20220917145439808
 creator: TidGiUser
-modified: 20221013121803498
+modified: 20221013130316465
 modifier: TidGiUser
 tags: 前端 人 🌎️参考
 title: 前端开发者
@@ -8,8 +8,8 @@ type: text/vnd.tiddlywiki
 
 |table-caption-top w-100 table-center table-lines table-hover-cyan table-borderless thead-info|k
 |表1.1	教程wiki|c
-| 昵称 | 个人主页 | 社交帐号 |h
+| 昵称 | 主页 | 社交帐号 |h
 | {{Anthony Fu!!icon}}<br>[[Anthony Fu]] | {{Anthony Fu!!homepage}} | {{Anthony Fu}} |
 | {{diu!!icon}}<br>[[diu]] | {{diu!!homepage}} | {{diu}} |
-| [[三咲智子|https://github.com/sxzz]] |  |
-| [[沈青川|https://github.com/ShenQingchuan]] |  |
+| {{三咲智子!!icon}}<br>[[三咲智子]] | {{三咲智子!!homepage}} | {{三咲智子}} |
+| {{沈青川!!icon}}<br>[[沈青川]] | {{沈青川!!homepage}} | {{沈青川}} |

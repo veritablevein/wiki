@@ -1,6 +1,6 @@
 created: 20221013091022517
 creator: TidGiUser
-modified: 20221013103655877
+modified: 20221013123853046
 modifier: TidGiUser
 tags: $:/tags/Macro
 title: $:/veritablevein/macros/badge-link
@@ -17,6 +17,10 @@ type: text/vnd.tiddlywiki
 
 \define badge-youtube(str)
 <a href="https://www.youtube.com/c/$str$"><img src="https://img.shields.io/youtube/channel/subscribers/$str$?label=youtube&style=social"></a>
+\end
+
+\define badge-instagram(str)
+<a href="https://www.instagram.com/$str$"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.swo.moe%2Fstats%2Finstagram%2F$str$&query=count&color=282c34&label=Instagram&labelColor=d7417b&logo=instagram&logoColor=ffffff&suffix=+follows&cacheSeconds=3600"></a>
 \end
 
 \define badge-steam(str)
