@@ -1,0 +1,6 @@
+classDiagram
+	class Depend{
+		+Set reactiveFns
+        +depend(activeReactiveFn)
+		+notify()
+	}
