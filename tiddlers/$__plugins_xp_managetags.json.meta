@@ -1,0 +1,12 @@
+author: TonGerner
+created: 20210410015717110
+dependents: 
+description: Add or Delete tags in view mode
+list: readme license
+modified: 20220810131842881
+name: Manage Tags
+plugin-type: plugin
+source: http://tw5custom.tiddlyspot.com
+title: $:/plugins/xp/managetags
+type: application/json
+version: 0.2.1

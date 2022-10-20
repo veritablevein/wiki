@@ -1,0 +1,11 @@
+author: kl
+created: 20211112052952405
+dependents: 
+description: A shortcut toolbar on standby
+list: readme settings
+modified: 20220810131842881
+name: QuickBar
+plugin-type: plugin
+title: $:/plugins/xp/quickbar
+type: application/json
+version: 0.2.2
