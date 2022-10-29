@@ -1,6 +1,6 @@
 created: 20221028101210193
 creator: TidGiUser
-modified: 20221029091343446
+modified: 20221029102859234
 modifier: TidGiUser
 tags: JavaScript
 title: 异步处理的方案
@@ -118,3 +118,26 @@ co(requestGenerator)
 ```
 
 ! async/await语法糖
+生成器、yield、co的语法糖
+
+```javascript
+//返回值：Promise，Thenable
+function requestData(url) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(url)
+    }, 1000)
+  })
+}
+
+async function requestGenerator(){
+	const res = await requestData("veritablevein")
+	const res1 = await requestData(res + "AAA")
+	const res2 = await requestData(res1 + "BBB")
+	const res3 = await requestData(res2 + "CCC")
+	const res4 = await requestData(res3 + "DDD")
+	console.log("res:", res4)
+}
+
+requestGenerator()
+```
