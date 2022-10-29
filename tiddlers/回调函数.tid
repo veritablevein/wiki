@@ -1,11 +1,9 @@
 created: 20221028101450194
 creator: TidGiUser
-draft.of: 新条目 1
-draft.title: 回调函数
-modified: 20221028101507327
+modified: 20221029081426940
 modifier: TidGiUser
 tags: 
-title: Draft of '新条目 1' by TidGiUser
+title: 回调函数
 type: text/vnd.tiddlywiki
 
 被作为实参传入另一函数，并在该外部函数内被调用，用以来完成某些任务的函数，称为回调函数。

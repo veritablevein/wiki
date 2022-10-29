@@ -1,12 +1,120 @@
 created: 20221028101210193
 creator: TidGiUser
-modified: 20221028101357659
+modified: 20221029091343446
 modifier: TidGiUser
 tags: JavaScript
 title: 异步处理的方案
 type: text/vnd.tiddlywiki
 
+场景：setTimeout模拟网络请求1s，请求网址直接获取返回网址，再在返回的网址上请求添加后缀，如此反复
+
+# url: veritablevein -> res: veritablevein
+# url: res + "AAA" -> res: veritableveinAAA
+# url: res + "BBB" -> res: veritableveinAAABBB
+# url: res + "CCC" -> res: veritableveinAAABBBCCC
+# url: res + "DDD" -> res: veritableveinAAABBBCCCDDD
+
+总共经过5s
+
 ! 回调地狱
+
+```javascript
+//返回值：Promise，Thenable
+function requestData(url) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(url)
+    }, 1000)
+  })
+}
+
+// 不正确的Promise用法模仿传统的回调地狱
+requestData("veritablevein").then(res => {
+  requestData(res + "AAA").then(res => {
+    requestData(res + "BBB").then(res => {
+      requestData(res + "CCC").then(res => {
+        requestData(res + "DDD").then(res => {
+          console.log(res)
+        })
+      })
+    })
+  })
+})
+```
+
 ! Promise链式调用
+
+```javascript
+//返回值：Promise，Thenable
+function requestData(url) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(url)
+    }, 1000)
+  })
+}
+
+requestData("veritablevein").then(res => {
+  return requestData(res + "AAA")
+}).then(res => {
+  return requestData(res + "BBB")
+}).then(res => {
+  return requestData(res + "CCC")
+}).then(res => {
+  return requestData(res + "DDD")
+}).then(res => {
+  console.log(res)
+})
+```
+
 ! Promise + Generator
+
+```javascript
+//返回值：Promise，Thenable
+function requestData(url) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(url)
+    }, 1000)
+  })
+}
+
+function* requestGenerator(){
+	const res = yield requestData("veritablevein")
+	const res1 = yield requestData(res + "AAA")
+	const res2 = yield requestData(res1 + "BBB")
+	const res3 = yield requestData(res2 + "CCC")
+	const res4 = yield requestData(res3 + "DDD")
+	console.log("res:", res4)
+}
+
+const generator = requestGenerator()
+generator.next().value.then(res => {
+  generator.next(res).value.then(res => {       // 这里next的参数res传给了生成器的res
+    generator.next(res).value.then(res => {     // 这里next的参数res传给了生成器的res1
+      generator.next(res).value.then(res => {   // 这里next的参数res传给了生成器的res2
+        generator.next(res).value.then(res => { // 这里next的参数res传给了生成器的res3
+          generator.next(res)                   // 这里next的参数res传给了生成器的res4
+        })
+      })
+    })
+  })
+})
+
+// 上面函数很有规律，可以写成一个工具函数
+function co(generatorFn) {
+  const generator = generatorFn()
+  function exec(res) {
+    const result = generator.next(res)
+    if (result.done) return
+    result.value.then(res => {
+      exec(res)
+    })
+  }
+  exec()
+}
+
+co(requestGenerator)
+```
+
 ! async/await语法糖
