@@ -1,0 +1,16 @@
+created: 20221028101210193
+creator: TidGiUser
+draft.of: 异步处理的方案
+draft.title: 异步处理的方案
+modified: 20221028101415939
+modifier: TidGiUser
+tags: JavaScript
+title: Draft of '异步处理的方案' by TidGiUser
+type: text/vnd.tiddlywiki
+
+场景：setTimeout模拟
+
+! 回调地狱
+! Promise链式调用
+! Promise + Generator
+! async/await语法糖

@@ -1,0 +1,12 @@
+created: 20221028101210193
+creator: TidGiUser
+modified: 20221028101357659
+modifier: TidGiUser
+tags: JavaScript
+title: 异步处理的方案
+type: text/vnd.tiddlywiki
+
+! 回调地狱
+! Promise链式调用
+! Promise + Generator
+! async/await语法糖
