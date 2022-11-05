@@ -1,0 +1,12 @@
+author: oeyoews
+core-version: 5.2.3
+dependents: 
+description: Some shortcuts
+list: readme
+name: Some shortcuts
+parent-plugin: 
+plugin-type: plugin
+source: 
+title: $:/plugins/oeyoews/neotw-surfing-keys
+type: application/json
+version: v0.2.3

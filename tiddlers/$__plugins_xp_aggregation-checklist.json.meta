@@ -1,0 +1,9 @@
+author: kl
+dependents: $:/plugins/kookma/todolist $:/plugins/tgrosinger/tw5-checklist $:/plugins/xp/aggregation
+description: Manage your checklist
+name: Checklist
+parent-plugin: $:/plugins/xp/aggregation
+plugin-type: plugin
+title: $:/plugins/xp/aggregation-checklist
+type: application/json
+version: 0.3.0

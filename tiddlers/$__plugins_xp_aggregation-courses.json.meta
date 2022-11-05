@@ -1,0 +1,9 @@
+author: kl
+dependents: $:/plugins/xp/aggregation
+description: Manage your courses
+name: Courses
+parent-plugin: $:/plugins/xp/aggregation
+plugin-type: plugin
+title: $:/plugins/xp/aggregation-courses
+type: application/json
+version: 0.3.0

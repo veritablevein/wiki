@@ -1,8 +1,8 @@
 created: 20221105091651443
 creator: TidGiUser
-modified: 20221105091655921
+modified: 20221105093610434
 modifier: TidGiUser
 title: $:/config/xp/quickbar/HoverPopupButtons/Visibility/$:/xp/quickbar/Buttons/things
 type: text/vnd.tiddlywiki
 
-hide
+show

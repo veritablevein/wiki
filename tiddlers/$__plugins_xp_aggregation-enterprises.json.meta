@@ -1,0 +1,9 @@
+author: kl
+dependents: $:/plugins/xp/aggregation
+description: Get to know the company
+name: Enterprises
+parent-plugin: $:/plugins/xp/aggregation
+plugin-type: plugin
+title: $:/plugins/xp/aggregation-enterprises
+type: application/json
+version: 0.3.0

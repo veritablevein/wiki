@@ -1,0 +1,9 @@
+author: kl
+dependents: 
+description: Map of Knowledge System
+name: Knowledge System
+parent-plugin: $:/plugins/xp/aggregation
+plugin-type: plugin
+title: $:/plugins/xp/aggregation-knowledge-system
+type: application/json
+version: 0.2.0

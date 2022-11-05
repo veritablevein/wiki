@@ -1,8 +1,8 @@
 created: 20221020044710811
 creator: TidGiUser
-modified: 20221020044713129
+modified: 20221105095711437
 modifier: TidGiUser
 title: $:/config/xp/quickbar/Items/Visibility/$:/xp/quickbar/items/setting-buttons
 type: text/vnd.tiddlywiki
 
-hide
+show

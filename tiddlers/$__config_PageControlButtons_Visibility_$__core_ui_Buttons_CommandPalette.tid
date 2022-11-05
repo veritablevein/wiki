@@ -1,8 +1,8 @@
 created: 20221105091735143
 creator: TidGiUser
-modified: 20221105091736532
+modified: 20221105093444322
 modifier: TidGiUser
 title: $:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/CommandPalette
 type: text/vnd.tiddlywiki
 
-show
+hide

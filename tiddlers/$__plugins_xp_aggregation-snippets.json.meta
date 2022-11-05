@@ -1,0 +1,9 @@
+author: kl
+dependents: $:/plugins/xp/aggregation
+description: Manage your snippets
+name: SNIPPETS
+parent-plugin: $:/plugins/xp/aggregation
+plugin-type: plugin
+title: $:/plugins/xp/aggregation-snippets
+type: application/json
+version: 0.3.0

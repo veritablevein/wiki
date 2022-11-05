@@ -1,0 +1,9 @@
+author: kl
+dependents: $:/plugins/xp/aggregation
+description: Software Listing
+name: Software
+parent-plugin: $:/plugins/xp/aggregation
+plugin-type: plugin
+title: $:/plugins/xp/aggregation-software
+type: application/json
+version: 0.3.0
