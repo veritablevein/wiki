@@ -4,8 +4,7 @@ creator: TidGiUser
 dark-palette: $:/palettes/SolarizedDarks
 description: Toggle between light/dark color palette
 light-palette: $:/palettes/Vanilla
-list-after: 
-modified: 20221005125230499
+modified: 20221105091629990
 modifier: TidGiUser
 tags: $:/tags/PageControls
 title: $:/plugins/kookma/shiraz/ui/Buttons/SwitchPalette

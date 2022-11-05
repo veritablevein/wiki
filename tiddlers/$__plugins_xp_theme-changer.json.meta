@@ -1,0 +1,11 @@
+author: kl
+created: 20210409145728327
+dependents: $:/themes/tiddlywiki/vanilla
+description: A button to switch custom themes
+list: readme
+modified: 20220810131842881
+name: Theme Changer
+plugin-type: plugin
+title: $:/plugins/xp/theme-changer
+type: application/json
+version: 0.2.1
