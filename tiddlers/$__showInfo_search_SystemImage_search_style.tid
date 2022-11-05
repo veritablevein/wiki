@@ -1,0 +1,32 @@
+created: 20210911022400630
+creator: TidGiUser
+fill-fallback: 
+modified: 20221105103830545
+modifier: TidGiUser
+tags: $:/showInfo/search $:/showInfo $:/tags/Stylesheet
+title: $:/showInfo/search/SystemImage/search/style
+type: text/vnd.tiddlywiki
+
+<pre>
+.search-list-container {
+display:flex;
+align-items: center;
+}
+
+.search-list-container button {
+padding:.5em;
+}
+
+.system-image-search svg {
+
+fill:<<color foreground>>;
+
+}
+
+.tc-edit-texteditor {
+  width:100%;
+	padding: 3px 3px 3px 3px;
+	border: 1px solid rgb(63, 63, 63);
+	line-height: 1.3em;
+	-webkit-appearance: none;
+}

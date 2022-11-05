@@ -2,9 +2,8 @@ author: Thomas Elmiger
 color-scheme: dark
 created: 20221019154637702
 description: Delightful, soft darkness.
-modified: 20221105095620108
-modifier: TidGiUser
+modified: 20221019154637702
 name: Twilight
-tags: $:/tags/Palette
+tags: $:/tags/Palette $:/tags/Stylesheet
 title: $:/palettes/Twilight
 type: application/x-tiddler-dictionary

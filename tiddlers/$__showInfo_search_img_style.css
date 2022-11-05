@@ -1,0 +1,10 @@
+.search-list-img :is(svg , img) {
+font-size: 2em;
+margin:5px;
+}
+
+.search-list-img img {
+object-fit: contain;
+width: 2em;
+height: auto;
+}
