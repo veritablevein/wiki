@@ -1,0 +1,9 @@
+created: 20221109065642805
+creator: TidGiUser
+modified: 20221109070841091
+modifier: TidGiUser
+tags: 迭代协议
+title: 原生可迭代对象
+type: text/vnd.tiddlywiki
+
+String、Array、Map、Set、arguments对象、NodeList集合

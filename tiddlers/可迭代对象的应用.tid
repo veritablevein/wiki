@@ -1,0 +1,22 @@
+created: 20221109065859864
+creator: TidGiUser
+modified: 20221109070833981
+modifier: TidGiUser
+tags: 迭代协议
+title: 可迭代对象的应用
+type: text/vnd.tiddlywiki
+
+* JS语法：
+** for...of
+** 展开语法
+** yield*
+** 解构赋值
+* 创建某些对象时：
+** new Map([Iterable])
+** new WeakMap([Iterable])
+** new Set([Iterable])
+** new WeakSet([Iterable])
+* 一些方法的调用：
+** Promise.all([Iterable])
+** Promise.race([Iterable])
+** Array.from([Iterable])

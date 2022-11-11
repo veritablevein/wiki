@@ -1,0 +1,131 @@
+created: 20221109074433103
+creator: TidGiUser
+modified: 20221109082028182
+modifier: TidGiUser
+tags: 模块化规范 JavaScript
+title: ES Module
+type: text/vnd.tiddlywiki
+
+* export
+** 直接导出声明语句，export const name = "veritablevein"
+** 导出和声明分开
+** 分开时用别名导出
+** 默认导出
+* import
+** 普通导入
+** 用别名导入
+** 导入所有内容放入*标识符中
+** 默认导入
+```html
+<script src="./main.js" type="module"></script>
+```
+! 导出
+!! 导出和声明分开
+```JavaScript
+//foo.js
+export const name = "veritablevein"
+export const age = 18
+export function sum (a, b){
+	return a + b
+}
+```
+!! 导出和声明分开
+```JavaScript
+//foo.js
+const name = "veritablevein"
+const age = 18
+function sum (a, b){
+	return a + b
+}
+
+export {
+	name,
+	age,
+	sum
+}
+```
+!! 分开时用别名导出
+```JavaScript
+//foo.js
+const name = "veritablevein"
+const age = 18
+function sum (a, b){
+	return a + b
+}
+
+export {
+	name as fName,
+	age as fAge,
+	sum as fSum
+}
+```
+!! 默认导出
+```JavaScript
+//foo.js
+const name = "veritablevein"
+const age = 18
+function sum (a, b){
+	return a + b
+}
+
+export {
+	name as default,
+	age,
+	sum
+}
+
+// 常用下面这种形式默认导出
+// export default name
+```
+! 导入
+!! 普通导入
+```javascript
+// main.js
+import {name, age, sum} from "./foo.js"
+
+console.log(name, age, sum(1, 2))
+```
+!! 用别名导入
+```javascript
+// main.js
+import {name as fName, age as fName, sum as fSum} from "./foo.js"
+
+console.log(fName, fAge, fSum(1, 2))
+```
+!! 导入所有内容放入*标识符中
+```javascript
+// main.js
+import * as foo from "./foo.js"
+
+console.log(foo.name, foo.age, foo.sum(1, 2))
+```
+!! 默认导入
+```javascript
+// main.js
+import foo from "./foo.js"
+
+console.log(foo)
+```
+
+! 第三方库导出index.js
+```JavaScript
+// 1.导出方式一:
+import { add, sub } from './math.js'
+import { timeFormat, priceFormat } from './format.js'
+
+export {
+	add,
+	sub,
+	timeFormat,
+	priceFormat
+}
+
+// 2.导出方式二:
+ export { add, sub } from './math.js'
+ export { timeFormat, priceFormat } from './format.js'
+
+// 3.导出方式三:
+export * from './math.js'
+export * from './format.js'
+
+```

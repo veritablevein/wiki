@@ -1,0 +1,87 @@
+created: 20221109061222750
+creator: TidGiUser
+modified: 20221109064841675
+modifier: TidGiUser
+tags: 迭代协议
+title: 迭代器协议
+type: text/vnd.tiddlywiki
+
+! 形式
+* 形式：Object
+** 方法：next()，0~1个参数
+*** 语义：按照一定次序访问容器内的元素，直到所有元素遍历完状态done为true
+*** 返回值：Object
+**** 形式：{value:element, done:true/false}
+
+! 用法
+!! 迭代器：为一个对象单独生成迭代器
+```javascript
+// 数组
+const arr = ["abc", "cba", "nba"]
+
+// 创建一个迭代器对象来访问数组
+let index = 0
+
+const arrIterator = {
+  next: function() {
+    if (index < arr.length) {
+      return { done: false, value: arr[index++] }
+    } else {
+      return { done: true, value: undefined }
+    }
+  }
+}
+
+console.log(arrIterator.next())
+console.log(arrIterator.next())
+console.log(arrIterator.next()) // { done: false, value: "nba" }
+console.log(arrIterator.next()) // { done: true, value: undefined }
+console.log(arrIterator.next()) // { done: true, value: undefined }
+console.log(arrIterator.next()) // { done: true, value: undefined }
+```
+!! 生成迭代器函数：为一类对象生成迭代器
+```JavaScript
+function createArrayIterator(arr) {
+  let index = 0
+  return {
+    next: function() {
+      if (index < arr.length) {
+        return { done: false, value: arr[index++] }
+      } else {
+        return { done: true, value: undefined } 
+      }
+    }
+  }
+}
+
+const names = ["abc", "cba", "nba"]
+const nums = [10, 22, 33, 12]
+
+const namesIterator = createArrayIterator(names)
+console.log(namesIterator.next())
+console.log(namesIterator.next())
+console.log(namesIterator.next())
+
+const numsIterator = createArrayIterator(nums)
+console.log(numsIterator.next())
+console.log(numsIterator.next())
+console.log(numsIterator.next())
+console.log(numsIterator.next())
+
+// 创建一个无限的迭代器
+function createNumberIterator() {
+  let index = 0
+  return {
+    next: function() {
+      return { done: false, value: index++ }
+    }
+  }
+}
+
+const numberInterator = createNumberIterator()
+console.log(numberInterator.next())
+console.log(numberInterator.next())
+console.log(numberInterator.next())
+console.log(numberInterator.next())
+console.log(numberInterator.next())
+```

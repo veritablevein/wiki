@@ -1,0 +1,9 @@
+{
+    "created": "20221109070459325",
+    "creator": "TidGiUser",
+    "text": "```javascript\nconst names = [\"abc\", \"cba\", \"nba\"]\nconsole.log(names[Symbol.iterator])\n\nfor (const item of names) {\n  console.log(item)\n}\n```",
+    "tags": "",
+    "title": "for...of",
+    "modified": "20221109070619183",
+    "modifier": "TidGiUser"
+}

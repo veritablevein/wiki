@@ -1,0 +1,21 @@
+created: 20221109073802811
+creator: TidGiUser
+modified: 20221109074908500
+modifier: TidGiUser
+tags: JavaScript
+title: Javascript模块化
+type: text/vnd.tiddlywiki
+
+* 模块化是什么？
+* 为什么会出现模块化？
+* 没要模块化会有哪些问题？
+* 常见的[[模块化规范]]？
+** [[AMD]]
+** [[CMD]]
+** [[CommonJS]]
+** [[ES Module]]
+* 不同模块化规范应该关注那些区别？
+** 导入导出的形式
+** 同步异步的处理
+** 依赖的库和运行环境
+** 内部的实现原理
