@@ -1,0 +1,24 @@
+created: 20221117075005132
+creator: TidGiUser
+modified: 20221117092228403
+modifier: TidGiUser
+tags: JavaScript
+title: 防抖函数
+type: text/vnd.tiddlywiki
+
+单位时间内函数被频繁调用，为了优化性能，通常延迟函数到最后一次触发，且单位时间内没有新调用时，执行
+
+防抖函数就是将传入的函数设置单位时间延迟，变成具有这样特性的一类函数
+
+* 形式：
+** debounce(fn, delay, immediate = false){return _debounced}
+* 参数：
+** fn：要做防抖处理的函数
+** delay：防抖延迟的时间
+** immediate：每次首次调用是否立即执行，默认为否
+* 返回值：
+** _debounced：已经过防抖处理的函数
+* 函数体内容：将传入函数进行防抖处理
+* 使用场景：
+** 搜索引擎输入词汇，防止联想关键词频繁触发网络请求
+! 通过第三方库来使用
