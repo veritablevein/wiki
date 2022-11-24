@@ -1,12 +1,12 @@
 created: 20221003121543756
 creator: TidGiUser
-modified: 20221003122536544
+modified: 20221124134751933
 modifier: TidGiUser
 tags: ES6
 title: 暂时性死区
 type: text/vnd.tiddlywiki
 
-明明let/const没有作用域提升，却会导致声明前的访问无法访问，这段作用域被社区称作暂时性死区。
+明明let/const声明前的访问无法访问，会导致没有作用域提升，这段作用域被社区称作暂时性死区。
 
 ```javascript
 let foo = "foo"
