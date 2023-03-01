@@ -1,0 +1,13 @@
+created: 20221201091116923
+creator: TidGiUser
+modified: 20221201091615328
+modifier: TidGiUser
+tags: CSS
+title: CSS应用到元素的三种写法
+type: text/vnd.tiddlywiki
+
+哪三种写法？
+
+# [[内联样式]]inline style
+# [[内部样式表]]internal style sheet
+# [[外部样式表]]external style sheet

@@ -1,0 +1,26 @@
+created: 20221222084314450
+creator: TidGiUser
+modified: 20221222090443133
+modifier: TidGiUser
+tags: 
+title: display主要的四个值
+type: text/vnd.tiddlywiki
+
+# block
+## 独占一行
+## 可以设置宽高
+## 默认宽高由内容决定
+# inline
+## 和其他行内级元素在同一行
+## 不能设置宽高
+## 宽高由内容决定
+# inline-block
+## 和其他行内级元素在同一行
+## 可以设置宽高
+## 默认宽高由内容决定
+# none
+
+| display | 和行的关系 | 能否设置宽高 | 宽高由内容决定的情况 |
+| block | 独占一行✅ | 能✅ | Default❌ |
+| inline | 和其他行内级元素在同一行❌ | 否❌ | ALL✅ |
+| inline-block | 和其他行内级元素在同一行❌ | 能✅ | Default❌ |

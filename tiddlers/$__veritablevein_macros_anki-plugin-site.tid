@@ -1,0 +1,11 @@
+created: 20221203094219099
+creator: TidGiUser
+modified: 20221203095014500
+modifier: TidGiUser
+tags: $:/tags/Macro
+title: $:/veritablevein/macros/anki-plugin-site
+type: text/vnd.tiddlywiki
+
+\define anki-plugin(str)
+<a href="https://ankiweb.net/shared/info/$str$" target="_blank">$str$</a>
+\end

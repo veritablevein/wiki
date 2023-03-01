@@ -1,12 +1,11 @@
 author: oeyoews
-core-version: 5.2.3
-dependents: 
-description: Some shortcuts
-list: readme
-name: Some shortcuts
-parent-plugin: 
+core-version: 5.2.5
+dependents: $:/plugins/kookma/shiraz-callout
+description: Surfing On TiddlyWiki
+list: readme explore
+name: Surfing on TiddlyWiki
 plugin-type: plugin
 source: 
 title: $:/plugins/oeyoews/neotw-surfing-keys
 type: application/json
-version: v0.2.3
+version: 0.6.0

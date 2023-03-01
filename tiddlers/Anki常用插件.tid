@@ -1,0 +1,14 @@
+created: 20221203092814081
+creator: TidGiUser
+modified: 20221203094744206
+modifier: TidGiUser
+tags: Anki 插件
+title: Anki常用插件
+type: text/vnd.tiddlywiki
+
+|table-caption-top w-100 table-center table-lines table-hover-cyan table-borderless thead-info|k
+|表1.1	Anki常用插件|c
+| 名称 | 安装代码 | 简述 | 版本要求 |h
+| AnkiWebView Inspector | <<anki-plugin 31746032>> | 右键启用web调试工具 | 2.1.x |
+| FSRS4Anki Helper | <<anki-plugin 759844606>> | 右键牌组通过FSRS重新安排所有卡片 | >= 2.1.55 |
+|  |  |  |

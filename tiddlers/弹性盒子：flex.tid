@@ -1,7 +1,16 @@
 created: 20220905175303761
 creator: TidGiUser
-modified: 20220905175305298
+modified: 20230124102649754
 modifier: TidGiUser
 tags: CSS
 title: 弹性盒子：flex
 type: text/vnd.tiddlywiki
+
+基本概念：
+
+# flex container
+# flex item
+## 受flex container属性的设置来进行控制和布局
+## 
+display:flex
+

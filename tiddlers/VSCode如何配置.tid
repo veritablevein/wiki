@@ -1,0 +1,24 @@
+created: 20230301094931207
+modified: 20230301145722414
+tags: VSCode 插件 重装系统
+title: VSCode如何配置
+type: text/vnd.tiddlywiki
+wysiwyg: yes
+
+如何启用VSCode同步插件配置？
+
+活动栏
+
+->⚙️管理->设置同步开启，用MicroSoft/Github登录
+
+->🧑‍🚀账户->设置同步已打开
+
+Settings.json
+
+用户配置使用antfu的vscode配置：<a >[ext[https://github.com/antfu/vscode-settings/blob/main/.vscode/settings.json]]</a>
+
+Setting.json配置解释：
+
+Extensions.json
+
+列出所有插件：code list-extensions | % { "code install-extension $_" }

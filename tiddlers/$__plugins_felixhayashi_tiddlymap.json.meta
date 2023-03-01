@@ -6,9 +6,9 @@ description: TiddlyMap – Map drawing and topic visualization for your wiki
 list: readme license
 name: TiddlyMap
 plugin-type: plugin
-released: Sat, 29 Oct 2022 02:17:04 GMT
+released: Sat, 04 Feb 2023 23:08:18 GMT
 source: https://github.com/felixhayashi/TW5-TiddlyMap
 suggested: $:/plugins/felixhayashi/topstoryview
 title: $:/plugins/felixhayashi/tiddlymap
 type: application/json
-version: 0.17.15+10019
+version: 0.17.16+10020

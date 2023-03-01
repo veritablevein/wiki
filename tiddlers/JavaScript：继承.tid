@@ -1,6 +1,6 @@
 created: 20220925082150355
 creator: TidGiUser
-modified: 20220925101203352
+modified: 20221202174929056
 modifier: TidGiUser
 tags: JavaScript
 title: JavaScript：继承
@@ -10,3 +10,6 @@ type: text/vnd.tiddlywiki
 
 # [[原型链继承]]
 # [[借用构造函数继承]]
+# [[原型式继承]]
+# [[寄生式继承]]
+# [[寄生组合式继承]]
