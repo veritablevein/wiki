@@ -1,5 +1,5 @@
 created: 20230301094931207
-modified: 20230301151227962
+modified: 20230301172655800
 tags: VSCode 插件 重装系统
 title: VSCode如何配置
 type: text/vnd.tiddlywiki
@@ -20,4 +20,8 @@ Setting.json配置解释：
 
 Extensions.json
 
-列出所有插件：code list-extensions | % { "code install-extension $_" }
+列出所有插件：
+
+```bash
+code --list-extensions | % { "code install-extension $_" }
+```
