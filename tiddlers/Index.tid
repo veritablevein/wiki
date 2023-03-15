@@ -1,7 +1,7 @@
 created: 20220124135902019
 creator: TidGiUser
 icon: 
-modified: 20221105091537880
+modified: 20230315125704135
 modifier: TidGiUser
 title: Index
 tmap.id: 0dc1cb92-0912-4c69-ab9e-89d9a194bfe6
@@ -20,7 +20,9 @@ type: text/vnd.tiddlywiki
 
 <$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TagCloud.js"/>
 <$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TheBrain.js" levels=2/>
-<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/oflg/CalendarHeatmap.js" $height="150px" />
+<div style="max-width: 800px; height: 200px; margin: 0 auto;">
+<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js" subfilter="[all[tiddlers]!is[shadow]!is[system]!field:calendarEntry[yes]]" $width="100%" $height="100%" />
+</div>
 
 ---
 {{$:/config/veritablevein/subtitlefooter}}
