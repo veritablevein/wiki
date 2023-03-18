@@ -1,7 +1,7 @@
 created: 20230318090151115
-modified: 20230318090659158
+modified: 20230318090802924
 tags: Vue 组件库 CSS
-title: Vue中如何修改第三方组件库的样式
+title: Vue中如何修改第三方UI组件库的样式
 type: text/vnd.tiddlywiki
 
 # 在组件库的插槽中使用自己的元素，在自己的作用域中直接修改自己的元素
