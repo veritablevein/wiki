@@ -1,0 +1,59 @@
+created: 20230318065349419
+modified: 20230318072602662
+tags: Vuex Pinia
+title: Vuex VS Pinia
+type: text/vnd.tiddlywiki
+
+| store API | state | getters | mutations | actions | modules |
+| Vuex | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| Pinia | ✔️ | ✔️ | ❌ | ✔️ | ❌ |
+
+! How to use
+# Vuex: 
+```javascript
+// main.js
+import { createApp } from 'vue'
+import { createStore } from 'vuex'
+import App from './app.vue'
+
+const store = createStore({
+	state: () => ({data, ...}),
+	getters: {fn(){}, ...},
+	mutations: {fn(){}, ...},
+	actions: {fn(){}, ...},
+	module: {}
+})
+
+const app = createApp(App)
+app.use(store).mount('#app')
+```
+
+# Pinia:
+```javascript
+// src/stores/index.js
+import { createPinia } from 'pinia'
+const pinia = createPinia()
+export default pinia
+```
+```javascript
+// main.js
+import { createApp } from 'vue'
+import App from './app.vue'
+
+import pinia from './stores'
+
+const app = createApp(App)
+app.use(pinia).mount('#app')
+```
+```javascript
+// src/stores/modules/city.js
+import { defineStore } from 'pinia'
+
+const useCityStore = defineStore("city", {
+	state: () => ({data, ...}),
+	getters: {fn(){}, ...},
+	actions: {fn(){}, ...}
+})
+
+export default useCityStore
+```

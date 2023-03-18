@@ -1,0 +1,7 @@
+created: 20230318061636286
+modified: 20230318061728178
+tags: [[ES Module]]
+title: import.meta.url
+type: text/vnd.tiddlywiki
+
+import.meta.url 是一个 ESM 的原生功能，会暴露当前模块的 URL

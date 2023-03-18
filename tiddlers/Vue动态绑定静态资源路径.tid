@@ -1,0 +1,24 @@
+created: 20230318060726037
+modified: 20230318065339240
+tags: Vite webpack Vue 实践
+title: Vue动态绑定静态资源路径
+type: text/vnd.tiddlywiki
+
+! 动态绑定路径的方法
+!! webpack
+```html
+<!-- src/components/tab/component.vue -->
+<img :src="require(item.path)" alt="">
+```
+!! vite的静态资源处理：new URL(url, [[import.meta.url]])
+```html
+<!-- src/components/tab/component.vue -->
+<img :src="getAssetURL(item.path)" alt="">
+```
+```javascript
+// src/utils/load_assets.js
+export const getAssetURL = (image) => {
+	// URL的第一个参数为相对路径，相对于import.meta.url，即该文件的当前路径的URL
+	return new URL(`../assets/img/${image}`, import.meta.url)
+}
+```
