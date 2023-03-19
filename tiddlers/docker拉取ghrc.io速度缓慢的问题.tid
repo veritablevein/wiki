@@ -1,0 +1,9 @@
+created: 20230318143254233
+modified: 20230318143517947
+tags: solution Docker
+title: docker拉取ghrc.io速度缓慢的问题
+type: text/vnd.tiddlywiki
+
+解决方案：
+
+# ghrc.io换成ghrc.lank8s.cn
