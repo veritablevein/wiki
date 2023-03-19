@@ -1,0 +1,51 @@
+created: 20230319092955502
+modified: 20230319095116732
+tags: Vue Vue-Router Vue指令 CSS 实践
+title: Vue如何在不同路由中隐藏固定的组件
+type: text/vnd.tiddlywiki
+
+! 使用v-if/show，结合router.meta来使用
+
+```html
+<!-- App.vue -->
+<template>
+	<tab-bar v-if="!route.meta.hideTabBar" />
+</template>
+
+<script setup>
+import { useRoute } from 'vue-router'
+	
+const route = useRoute()
+</script>
+```
+```javascript
+// /src/router/index.js
+const routes = [
+	{
+		path:"/city",
+		component: () => import("@/views/city/city.vue"),
+		meta: {
+			hideTabBar: true
+		}
+	}
+]
+```
+
+! 使用css用当前路由页面覆盖要隐藏的组件
+
+```html
+<!-- city.vue的根div -->
+<div class="city top-page">
+</div>
+```
+```css
+/* assets/css/common.css */
+.top-page {
+	postion: relative;
+	z-index: 9;
+	height: 100vh;
+	background-color: #fff;
+	
+	overflow-y: auto;
+}
+```
