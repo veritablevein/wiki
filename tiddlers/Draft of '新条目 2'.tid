@@ -1,0 +1,44 @@
+created: 20230327055335641
+draft.of: 新条目 2
+draft.title: Vue3 Vite 项目结构
+modified: 20230327060619296
+tags: 
+title: Draft of '新条目 2'
+type: text/vnd.tiddlywiki
+
+@@.list-tree
+*package.json
+*index.html
+*src
+**main.js
+**App.vue
+**assets
+***css
+****common.css
+****reset.css
+****index.css
+***img
+****common
+****home
+***font
+***data
+**views
+***eachPageName...
+**components
+***common
+***eachComponentName...
+**hooks
+***useXxx.js
+**utils
+**services
+***modules
+***request
+***index.js
+**router
+***index.js
+**stores
+***modules
+***index.js
+**mock
+*vite.config.js
+@@
