@@ -1,5 +1,13 @@
 created: 20230312133712638
-modified: 20230312133732866
+modified: 20230504113035015
 tags: TODO question Vue
 title: Vue的响应式原理⭐⭐⭐⭐⭐
 type: text/vnd.tiddlywiki
+
+# WeakMap->Map->Set
+# targetMap->depsMap->dep
+# target->key
+# trigger
+# track
+# effect
+# activeEffect
