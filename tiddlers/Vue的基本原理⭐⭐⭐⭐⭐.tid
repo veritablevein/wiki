@@ -1,11 +1,21 @@
 created: 20230312133229258
-modified: 20230504113223353
+modified: 20230511150018732
 tags: TODO question Vue
 title: Vue的基本原理⭐⭐⭐⭐⭐
 type: text/vnd.tiddlywiki
 
 核心模块：
 
-# reactivity
-# runtime-core
-# runtime-dom
+@@.list-tree
+*reactivity
+*runtime
+**runtime-core
+**runtime-dom
+*compiler
+**compiler-core
+**compiler-dom
+**compiler-sfc
+**compiler-ssr
+*shared
+*vue
+@@

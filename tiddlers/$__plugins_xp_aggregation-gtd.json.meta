@@ -7,4 +7,4 @@ parent-plugin: $:/plugins/xp/aggregation
 plugin-type: plugin
 title: $:/plugins/xp/aggregation-gtd
 type: application/json
-version: 0.3.1
+version: 0.3.2

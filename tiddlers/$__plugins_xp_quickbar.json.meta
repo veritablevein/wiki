@@ -8,4 +8,4 @@ name: QuickBar
 plugin-type: plugin
 title: $:/plugins/xp/quickbar
 type: application/json
-version: 0.2.5
+version: 0.2.6
