@@ -1,5 +1,5 @@
 created: 20230511142129744
-modified: 20230511144358820
+modified: 20230511155359904
 tags: TypeScript
 title: type和interface的区别
 type: text/vnd.tiddlywiki
@@ -67,3 +67,6 @@ class Person implements IPerson {
     }
 }
 ```
+
+! 总结
+基本上非对象类型使用type，对象类型使用interface
