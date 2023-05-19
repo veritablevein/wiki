@@ -1,0 +1,36 @@
+created: 20230519121113410
+modified: 20230519122746558
+tags: TypeScript
+title: 严格对象字面量赋值检测
+type: text/vnd.tiddlywiki
+
+```typescript
+interface IPerson {
+  name: string
+  age: number
+}
+
+// const ikun: IPerson = {
+//   name: "why",
+//   age: 20,
+//   height: 1.88	//error: 字面量赋值严格类型检测
+// }
+
+//下面这样做却不会报错
+const obj = {
+  name: "why",
+  age: 20,
+  height: 1.88
+}
+const ikun: IPerson = obj
+
+// 下面函数调用时也有这种现象
+function printPerson (person: IPerson) {}
+
+// printPerson({name: "kobe", age:30, height: 1.98})
+
+const kobe = {name: "kobe", age:30, height: 1.98}
+printPerson(kobe)
+```
+
+参考链接：[[microsoft/TypeScript PR: Strict object literal assignment checking #3823|https://github.com/microsoft/TypeScript/pull/3823]]
