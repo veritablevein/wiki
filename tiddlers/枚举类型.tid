@@ -1,0 +1,77 @@
+created: 20230520140838606
+modified: 20230520143353386
+tags: TypeScript
+title: 枚举类型
+type: text/vnd.tiddlywiki
+
+```TypeScript
+enum Direction {
+  UP = 100,
+  DOWN, // 自增
+  RIGHT = 120,
+  LEFT,
+  FRONT = "FRONT",
+  // MUSTSET,  // 直接在指定上一个FRONT不为number类型的值后，不能不指定MUSTSET的值
+  // BACK = false, // Type 'boolean' is not assignable to type 'number' as required for computed enum member values.
+  BACK = "BACK"
+}
+
+enum Operation {
+  READ = 1 << 0,
+  WRITE = 1 << 1,
+  DELETE = 1 << 2
+}
+
+const d1: Direction = Direction.UP
+console.log(Direction)
+console.log(Operation)
+```
+
+上面TS编译成JS后
+
+```JavaScript
+"use strict";
+var Direction;
+(function (Direction) {
+    Direction[Direction["UP"] = 100] = "UP";
+    Direction[Direction["DOWN"] = 101] = "DOWN";
+    Direction[Direction["RIGHT"] = 120] = "RIGHT";
+    Direction[Direction["LEFT"] = 121] = "LEFT";
+    Direction["FRONT"] = "FRONT";
+    Direction["BACK"] = "BACK";
+})(Direction || (Direction = {}));
+var Operation;
+(function (Operation) {
+    Operation[Operation["READ"] = 1] = "READ";
+    Operation[Operation["WRITE"] = 2] = "WRITE";
+    Operation[Operation["DELETE"] = 4] = "DELETE";
+})(Operation || (Operation = {}));
+const d1 = Direction.UP;
+console.log(Direction);
+console.log(Operation);
+```
+
+执行结果
+
+```json
+[object Object] {
+  100: "UP",
+  101: "DOWN",
+  120: "RIGHT",
+  121: "LEFT",
+  BACK: "BACK",
+  DOWN: 101,
+  FRONT: "FRONT",
+  LEFT: 121,
+  RIGHT: 120,
+  UP: 100
+}
+[object Object] {
+  1: "READ",
+  2: "WRITE",
+  4: "DELETE",
+  DELETE: 4,
+  READ: 1,
+  WRITE: 2
+}
+```
