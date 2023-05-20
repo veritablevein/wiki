@@ -1,5 +1,5 @@
 created: 20230511142129744
-modified: 20230511155359904
+modified: 20230520144435348
 tags: TypeScript
 title: type和interface的区别
 type: text/vnd.tiddlywiki
@@ -9,6 +9,7 @@ type: text/vnd.tiddlywiki
 ! type和interface的区别
 !! 1. type和interface的使用范围不同
 ```typescript
+// type除了对象还能声明其他的
 type MyNumber = number
 type IDType = number | string
 ```

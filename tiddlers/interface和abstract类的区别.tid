@@ -1,0 +1,30 @@
+created: 20230520144516340
+modified: 20230520150831062
+tags: TypeScript
+title: interface和abstract类的区别
+type: text/vnd.tiddlywiki
+
+abstract更侧重类型上的is a；
+
+interface更侧重行为上的has a；
+
+比如cat是一个animal，但car不是animal，但他们都可以实现一个有running方法的interface
+
+```TypeScript
+abstract class animal {
+  abstract running(): void
+}
+
+interface IRun{
+  running: ()=>void
+}
+
+
+class cat extends animal implements IRun{
+  running(){}
+}
+
+class car implements IRun{
+  running(){}
+}
+```
