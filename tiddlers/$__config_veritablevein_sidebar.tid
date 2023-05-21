@@ -1,0 +1,9 @@
+created: 20230521100115901
+modified: 20230521100236739
+tags: $:/tags/Stylesheet
+title: $:/config/veritablevein/sidebar
+type: text/vnd.tiddlywiki
+
+div.content {
+	display: block !important;
+}
