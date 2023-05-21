@@ -1,0 +1,12 @@
+{
+    "title": "新条目",
+    "created": "20220715090642900",
+    "creator": "TidGiUser",
+    "modified": "20220715090826205",
+    "modifier": "TidGiUser",
+    "tags": "",
+    "type": "text/vnd.tiddlywiki",
+    "text": "<$list>\n{\"name\": \"<<currentTiddler>>\"},\n</$list>\n\n<$list counter=\"counter\">\n<$set name=current value=<<currentTiddler>> >\n<$list filter=\"[all[current]links[]]\">\n{\"source\":\"<<current>>\", \"target\": \"{{!!title}}\"},\n</$list>\n</$set>\n</$list>",
+    "revision": "0",
+    "bag": "default"
+}
