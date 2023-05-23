@@ -1,0 +1,8 @@
+{
+    "created": "20230523083248909",
+    "text": "%%{init: {'theme': 'dark'}}%%\nclassDiagram\n    class Creator{\n        +factoryMethod(): Product\n    }\n    class ConcreteCreator{\n        +factoryMethod(): Product\n    }\n    class Product{\n        +operation()\n    }\n    class ConcreteProduct{\n        +operation()\n    }\n    Creator <|-- ConcreteCreator\n    Product <|.. ConcreteProduct\n    ConcreteCreator ..> ConcreteProduct : creates",
+    "tags": "",
+    "title": "新条目",
+    "modified": "20230523083345159",
+    "type": "text/vnd.tiddlywiki.mermaid"
+}
