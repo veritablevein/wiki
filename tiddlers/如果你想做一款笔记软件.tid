@@ -1,15 +1,16 @@
 created: 20220824131441015
 creator: TidGiUser
-modified: 20220930062723558
+modified: 20230527051504111
 modifier: TidGiUser
 tags: 项目
 title: 如果你想做一款笔记软件
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
+* 跨平台
+* 在线部署
 * PDF处理能力
 * OCR在线校验
-* 父子脑图、焦点
+* 父子脑图、焦点、大纲
 * 双向链接词典mdx
 * 渐近阅读、SM18算法
 * Anki的模板形式web兼容性
@@ -21,4 +22,4 @@ wysiwyg: yes
 
 数据库，表
 
-记忆算法
+间隔重复算法
