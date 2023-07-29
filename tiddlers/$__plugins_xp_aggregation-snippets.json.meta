@@ -6,4 +6,4 @@ parent-plugin: $:/plugins/xp/aggregation
 plugin-type: plugin
 title: $:/plugins/xp/aggregation-snippets
 type: application/json
-version: 0.3.1
+version: 0.5.0
