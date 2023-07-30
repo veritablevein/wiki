@@ -1,0 +1,13 @@
+created: 20230730125850618
+modified: 20230730132736122
+tags: 实践 solution
+title: 基于菜单的动态路由
+type: text/vnd.tiddlywiki
+wysiwyg: yes
+
+映射菜单到路由的过程：
+
+# 根据文件目录获取本地所有路由
+# 根据用户菜单映射路由
+# 在登录刷新时注册相应的路由
+
