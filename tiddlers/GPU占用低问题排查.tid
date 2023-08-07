@@ -1,6 +1,6 @@
 created: 20230729092435439
 icon: 
-modified: 20230729094653600
+modified: 20230807041614126
 tags: solution
 title: GPU占用低问题排查
 type: text/vnd.tiddlywiki
@@ -15,3 +15,5 @@ type: text/vnd.tiddlywiki
 # 某种原因导致CPU降频
 # 某种原因导致内存频率不对
 # 后台软件之类影响（对比不直播，清后台，杀毒扫盘）
+# 看看CPU是否带核显（Intel带不带F），显示器接的核显🤣
+
