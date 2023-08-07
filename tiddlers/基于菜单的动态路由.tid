@@ -1,13 +1,36 @@
 created: 20230730125850618
-modified: 20230730132736122
+modified: 20230730155333059
 tags: 实践 solution
 title: 基于菜单的动态路由
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 映射菜单到路由的过程：
 
-# 根据文件目录获取本地所有路由
-# 根据用户菜单映射路由
-# 在登录刷新时注册相应的路由
+# 使用工具自动化生成router和views相应目录层级的路由和组件
+# 根据文件目录import.meta.glob()获取本地所有路由
+# 根据用户菜单映射路由和本地路由匹配，给没有路由的路径添加重定向mapMenusToRoutes()
+# 在登录刷新时映射并注册路由router.addRoute()
 
+```typescript
+// map-menus 按目录获取本地路由
+import type { RouteRecordRaw } from 'vue-router'
+
+function loadLocalRoutes() {
+	// 存储本地路由
+  const localRoutes: RouteRecordRaw[] = []
+  // 根据目录结构获取本地路由
+	const files: Record<string, any> = import.meta.glob(
+    '../router/main/**/**.ts',
+    {
+				// eager立刻导入
+      eager: true
+    }
+  )
+  for (const key in files) {
+    const module = files[key]
+    localRoutes.push(module.default)
+  }
+  return localRoutes
+}
+
+```
