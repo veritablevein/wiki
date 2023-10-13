@@ -1,6 +1,6 @@
 created: 20220824100910506
 creator: TidGiUser
-modified: 20220905061904701
+modified: 20231013131649463
 modifier: TidGiUser
 tags: MHRS MOD
 title: 文件类型
@@ -55,3 +55,5 @@ wysiwyg: yes
 !! ogg→wav——Total Audio Converter
 
 !! wav→wem——Wwise
+
+!! foobar2000直接播放wem——foo_input_vgmstream.fb2k-component
