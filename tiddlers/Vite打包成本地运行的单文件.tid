@@ -1,0 +1,25 @@
+created: 20240125125307355
+modified: 20240125130008335
+tags: Vite solution
+title: Vite打包成本地运行的单文件
+
+vite如何打包成SingleFile，不需要服务器本地执行：
+
+1. 使用pnpm install @vitejs/plugin-legacy terser -D，不装terser报错
+
+2. vite.config.ts添加
+
+```ts
+ export default defineConfig({
+	 plugins: [
+		 legacy({
+			 targets: ['defaults', 'not IE 11']
+		 })
+	 ],
+	 base: './'
+ })
+```
+
+   
+
+3. 打包后dist目录的index.html删掉crossorigin、nodemodule相关属性和一些script标签（用了import.meta.url相关的要保留），id为vite-legacy-entry的script元素内为空
