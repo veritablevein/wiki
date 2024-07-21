@@ -1,0 +1,44 @@
+created: 20240205075457174
+modified: 20240205080248299
+tags: OpenWrt solution
+title: openwrt配置IPv6+ddns+端口映射
+
+修改接口LAN的192.168.1.1到192.168.5.1
+
+新增接口 静态地址 包含接口和wan一致，192.168.1.x和光猫同网段、子网掩码255.255.255.0、网关填猫原来的192.168.1.1，防火墙设置和wan一致
+
+通过telnet获取PPPoE账号密码
+
+```bash
+sidbg 1DB decry /userconfig/cfg/db_user_cfg.xml
+cd /tmp
+vi debug-decry-cfg
+```
+/PPPoE WANCPPP 手机号
+
+开启IPV6 ddns
+
+`*/2 * * * * token=************ /root/dynv6.sh ******.dynv6.net`
+
+
+使用socat端口映射
+
+```bash
+socat TCP6-LISTEN:5244,reuseaddr,fork TCP4:192.168.5.195:5244 &
+socat TCP6-LISTEN:47984,reuseaddr,fork TCP4:192.168.5.195:47984 &
+socat TCP6-LISTEN:47989,reuseaddr,fork TCP4:192.168.5.195:47989 &
+socat TCP6-LISTEN:48010,reuseaddr,fork TCP4:192.168.5.195:48010 &
+socat UDP6-LISTEN:5353,reuseaddr,fork TCP4:192.168.5.195:5353 &
+socat UDP6-LISTEN:47998,reuseaddr,fork TCP4:192.168.5.195:47998 &
+socat UDP6-LISTEN:47999,reuseaddr,fork TCP4:192.168.5.195:47999 &
+socat UDP6-LISTEN:48000,reuseaddr,fork TCP4:192.168.5.195:48000 &
+socat UDP6-LISTEN:48002,reuseaddr,fork TCP4:192.168.5.195:48002	 &
+socat UDP6-LISTEN:48010,reuseaddr,fork TCP4:192.168.5.195:48010 &
+socat TCP6-LISTEN:47990,reuseaddr,fork TCP4:192.168.5.195:47990 &
+socat UDP6-LISTEN:47990,reuseaddr,fork TCP4:192.168.5.195:47990 &
+```
+使用lucky
+
+```bash
+sh golucky.sh https://www.daji.it:6/files 2.6.2
+```
